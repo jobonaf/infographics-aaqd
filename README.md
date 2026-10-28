@@ -71,5 +71,6 @@ Compila `sources.md`: ogni affermazione nella figura deve avere fonte (CELEX/ELI
 
 - **Licenza**: proposta CC BY 4.0 per figure e testi, licenza permissiva (es. MIT) per il codice; aggiungi i file `LICENSE` con i testi ufficiali.
   Verifica la policy di ARPA FVG sulla diffusione. Zenodo copia la licenza nei metadati del record.
+- **Licenze applicate in questo repository**: codice sotto `LICENSE` (MIT); figure, testi e asset grafici sotto `LICENSE-CC-BY-4.0` (CC BY 4.0).
 - **Affiliazione e loghi**: se compaiono nomi o loghi istituzionali (ARPA FVG, SNPA, FAIRMODE), concorda prima l'autorizzazione.
 - **Verifica normativa**: chiudi i punti "da verificare" in `01-rappresentativita-spaziale/sources.md`.
