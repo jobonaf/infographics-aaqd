@@ -5,7 +5,7 @@ Destinate a slide riutilizzabili, formazione, gruppi tecnici (SNPA, FAIRMODE) e,
 
 | # | Infografica | Stato |
 |---|---|---|
-| 01 | Rappresentatività spaziale di un punto di campionamento | v0.1 – da verificare sul testo vigente (vedi `sources.md`) |
+| 01 | Rappresentatività spaziale di un punto di campionamento | v0.1 – da verificare sul testo vigente (vedi `01-rappresentativita-spaziale/sources.md`) |
 
 ## Cosa c'è in ogni cartella
 
