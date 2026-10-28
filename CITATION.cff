@@ -1,7 +1,7 @@
 cff-version: 1.2.0
 message: "If you use these infographics, please cite the repository and include the version."
 title: "Infographics on Directive (EU) 2024/2881 on air quality and related implementing acts"
-version: 0.2.0
+version: 0.1.0
 # date-released: to be set at the GitHub release
 authors:
   - family-names: Bonafè
