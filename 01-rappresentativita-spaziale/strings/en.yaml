@@ -1,0 +1,43 @@
+# English strings. Lists = pre-wrapped lines. Decimal separator: point.
+lang: en
+alt_title: "Spatial representativeness of a sampling point"
+alt_desc: >-
+  Three-panel infographic. 1: the central value C at a sampling point (annual mean, measured or modelled).
+  2: the tolerance, max(15 % of C; Annex I minimum), with two worked examples for PM10.
+  3: the representativeness area on a synthetic zone map, refined by excluding cells near a heavily trafficked road
+  and cells with a different source profile.
+title: "Spatial representativeness of a sampling point"
+subtitle: "Dir. (EU) 2024/2881 · Impl. Dec. (EU) 2026/1208 · applicable from 30 June 2028"
+title_m: ["Spatial representativeness", "of a sampling point"]
+subtitle_m: ["Dir. (EU) 2024/2881 · Impl. Dec. (EU) 2026/1208", "applicable from 30 June 2028"]
+h1: "The point"
+h2: "The tolerance"
+h3: "The area"
+central_value: "Central value C"
+sampling_point: ["sampling", "point"]
+meas_head: "measurements:"
+meas_body: ["annual mean", "measured at", "the point"]
+model_head: "models:"
+model_body: ["annual mean", "modelled at", "the point"]
+other_metrics: "other metrics only if justified"
+via: "measurements · models · both"
+formula: ["tolerance = max( 15 % · C ;", "Annex I minimum )"]
+example: "example · PM10 · µg/m³"
+cap1a: "15 % of 20 = 3 > minimum 2"
+cap1b: "interval 17 – 23"
+cap2a: "15 % of 10 = 1.5 < minimum 2"
+cap2b: "minimum applies: 8 – 12"
+road: "heavily trafficked road"
+expert: ["different source", "profile", "(experts)"]
+leg_A: ["Station A"]
+leg_B: ["Station B"]
+leg_excl: ["excluded", "(refinement)"]
+leg_not: ["not", "represented"]
+leg_zone: ["zone", "boundary"]
+leg_station: ["monitoring", "station"]
+review: ["review", "≤ 5 years"]
+synthetic: "synthetic data, for illustration only"
+refinement: "Refinement Art. 5(3)-(4)"
+def_bold: "Spatial representativeness (Dir. Art. 3):"
+def_l1: "the air quality metrics observed at the point are representative of an explicitly"
+def_l2: "delineated area, within which the metrics do not differ from those at the point by more than a pre-defined tolerance level."

@@ -1,0 +1,19 @@
+cff-version: 1.2.0
+message: "Se usi queste infografiche, cita il repository indicando la versione."
+title: "Infografiche sulla Direttiva (UE) 2024/2881 sulla qualità dell'aria e sui relativi atti di esecuzione"
+version: 0.2.0
+# date-released: da impostare alla release su GitHub
+authors:
+  - family-names: Bonafè
+    given-names: Giovanni
+    orcid: "https://orcid.org/0000-0002-7815-8866"
+    # affiliation: da decidere (vedi README, sezione "Prima della prima release")
+keywords:
+  - air quality
+  - Directive (EU) 2024/2881
+  - spatial representativeness
+  - infographics
+  - FAIRMODE
+# license: da decidere prima della prima release (proposta: CC-BY-4.0 per figure e testi, MIT per il codice)
+# doi: da aggiungere dopo la prima release archiviata da Zenodo (DOI "concept", che rimanda a tutte le versioni)
+# repository-code: https://github.com/<utente>/<repo>

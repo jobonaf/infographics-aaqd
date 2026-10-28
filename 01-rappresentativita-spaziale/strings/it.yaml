@@ -1,0 +1,43 @@
+# Stringhe italiane. Liste = righe già spezzate. Separatore decimale: virgola.
+lang: it
+alt_title: "Rappresentatività spaziale di un punto di campionamento"
+alt_desc: >-
+  Infografica in tre pannelli. 1: il valore centrale C in un punto di campionamento (media annua, misurata o modellata).
+  2: la tolleranza, max(15 % di C; minimo di Allegato I), con due esempi numerici per il PM10.
+  3: l’area di rappresentatività su una mappa di zona sintetica, raffinata escludendo le celle vicine a una strada molto
+  trafficata e quelle con profilo di sorgente diverso.
+title: "Rappresentatività spaziale di un punto di campionamento"
+subtitle: "Dir. (UE) 2024/2881 · Dec. es. (UE) 2026/1208 · applicabile dal 30 giugno 2028"
+title_m: ["Rappresentatività spaziale", "di un punto di campionamento"]
+subtitle_m: ["Dir. (UE) 2024/2881 · Dec. es. (UE) 2026/1208", "applicabile dal 30 giugno 2028"]
+h1: "Il punto"
+h2: "La tolleranza"
+h3: "L’area"
+central_value: "Valore centrale C"
+sampling_point: ["punto di", "campionamento"]
+meas_head: "misure:"
+meas_body: ["media annua", "misurata nel", "punto"]
+model_head: "modelli:"
+model_body: ["media annua", "modellata nel", "punto"]
+other_metrics: "altre metriche solo se motivate"
+via: "misure · modelli · entrambi"
+formula: ["tolleranza = max( 15 % · C ;", "minimo Allegato I )"]
+example: "esempio · PM10 · µg/m³"
+cap1a: "15 % di 20 = 3 > minimo 2"
+cap1b: "intervallo 17 – 23"
+cap2a: "15 % di 10 = 1,5 < minimo 2"
+cap2b: "vale il minimo: 8 – 12"
+road: "strada molto trafficata"
+expert: ["profilo di", "sorgente diverso", "(esperti)"]
+leg_A: ["Stazione A"]
+leg_B: ["Stazione B"]
+leg_excl: ["esclusa", "(raffinamento)"]
+leg_not: ["non", "rappresentata"]
+leg_zone: ["confine", "di zona"]
+leg_station: ["stazione", "di misura"]
+review: ["revisione", "≤ 5 anni"]
+synthetic: "dati sintetici, solo illustrativi"
+refinement: "Raffinamento art. 5(3)-(4)"
+def_bold: "Rappresentatività spaziale (Dir. art. 3):"
+def_l1: "le metriche di qualità dell’aria osservate nel punto sono rappresentative di un’area"
+def_l2: "esplicitamente delimitata, in cui le metriche non differiscono da quelle del punto oltre un livello di tolleranza predefinito."
