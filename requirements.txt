@@ -1,0 +1,3 @@
+numpy
+pyyaml
+cairosvg   # solo per esportare PNG/PDF; l'SVG si genera anche senza
