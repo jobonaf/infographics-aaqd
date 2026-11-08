@@ -1,0 +1,73 @@
+# English strings. Paragraphs (lists) are re-wrapped automatically to the available width.
+# The ESI acronym is not used: the slide speaks of "indicators of the exceedance situation".
+lang: en
+alt_title: "How extensive is an exceedance?"
+alt_desc: >-
+  Infographic in four panels on how an exceedance of an air quality standard is quantified. 1: what is computed, with an
+  invented example: surface, people, roads, vegetation. 2: the five steps: exceedance area, surface,
+  people, roads, vegetation. 3: the sources of uncertainty: resolution of the population
+  map, residents or people present, road network considered. 4: which model to use and what to document.
+title: "How extensive is an exceedance?"
+subtitle: "How an exceedance is quantified · Commission technical support document (April 2025), §3.5 · Dir. (EU) 2024/2881"
+h1: "What is computed"
+h2: "The calculation steps"
+h3: "Sources of uncertainty"
+h4: "Which model"
+map_cap: ["invented example: the red area exceeds the NO2 limit set to protect health"]
+ind:
+  - name: "Surface"
+    value: "3.2 km²"
+    text: ["of the area above the standard"]
+  - name: "People"
+    value: "14 000"
+    text: ["living in the area (if the standard protects health)"]
+  - name: "Roads"
+    value: "5.6 km"
+    text: ["of roads above the standard (if traffic is the cause)"]
+  - name: "Vegetation"
+    value: "not required"
+    text: ["km² of sensitive vegetation (if the standard protects it)"]
+steps:
+  - name: "Exceedance area"
+    tag: "always"
+    text: ["From the model map (reference year) take the zones above the standard (limit value, target value or critical level), without places where compliance is not assessed, such as the carriageway."]
+  - name: "Surface"
+    tag: "always"
+    text: ["With GIS software, in km²."]
+  - name: "People"
+    tag: "health standard"
+    text: ["Overlay the map of residents on the area and add up the inhabitants."]
+  - name: "Roads"
+    tag: "if traffic is the cause"
+    text: ["In street canyons in exceedance, add up the length of the segments: a road is one segment, however many lanes it has."]
+  - name: "Vegetation"
+    tag: "vegetation standard"
+    text: ["Overlay the map of sensitive vegetation and compute the km² inside the area. Exclude areas within 20 km of cities, or within 5 km of other built-up zones, industry and roads with over 50 000 vehicles a day, except vulnerable areas."]
+rows3:
+  - name: "Population map"
+    icon: "grid"
+    text: ["Cells of 0.5 km² or smaller: with larger cells those exposed are underestimated. In canyons the buildings facing the street count."]
+  - name: "Residents or people present?"
+    icon: "people"
+    text: ["Residents are counted, not the whole zone. In city centres many people work, study or seek care without living there: residents may underestimate those exposed."]
+  - name: "Which roads?"
+    icon: "road"
+    text: ["The total depends on the roads considered: a complete, declared network is best. For open roads use the surface."]
+bars: ["main roads only", "every street"]
+bars_cap: "same city, different network: very different totals (sketch)"
+rows4:
+  - name: "Fit for purpose"
+    icon: "check"
+    text: ["One that meets at least the modelling quality objective (MQO)."]
+  - name: "Able to reproduce gradients"
+    icon: "wave"
+    text: ["Where concentrations change a lot from point to point, the model must reproduce these gradients."]
+  - name: "In cities: street canyons"
+    icon: "canyon"
+    text: ["For traffic hotspots, use street canyon models (narrow streets between buildings)."]
+  - name: "Document everything"
+    icon: "doc"
+    text: ["Method and results described in the plan, for transparency and comparability (Annex V, point E)."]
+def_bold: "Quantifying an exceedance:"
+def_l1: "the surface, people, roads and vegetation exposed depend heavily on method and input data."
+def_l2: "That is why fit-for-purpose models and a documented, transparent methodology are needed."

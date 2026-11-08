@@ -1,0 +1,74 @@
+# Stringhe italiane. I paragrafi (liste) vengono ri-spezzati automaticamente in base alla larghezza.
+# La sigla ESI non compare: si parla di «indicatori della situazione di superamento».
+lang: it
+alt_title: "Quanto è esteso un superamento?"
+alt_desc: >-
+  Infografica in quattro pannelli su come si quantifica un superamento di uno standard di qualità dell'aria. 1: che cosa
+  si calcola, con un esempio inventato: superficie, persone, strade, vegetazione. 2: i cinque passi: area di superamento,
+  superficie, persone, strade, vegetazione. 3: le fonti di
+  incertezza: risoluzione della mappa di popolazione, residenti o persone presenti, rete stradale considerata. 4: quale
+  modello usare e che cosa documentare.
+title: "Quanto è esteso un superamento?"
+subtitle: "Come si quantifica un superamento · Documento tecnico di supporto della Commissione (aprile 2025), §3.5 · Dir. (UE) 2024/2881"
+h1: "Che cosa si calcola"
+h2: "I passi del calcolo"
+h3: "Fonti di incertezza"
+h4: "Quale modello"
+map_cap: ["esempio inventato: in rosso l’area che supera il limite di NO2 fissato per la salute"]
+ind:
+  - name: "Superficie"
+    value: "3,2 km²"
+    text: ["dell’area sopra lo standard"]
+  - name: "Persone"
+    value: "14 000"
+    text: ["che abitano nell’area (se lo standard protegge la salute)"]
+  - name: "Strade"
+    value: "5,6 km"
+    text: ["di strade sopra lo standard (se la causa è il traffico)"]
+  - name: "Vegetazione"
+    value: "non richiesta"
+    text: ["km² di vegetazione sensibile (se lo standard la protegge)"]
+steps:
+  - name: "Area di superamento"
+    tag: "sempre"
+    text: ["Dalla mappa del modello (anno di riferimento) prendi le zone sopra lo standard (valore limite, valore obiettivo o livello critico), senza i luoghi dove la conformità non si valuta, come la carreggiata."]
+  - name: "Superficie"
+    tag: "sempre"
+    text: ["Con un software GIS, in km²."]
+  - name: "Persone"
+    tag: "standard per la salute"
+    text: ["Sovrapponi la mappa dei residenti all’area e somma gli abitanti."]
+  - name: "Strade"
+    tag: "se la causa è il traffico"
+    text: ["Nei canyon stradali in superamento somma la lunghezza dei tratti: una strada è un tratto, qualunque sia il numero di corsie."]
+  - name: "Vegetazione"
+    tag: "standard per la vegetazione"
+    text: ["Sovrapponi la mappa della vegetazione sensibile e calcola i km² dentro l’area. Escludi le aree entro 20 km da città, o entro 5 km da altre zone edificate, industrie e strade con oltre 50 000 veicoli al giorno, salvo aree vulnerabili."]
+rows3:
+  - name: "Mappa della popolazione"
+    icon: "grid"
+    text: ["Celle da 0,5 km² o più piccole: con celle più grandi si sottostimano gli esposti. Nei canyon contano gli edifici affacciati."]
+  - name: "Residenti o presenti?"
+    icon: "people"
+    text: ["Si contano i residenti, non tutta la zona. Nei centri città molti lavorano, studiano o si curano senza risiedervi: i residenti possono sottostimare gli esposti."]
+  - name: "Quali strade?"
+    icon: "road"
+    text: ["Il totale dipende dalle strade considerate: meglio una rete completa e dichiarata. Per le strade aperte si usa la superficie."]
+bars: ["solo strade principali", "ogni via"]
+bars_cap: "stessa città, rete diversa: totali molto diversi (schema)"
+rows4:
+  - name: "Adatto allo scopo"
+    icon: "check"
+    text: ["Che rispetti almeno l’obiettivo di qualità della modellistica (MQO)."]
+  - name: "Che riproduca i gradienti"
+    icon: "wave"
+    text: ["Dove le concentrazioni cambiano molto da punto a punto, il modello deve riprodurre questi gradienti."]
+  - name: "In città: canyon stradali"
+    icon: "canyon"
+    text: ["Per i punti caldi da traffico servono modelli per i canyon stradali (strade strette tra edifici)."]
+  - name: "Documentare tutto"
+    icon: "doc"
+    text: ["Metodo e risultati descritti nel piano, per trasparenza e confrontabilità (Allegato V, punto E)."]
+def_bold: "Quantificare un superamento:"
+def_l1: "superficie, persone, strade e vegetazione esposte dipendono molto da metodo e dati di input."
+def_l2: "Per questo servono modelli adatti allo scopo e una metodologia documentata e trasparente."
