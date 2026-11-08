@@ -1,0 +1,65 @@
+# English strings. Paragraphs (lists) are re-wrapped automatically to the available width.
+lang: en
+alt_title: "Emission scenarios of an air quality plan"
+alt_desc: >-
+  Infographic in three panels on the emission scenarios of an air quality plan. 1: the seven scenario types (reference,
+  baseline, maximum feasible reduction, required reduction, zero emission, selected measures, average exposure) with
+  what they show and whether the directive requires them. 2: bar chart with an invented example: concentration as a
+  percentage of the limit in the different scenarios, with the best-to-worst case range for the baseline and for the
+  selected measures. 3: how to handle uncertainty (best and worst case) and the number of calculations (two scenarios
+  are often enough).
+title: "Emission scenarios of an air quality plan"
+subtitle: "Seven scenario types · Commission technical support document (April 2025), §5.2.4 · Dir. (EU) 2024/2881, Annex VIII"
+h1: "Seven scenarios"
+h2: "What changes"
+h3: "Uncertainty and runs"
+legend_req: "required by the directive"
+scen:
+  - name: "Reference"
+    tag: "starting year"
+    req: false
+    text: ["The latest year with an exceedance: the starting point; future comparisons use its meteorology."]
+  - name: "Baseline"
+    tag: "required"
+    req: true
+    text: ["In the projection year (future year of the plan) with no new action (“business as usual”): only measures already adopted. It may already meet the limit."]
+  - name: "Maximum feasible reduction"
+    tag: "if the limit cannot be met in time"
+    req: false
+    text: ["All realistically possible measures within a given time: technical, structural or behavioural. It shows the best achievable."]
+  - name: "Required reduction"
+    tag: "simple cases"
+    req: false
+    text: ["If one local source dominates (e.g. traffic): estimate the emission cut needed, look for measures, and the model checks the limit."]
+  - name: "Zero emission"
+    tag: "not required, useful"
+    req: false
+    text: ["Without the zone’s emissions: shows the most that local reductions can achieve. A regional model is needed; ozone may increase."]
+  - name: "Selected measures"
+    tag: "required, if data exist"
+    req: true
+    text: ["The effect of each measure alone. For reactive pollutants measures interact, so they are also assessed together, as a package."]
+  - name: "Average exposure (AEI)"
+    tag: "required if the reduction obligation is not met"
+    req: true
+    text: ["AEI = average exposure indicator: mean of 3 consecutive years compared with that of 10 years before the projection year."]
+chart_title: "invented example: concentration as % of the limit"
+chart_rows:
+  - ["Reference", 135, null]
+  - ["Baseline", 115, [104, 128]]
+  - ["Selected measures", 88, [78, 99]]
+  - ["Maximum reduction", 72, null]
+  - ["Zero emission", 36, null]
+limit_label: "limit"
+chart_axis: "concentration, % of the limit"
+chart_legend: "range between best and worst case"
+chart_note: ["The distance between “Reference” and “Zero emission” is the part that depends on the zone’s emissions."]
+chart_note2: ["The chosen scenario meets the limit even in the worst case."]
+p3_a_title: "Best and worst case"
+p3_a: ["The directive asks, where possible, for a best, a most likely and a worst case, obtained with sensitivity tests: the efficiency of technologies, implementation, take-up, exemptions and enforcement are varied."]
+p3_b_title: "How many runs?"
+p3_b: ["Calculating every measure and every case leads to too many scenarios. Two are often enough for the projection year: the baseline and the final scenario, which meets the limit. If the limit is not reached, more measures and scenarios are needed. If the AEI is needed, one more is added with the emissions of 10 years before the projection year."]
+boxes: ["Baseline", "Final", ["+ AEI: emissions of 10 years before", "the projection year (if needed)"]]
+def_bold: "Scenario:"
+def_l1: "a calculation with emissions changed from the reference year, with the same meteorology, to see how much the measures are needed and worth."
+def_l2: "The plan shows what happens with no new action (baseline) and with which measures the limit is met."

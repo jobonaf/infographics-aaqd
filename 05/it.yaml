@@ -1,0 +1,65 @@
+# Stringhe italiane. I paragrafi (liste) vengono ri-spezzati automaticamente in base alla larghezza.
+lang: it
+alt_title: "Gli scenari emissivi di un piano per la qualità dell'aria"
+alt_desc: >-
+  Infografica in tre pannelli sugli scenari emissivi di un piano per la qualità dell'aria. 1: i sette tipi di scenario
+  (riferimento, base, massima riduzione fattibile, riduzione necessaria, zero emissioni, misure selezionate, esposizione
+  media) con che cosa mostrano e se la direttiva li richiede. 2: grafico a barre con un esempio inventato: la
+  concentrazione in percentuale del limite nei diversi scenari, con l'intervallo tra caso migliore e peggiore per la
+  base e per le misure selezionate. 3: come gestire l'incertezza (caso migliore e peggiore) e il numero di calcoli
+  (spesso bastano due scenari).
+title: "Gli scenari emissivi di un piano per la qualità dell’aria"
+subtitle: "Sette tipi di scenario · Documento tecnico di supporto della Commissione (aprile 2025), §5.2.4 · Dir. (UE) 2024/2881, Allegato VIII"
+h1: "Sette scenari"
+h2: "Che cosa cambia"
+h3: "Incertezza e calcoli"
+legend_req: "richiesto dalla direttiva"
+scen:
+  - name: "Riferimento (reference)"
+    tag: "anno di partenza"
+    req: false
+    text: ["L’ultimo anno con un superamento: da qui si parte; i confronti futuri usano la sua meteorologia."]
+  - name: "Base (baseline)"
+    tag: "richiesto"
+    req: true
+    text: ["Nell’anno di proiezione (anno futuro del piano) senza nuove azioni («business as usual»): solo misure già adottate. Può già rispettare il limite."]
+  - name: "Massima riduzione fattibile"
+    tag: "se il limite non si raggiunge in tempo"
+    req: false
+    text: ["Tutte le misure realisticamente possibili entro un certo tempo: tecniche, strutturali o comportamentali. Mostra il meglio ottenibile."]
+  - name: "Riduzione necessaria"
+    tag: "casi semplici"
+    req: false
+    text: ["Se domina una sola sorgente locale (es. il traffico): si stima il calo di emissioni necessario, si cercano le misure e il modello verifica il limite."]
+  - name: "Zero emissioni"
+    tag: "non richiesto, utile"
+    req: false
+    text: ["Senza le emissioni della zona: mostra quanto si può ottenere al massimo con riduzioni locali. Serve un modello regionale; l’ozono può aumentare."]
+  - name: "Misure selezionate"
+    tag: "richiesto, se i dati ci sono"
+    req: true
+    text: ["L’effetto di ogni misura da sola. Per gli inquinanti reattivi le misure interagiscono, quindi si valutano anche insieme, come pacchetto."]
+  - name: "Esposizione media (AEI)"
+    tag: "richiesto se l’obbligo di riduzione non è rispettato"
+    req: true
+    text: ["AEI = average exposure indicator: media di 3 anni consecutivi confrontata con quella di 10 anni prima dell’anno di proiezione."]
+chart_title: "esempio inventato: concentrazione in % del limite"
+chart_rows:
+  - ["Riferimento", 135, null]
+  - ["Base", 115, [104, 128]]
+  - ["Misure selezionate", 88, [78, 99]]
+  - ["Massima riduzione", 72, null]
+  - ["Zero emissioni", 36, null]
+limit_label: "limite"
+chart_axis: "concentrazione, % del limite"
+chart_legend: "intervallo tra caso migliore e peggiore"
+chart_note: ["La distanza tra «Riferimento» e «Zero emissioni» è la parte che dipende dalle emissioni della zona."]
+chart_note2: ["Lo scenario scelto rispetta il limite anche nel caso peggiore."]
+p3_a_title: "Caso migliore e peggiore"
+p3_a: ["La direttiva chiede, dove possibile, un caso migliore, uno più probabile e uno peggiore (best, most likely, worst case), ottenuti con test di sensibilità: si fanno variare efficacia delle tecnologie, attuazione, adesione, esenzioni e controlli."]
+p3_b_title: "Quanti calcoli?"
+p3_b: ["Calcolare ogni misura e ogni caso porta a troppi scenari. Spesso ne bastano due per l’anno di proiezione: la base e lo scenario finale, che rispetta il limite. Se il limite non è raggiunto servono altre misure e altri scenari. Se serve l’AEI se ne aggiunge uno con le emissioni di 10 anni prima dell’anno di proiezione."]
+boxes: ["Base", "Finale", ["+ AEI: emissioni di 10 anni prima", "dell’anno di proiezione (se serve)"]]
+def_bold: "Scenario:"
+def_l1: "un calcolo con emissioni modificate rispetto all’anno di riferimento, a parità di meteorologia, per capire quanto servono le misure e quanto valgono."
+def_l2: "Il piano mostra che cosa succede senza nuove azioni (base) e con quali misure si rispetta il limite."
