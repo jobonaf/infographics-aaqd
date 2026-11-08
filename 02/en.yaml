@@ -1,0 +1,54 @@
+# English strings. Lists = pre-broken lines. Decimal separator: dot.
+# Numbers in braces ({LV}, {beta}, {rel}, {p90}) are computed in build.py.
+lang: en
+alt_title: "MQI and MQO: model quality in air quality assessment"
+alt_desc: >-
+  Infographic in four panels. 1: the MQI indicator, the ratio between the root mean square error of model versus
+  measurements and the maximum allowed uncertainty of measurement and model, computed at each station. 2: the allowed
+  uncertainty for PM10 (annual mean) as a function of concentration, for fixed measurements and for the model (fixed
+  measurement uncertainty times the ratio β). 3: the FAIRMODE target plot of the short-term MQO: each station is a point (normalised CRMSE and bias) and the distance
+  from the centre is the MQI; the MQO is fulfilled when at least 90 % of the points fall inside the circle of radius 1,
+  with a synthetic example of twelve stations. 4: with data fusion or
+  assimilation, validation on independent data through the leave-one-out procedure.
+title: "MQI and MQO: model quality in air quality assessment"
+subtitle: "Dir. (EU) 2024/2881, Annex V · Commission technical support document (April 2025), §3.4"
+h1: "The indicator"
+h2: "Allowed uncertainty"
+h3: "The objective"
+h4: "With data fusion"
+leg_obs: "observed"
+leg_mod: "modelled"
+synthetic: "synthetic data, illustrative only"
+rmse_def: ["RMSE: root mean square error", "between model and measurements"]
+u_def: ["U = allowed uncertainty:", "measurement (O) and model (M)"]
+longterm: ["long term: |bias|", "instead of the RMSE"]
+y_title: "uncertainty (µg/m³)"
+x_title: "concentration (µg/m³)"
+lv_label: "LV = {LV}"
+leg_meas: "fixed measurements"
+leg_model: "model"
+cap2a: "PM10, annual mean"
+cap2b: "LV = {LV} µg/m³ · β = {beta}"
+cap2c: ["below the LV the uncertainty is constant,", "above it grows in proportion"]
+beta_lines: ["β for long-term values:"]
+axis_x3: "normalised CRMSE"
+axis_y3: "normalised bias"
+cap3a: "distance from centre = MQI"
+cap3b: "R: correlation · SD: amplitude"
+bias_pos: "bias +"
+bias_neg: "bias −"
+ex3: "example: {p90}"
+count3: "{n} of {N}"
+ok_line1: "MQO fulfilled if"
+b1: ["target plot: short term;", "long term: |bias| only"]
+b2: ["about 10 stations at least", "(FAIRMODE; not in the directive)"]
+excluded: "left out"
+center: ["fused", "field"]
+step1: ["leave one station out", "of the data fusion"]
+step2: ["rebuild the field", "with the other stations"]
+step3: ["compute the MQI at the left-out", "point (independent data)"]
+step4: ["repeat for every station:", "the MQO is judged on these MQIs"]
+alt_subset: ["or: a subset kept aside for", "validation (4D-Var, Kalman)"]
+def_bold: "MQO:"
+def_l1: "the MQI, computed at all available stations, is ≤ 1 for at least 90 % of them, for both short and long term."
+def_l2: "A necessary but not sufficient condition for a model to be fit for purpose."

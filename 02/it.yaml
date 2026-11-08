@@ -1,0 +1,54 @@
+# Stringhe italiane. Liste = righe già spezzate. Separatore decimale: virgola.
+# I numeri tra graffe ({LV}, {beta}, {rel}, {p90}) sono calcolati in build.py.
+lang: it
+alt_title: "MQI e MQO: la qualità dei modelli nella valutazione"
+alt_desc: >-
+  Infografica in quattro pannelli. 1: l'indicatore MQI, rapporto tra l'errore quadratico medio di modello e misure e
+  l'incertezza ammessa di misura e modello, calcolato in ogni stazione. 2: l'incertezza ammessa per il PM10 (media annua)
+  in funzione della concentrazione, per le misure fisse e per il modello (misure fisse moltiplicate per il rapporto β).
+  3: il target plot FAIRMODE dell'MQO a breve termine: ogni stazione è un punto (CRMSE e bias normalizzati) e la distanza
+  dal centro è l'MQI; l'MQO è soddisfatto quando almeno il 90 % dei punti è nel cerchio di raggio 1, con un esempio
+  sintetico di dodici stazioni. 4: con data fusion o assimilazione, la validazione su dati indipendenti
+  con la procedura leave-one-out.
+title: "MQI e MQO: la qualità dei modelli nella valutazione"
+subtitle: "Dir. (UE) 2024/2881, Allegato V · Documento tecnico di supporto della Commissione (aprile 2025), §3.4"
+h1: "L’indicatore"
+h2: "L’incertezza ammessa"
+h3: "L’obiettivo (MQO)"
+h4: "Con data fusion"
+leg_obs: "osservato"
+leg_mod: "modellato"
+synthetic: "dati sintetici, solo illustrativi"
+rmse_def: ["RMSE: errore quadratico medio", "tra modello e misure"]
+u_def: ["U = incertezza ammessa:", "misura (O) e modello (M)"]
+longterm: ["lungo termine: |bias|", "al posto dell’RMSE"]
+y_title: "incertezza (µg/m³)"
+x_title: "concentrazione (µg/m³)"
+lv_label: "VL = {LV}"
+leg_meas: "misure fisse"
+leg_model: "modello"
+cap2a: "PM10, media annua"
+cap2b: "VL = {LV} µg/m³ · β = {beta}"
+cap2c: ["sotto il VL l’incertezza è costante,", "sopra cresce in proporzione"]
+beta_lines: ["β a lungo termine:"]
+axis_x3: "CRMSE normalizzato"
+axis_y3: "bias normalizzato"
+cap3a: "distanza dal centro = MQI"
+cap3b: "R: correlazione · SD: ampiezza"
+bias_pos: "bias +"
+bias_neg: "bias −"
+ex3: "esempio: {p90}"
+count3: "{n} su {N}"
+ok_line1: "MQO soddisfatto se"
+b1: ["target plot: breve termine;", "lungo termine: solo |bias|"]
+b2: ["circa 10 stazioni come minimo", "(FAIRMODE; non è nella direttiva)"]
+excluded: "esclusa"
+center: ["campo", "fuso"]
+step1: ["escludi una stazione", "dalla fusione dei dati"]
+step2: ["ricostruisci il campo", "con le altre stazioni"]
+step3: ["calcola l’MQI nel punto", "escluso (dato indipendente)"]
+step4: ["ripeti per ogni stazione:", "l’MQO si valuta su questi MQI"]
+alt_subset: ["oppure: un sottoinsieme riservato", "alla validazione (4D-Var, Kalman)"]
+def_bold: "MQO:"
+def_l1: "l’MQI, calcolato su tutte le stazioni disponibili, è ≤ 1 per almeno il 90 % di esse, a breve e a lungo termine."
+def_l2: "Condizione necessaria, ma non sufficiente, perché il modello sia adatto allo scopo (fitness-for-purpose)."
