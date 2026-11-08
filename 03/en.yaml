@@ -1,0 +1,64 @@
+# English strings. Lists = pre-broken lines.
+lang: en
+alt_title: "Fitness-for-purpose: when a model is fit for its purpose"
+alt_desc: >-
+  Infographic in three panels. 1: the six fitness-for-purpose criteria of a modelling system and the quality control of
+  the inputs before every simulation. 2: how the principle applies to the five domains of the directive: monitoring
+  network (four levels of method for representativeness areas and the MoNET tool), assessment, source apportionment
+  (green, orange, grey colour code), plans (emulators) and forecasting; source apportionment and plans have stricter
+  conditions. 3: the MQO is necessary but not sufficient; related tools and standards.
+title: "Fitness-for-purpose: when a model is fit for its purpose"
+subtitle: "Commission technical support document (April 2025), §1.5 and §3.3 · Dir. (EU) 2024/2881"
+h1: "Criteria and inputs"
+h2: "Five domains, one principle"
+h3: "Beyond the MQO"
+crit:
+  - ["spatial and temporal resolution", "suited to the application"]
+  - ["relevant physical-chemical", "processes (or adequate data)"]
+  - ["relevant emission sources", "adequately represented"]
+  - ["suitable meteorological data", "to drive the simulations"]
+  - ["adequate validation", "and MQO fulfilled"]
+  - ["system and validation", "well documented"]
+crit_src: "criteria after Denby et al. (EEA, 2011)"
+p1_sub: "Inputs need checking too"
+p1_text: ["emissions, boundary conditions and meteorology are", "checked before every simulation, not just once;", "semi-automated, traceable, reproducible", "pre-processing"]
+net:
+  name: ["Monitoring", "network"]
+  sec: "§2.4"
+  head: "methods for representativeness areas; level 3+ advised:"
+  tiers:
+    - ["1 · expert", "judgement"]
+    - ["2 · proxy data", "or campaigns"]
+    - ["3 · validated", "model"]
+    - ["4 · model +", "measurements"]
+  monet: ["MoNET (FAIRMODE): web app that groups zones by pollution", "regime and flags redundant stations and network gaps."]
+ass:
+  name: ["Assessment"]
+  sec: "§3.3"
+  text: ["reproduce all observed levels, both background and", "traffic, in space and in time"]
+sa:
+  name: ["Source", "apportionment"]
+  sec: "§4.3.1"
+  head: "method suited to scope (assessment or plan) and pollutant:"
+  chips: ["green: suited", "orange: with conditions", "grey: not suited"]
+  example: "e.g. a receptor model is not suited for NO2 (grey)"
+plan:
+  name: ["Plans and", "roadmaps"]
+  sec: "§5.4.1"
+  text: ["link emissions to concentrations for future scenarios, at", "the scale of the exceedance (point, area, region); emulators:", "statistical or ML models that mimic a full model, faster"]
+fc:
+  name: ["Forecasting"]
+  sec: "§6.3"
+  text: ["validate with measurements meeting the data quality rules", "of the directive’s Annex V, over the whole forecast horizon", "(at least 3 days), day by day and over the long term"]
+strict_note: "stricter conditions on emissions and boundary conditions"
+venn_outer: ["fitness-for-", "purpose"]
+venn_inner: "MQO"
+venn_cap: ["MQO: the modelling", "quality objective.", "Necessary, but", "not sufficient"]
+tools:
+  - ["DELTA Tool: FAIRMODE software that computes MQI", "and MQO and produces harmonised diagrams and reports"]
+  - ["FAIRMODE (European forum for air quality modelling)", "also proposes quality control (QA/QC) criteria, checklists and a reporting", "scheme (Thunis and Tarrason, 2020)"]
+  - ["European standard CEN/TC 264/WG43 on model", "quality objectives: in preparation"]
+  - ["the directive requires reporting the model", "description and the MQO calculation"]
+def_bold: "Fitness-for-purpose:"
+def_l1: "there are no good or bad models in absolute terms: quality is measured against the objectives of the specific application."
+def_l2: "Passing the MQO (modelling quality objective) is an essential, but not sufficient, condition."

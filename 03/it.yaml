@@ -1,0 +1,64 @@
+# Stringhe italiane. Liste = righe già spezzate.
+lang: it
+alt_title: "Fitness-for-purpose: quando un modello è adatto allo scopo"
+alt_desc: >-
+  Infografica in tre pannelli. 1: i sei criteri di fitness-for-purpose di un sistema modellistico e il controllo di qualità
+  degli input prima di ogni simulazione. 2: come il principio si declina nei cinque ambiti della direttiva: rete di
+  monitoraggio (quattro livelli di metodo per le aree di rappresentatività e lo strumento MoNET), valutazione, source
+  apportionment (codice colore verde, arancio, grigio), piani (emulatori) e previsioni; source apportionment e piani
+  hanno condizioni più severe. 3: l'MQO è necessario ma non sufficiente; strumenti e norme collegati.
+title: "Fitness-for-purpose: quando un modello è adatto allo scopo"
+subtitle: "Documento tecnico di supporto della Commissione (aprile 2025), §1.5 e §3.3 · Dir. (UE) 2024/2881"
+h1: "Criteri e input"
+h2: "Cinque ambiti, un principio"
+h3: "Oltre l’MQO"
+crit:
+  - ["risoluzione spazio-temporale", "adeguata all’applicazione"]
+  - ["processi fisici e chimici", "pertinenti (o dati adeguati)"]
+  - ["sorgenti di emissione rilevanti", "rappresentate adeguatamente"]
+  - ["dati meteorologici adatti", "a guidare le simulazioni"]
+  - ["validazione adeguata", "e MQO soddisfatto"]
+  - ["sistema e validazione", "ben documentati"]
+crit_src: "criteri secondo Denby et al. (EEA, 2011)"
+p1_sub: "Anche gli input vanno controllati"
+p1_text: ["emissioni, condizioni al contorno e meteorologia si", "verificano prima di ogni simulazione, non una sola", "volta; pre-processing semiautomatico, tracciabile", "e riproducibile"]
+net:
+  name: ["Rete di", "monitoraggio"]
+  sec: "§2.4"
+  head: "metodi per le aree di rappresentatività; consigliato almeno il 3:"
+  tiers:
+    - ["1 · giudizio", "esperto"]
+    - ["2 · dati proxy", "o campagne"]
+    - ["3 · modello", "validato"]
+    - ["4 · modello", "+ misure"]
+  monet: ["MoNET (FAIRMODE): web app che raggruppa le zone per regime", "di inquinamento e segnala stazioni ridondanti o lacune."]
+ass:
+  name: ["Valutazione"]
+  sec: "§3.3"
+  text: ["riprodurre tutti i livelli osservati, sia di fondo sia da", "traffico, nello spazio e nel tempo"]
+sa:
+  name: ["Source", "apportionment"]
+  sec: "§4.3.1"
+  head: "metodo adatto a scopo (valutazione o piano) e inquinante:"
+  chips: ["verde: adatto", "arancio: con condizioni", "grigio: non adatto"]
+  example: "es.: un modello a recettore non è adatto per l’NO2 (grigio)"
+plan:
+  name: ["Piani e", "roadmap"]
+  sec: "§5.4.1"
+  text: ["legare emissioni e concentrazioni per scenari futuri, alla", "scala del superamento (punto, area, regione); emulatori:", "modelli statistici o ML che imitano un modello completo, più veloci"]
+fc:
+  name: ["Previsioni"]
+  sec: "§6.3"
+  text: ["validare con misure conformi ai requisiti di qualità dei dati", "dell’Allegato V della direttiva, su tutto l’orizzonte previsto", "(almeno 3 giorni), giorno per giorno e sul lungo periodo"]
+strict_note: "condizioni più severe su emissioni e condizioni al contorno"
+venn_outer: ["fitness-for-", "purpose"]
+venn_inner: "MQO"
+venn_cap: ["MQO: obiettivo di qualità", "della modellistica.", "Necessario, ma non", "sufficiente"]
+tools:
+  - ["DELTA Tool: software FAIRMODE che calcola MQI e MQO", "e produce diagrammi e report armonizzati"]
+  - ["FAIRMODE (forum europeo di modellazione della qualità", "dell’aria) propone anche criteri di controllo qualità (QA/QC), checklist e schema", "di reporting (Thunis e Tarrason, 2020)"]
+  - ["norma europea CEN/TC 264/WG43 sugli obiettivi di", "qualità dei modelli: in preparazione"]
+  - ["la direttiva chiede di riportare la descrizione del", "modello e il calcolo dell’MQO"]
+def_bold: "Fitness-for-purpose:"
+def_l1: "non esistono modelli buoni o cattivi in assoluto: la qualità si misura rispetto agli obiettivi della specifica applicazione."
+def_l2: "Superare l’MQO (obiettivo di qualità della modellistica) è condizione essenziale, ma non sufficiente."
