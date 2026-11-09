@@ -1,5 +1,7 @@
 # Air quality modelling infographics for the AAQD
 
+[![Validate infographics](https://github.com/jobonaf/infographics-aaqd/actions/workflows/validate.yml/badge.svg)](https://github.com/jobonaf/infographics-aaqd/actions/workflows/validate.yml)
+
 Bilingual Italian/English infographics on air quality modelling under Directive (EU) 2024/2881 (AAQD) and related technical guidance.
 
 The project is organised as a set of 17 code-generated slides for presentations, training, technical working groups and publications. SVG is the primary editable format; PNG and PDF are optional exports.
