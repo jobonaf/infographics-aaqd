@@ -2,18 +2,26 @@ cff-version: 1.2.0
 message: "If you use these infographics, please cite the repository and include the version."
 title: "Infographics on Directive (EU) 2024/2881 on air quality and related implementing acts"
 version: 0.1.0
-# date-released: to be set at the GitHub release
+date-released: 2026-10-28
 authors:
   - family-names: Bonafè
     given-names: Giovanni
     orcid: "https://orcid.org/0000-0002-7815-8866"
-    # affiliation: to be defined (see README, section "Before the first release")
+    affiliation: ARPA FVG
 keywords:
   - air quality
+  - atmospheric modelling
+  - AAQD
   - Directive (EU) 2024/2881
-  - spatial representativeness
-  - infographics
   - FAIRMODE
-# license: to be finalized before the first release (proposed: CC-BY-4.0 for figures and text, MIT for code)
-# doi: add after the first Zenodo archive release (concept DOI, which points to all versions)
+  - infographics
+  - source apportionment
+  - air quality plans
+license: "MIT"
+doi: "10.5281/zenodo.23744350"
 repository-code: "https://github.com/jobonaf/infographics-aaqd"
+abstract: >-
+  Bilingual Italian and English infographics on air quality modelling
+  under Directive (EU) 2024/2881. The project covers monitoring network
+  design, assessment, model quality objectives, source apportionment,
+  air quality plans, emission scenarios and forecasting.
