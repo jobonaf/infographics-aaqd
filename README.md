@@ -1,5 +1,7 @@
 # Air quality modelling infographics for the AAQD
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23744350.svg)](https://doi.org/10.5281/zenodo.23744350)
+
 [![Validate infographics](https://github.com/jobonaf/infographics-aaqd/actions/workflows/validate.yml/badge.svg)](https://github.com/jobonaf/infographics-aaqd/actions/workflows/validate.yml)
 
 Bilingual Italian/English infographics on air quality modelling under Directive (EU) 2024/2881 (AAQD) and related technical guidance.
