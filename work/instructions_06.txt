@@ -1,0 +1,22 @@
+INSTRUCTIONS 06 — Progettazione della rete di monitoraggio
+Leggi prima methods.txt (v3, stessa cartella). Cartella da creare: 06-monitoring-network-design (stem dei file: monitoring_network_design)
+ARCHETIPO: C (mappa schematica con elementi sovrapposti). Riusa il codice mappa di templates/template_map_layers_build.py se il pacchetto e' presente; altrimenti costruiscila con smooth() e sample() di common/layout.py (strade curve, zona irregolare).
+
+MESSAGGIO UNICO
+Dove mettere le stazioni (hotspot e fondo) e quante se ne possono togliere usando i modelli.
+
+SEZIONI DA LEGGERE
+- Cap. 2, soprattutto §2.3 «Network design» (pagine fisiche 36-41: 2.3.1 hotspot p.36, 2.3.2 fondo p.37, 2.3.3 metodi supplementari p.38, 2.3.4 revisione p.40): ruolo del modello per hotspot e fondo, criteri di localizzazione (Allegato IV B-C
+  come citato), esclusione dei luoghi non valutabili, riduzione fino al 50% delle stazioni fisse (art. 9(3): leggi le TRE condizioni
+  esatte), revisione della rete almeno ogni 5 anni con modello o misure indicative (verificare), MoNET (p. 42, §2.4, e descrizioni in 2.3).
+- NON trattare la rappresentatività spaziale (è la slide 5, già fatta): niente SRA, niente discussione su cosa «vedono» le stazioni.
+
+CONTENUTO ESSENZIALE (da riverificare)
+- Mappa schematica di una città con: mappa del modello sullo sfondo (gradiente di concentrazione, rosso dove alto), stazioni esistenti,
+  hotspot da traffico (alto), fondo urbano/rurale (basso).
+- Tre messaggi con icone: «Hotspot: dove il modello dice che la concentrazione è massima» · «Fondo: zone non dominate da una sola sorgente»
+  · «Si possono togliere fino al 50% delle stazioni fisse, a certe condizioni (le TRE da verificare nel testo)».
+- MoNET (se c'è spazio): «raggruppa le zone per regime di inquinamento e segnala stazioni ridondanti e lacune» (spiegare in figura).
+- Revisione: «ogni 5 anni» (icona calendario).
+DA NON MOSTRARE: dettagli dei criteri numerici, Tier (se non spiegabili in 8 parole), SRA.
+BUDGET: ≤ 100 parole. Dichiara «mappa inventata».

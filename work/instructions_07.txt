@@ -1,0 +1,25 @@
+INSTRUCTIONS 07 — Sorgenti naturali, sale e sabbia sulle strade
+Leggi prima methods.txt (v3, stessa cartella). Cartella da creare: 07-natural-sources-sanding-salting (stem dei file: natural_sources_sanding_salting)
+ARCHETIPO: F (albero decisionale).
+
+MESSAGGIO UNICO
+Quando un superamento può essere «sottratto» perché dovuto a sorgenti naturali o al sale/sabbia sulle strade, e come si trattano nelle proiezioni.
+
+SEZIONI DA LEGGERE
+- §3.7 «Natural sources and winter-sanding / winter-salting» (pagine fisiche 57-58): cosa si può sottrarre, come si quantifica,
+  perché la modellistica per sale e sabbia è difficile (fattori di emissione erratici; metodo di riferimento citato).
+- §5.3.4 (p. 92): trattamento nelle proiezioni dei piani.
+Fatti già verificati in §5.3.4 (rileggere per conferma):
+  • le sorgenti naturali si possono sottrarre dai superamenti se serve per rispettare il limite (esempi nel testo: incendi boschivi, spruzzi
+    marini, risospensione e trasporto di particelle naturali da regioni aride, eruzioni, attività sismica e geotermica, vento forte);
+  • sale e sabbia sulle strade (solo PM10) si possono sottrarre se si mostra di aver preso misure ragionevoli;
+  • nelle proiezioni le emissioni di sale e sabbia restano quelle dell'anno di riferimento (se note), salvo riduzioni previste dal piano (allora si quantificano).
+
+LAYOUT PROPOSTO (albero a 3-4 nodi, grande, a sinistra; a destra un riquadro «nei piani»)
+- Nodo 1: «Il superamento ha una causa naturale o è sale/sabbia?» → ramo «naturale» → «si sottrae se serve a rispettare il limite»;
+  ramo «sale/sabbia (PM10)» → nodo 2 «hai preso misure ragionevoli?» → sì: «si sottrae»; no: «resta nel superamento».
+- Riquadro «Nelle proiezioni»: «sale e sabbia: stesse emissioni dell'anno di riferimento, salvo riduzioni previste dal piano».
+- Icone: fuoco, onde (spruzzi), sale sulla strada, polvere.
+DA VERIFICARE: l'obbligo di quantificare e di documentare la sottrazione (§3.7); eventuali condizioni per i valori obiettivo.
+DA NON MOSTRARE: metodi numerici dettagliati, elenco completo delle sorgenti naturali (3-4 esempi bastano).
+BUDGET: ≤ 90 parole.

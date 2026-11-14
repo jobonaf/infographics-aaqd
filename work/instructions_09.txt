@@ -1,0 +1,21 @@
+INSTRUCTIONS 09 — Esposizione e impatto sanitario
+Leggi prima methods.txt (v3, stessa cartella). Cartella da creare: 09-exposure-health-impact (stem dei file: exposure_health_impact)
+ARCHETIPO: D/C ibrido: tre griglie in sequenza («concentrazioni × popolazione = esposizione») e un grafico piccolo.
+
+MESSAGGIO UNICO
+Per stimare l'impatto sulla salute si combinano la mappa delle concentrazioni e quella della popolazione, con funzioni concentrazione-risposta;
+non è obbligatorio per la direttiva ma è l'uso naturale delle mappe modellistiche.
+
+SEZIONI DA LEGGERE: §3.6 «Population exposure and health impact» (pagine fisiche 55-57). Estrai: perché oltre i limiti
+(effetti anche sotto i limiti), metodo (sovrapposizione + funzioni concentrazione-risposta OMS 2021 — verifica la dicitura esatta),
+risoluzione consigliata (nei miei appunti: 1 km² in area urbana, 5-10 km² in area rurale: VERIFICA i valori), cautele (doppio conteggio
+PM2,5 e NO2; gruppi vulnerabili; contributi per sorgente e per scala), questioni aperte (alta risoluzione, canyon, popolazione dinamica).
+
+LAYOUT PROPOSTO
+- Equazione visiva a tutta larghezza: [griglia colorata «concentrazioni»] × [griglia a puntini «popolazione»] → [griglia «esposizione»] → [icona
+  persona/polmone «impatto sulla salute»], con una freccia «funzione concentrazione-risposta».
+- Sotto: tre callout con icona (2-6 parole): «Risoluzione: celle di 1 km² in città, più grandi in campagna (verificare)» ·
+  «Attenzione: non sommare PM2,5 e NO2 (doppio conteggio)» · «Gruppi vulnerabili: bambini, anziani» (verificare che sia nel testo).
+- Esempio inventato (facoltativo): griglia 6×6 con valori; l'esposizione si calcola in build.py.
+DA NON MOSTRARE: formule epidemiologiche, valori di rischio relativo.
+BUDGET: ≤ 90 parole. Spiega «funzione concentrazione-risposta» in una riga.

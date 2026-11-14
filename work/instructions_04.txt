@@ -1,0 +1,20 @@
+INSTRUCTIONS 04 — MQI e MQO (ALLEGGERIMENTO, facoltativo)
+Leggi prima methods.txt (v3, stessa cartella). Cartella: 04-model-quality-mqi-mqo (gia' nel repo con questo nome). Versione attuale: previous/02-mqi-mqo/ (png e strings; vecchio numero), se il pacchetto e' presente. Stem dei file: mqi_mqo.
+ARCHETIPO: D (grafico protagonista) — il target plot FAIRMODE diventa l'elemento grande.
+
+STATO: la slide funziona e il target plot è stato apprezzato; è però ancora «a pannelli» con parecchio testo.
+OBIETTIVO: ridisegnare mantenendo i contenuti verificati (previous/02-mqi-mqo/sources.md) ma con il target plot a ~50% dell'area.
+
+MESSAGGIO UNICO
+L'MQI misura l'errore del modello rispetto all'incertezza ammessa; l'MQO è rispettato se almeno il 90% delle stazioni ha MQI ≤ 1.
+
+SEZIONI: §3.4 (pagine fisiche 47-51; figura 3-2 a p. 48), in particolare 3.4.1-3.4.4 (già lette nelle sessioni precedenti; rileggere solo per verificare).
+LAYOUT PROPOSTO
+- Centro/sinistra: target plot grande (assi CRMSE e bias normalizzati, cerchio MQI=1 e 0,5, 12 punti sintetici, 11 dentro, MQI90 calcolato).
+- Destra: formula visiva MQI = errore ÷ incertezza ammessa (una riga, con i due termini colorati) e una mini-curva dell'incertezza
+  ammessa (PM10 annuo: costante fino al VL, poi proporzionale) come piccolo grafico.
+- Sotto: una riga «con data fusion/assimilazione: validare su stazioni NON usate (leave-one-out)» con icona.
+- Fascia: MQO = MQI al 90° percentile ≤ 1; a breve e lungo termine (annuale: basta il lungo termine).
+DA TENERE: la normalizzazione degli assi del target plot (denominatore dell'MQI del documento, √(U_O²+U_M²); FAIRMODE storico usa 2·RMSU) resta dichiarata ◐ in sources.md; asterisco su β (da confrontare con Allegato V), DELTA allineato (non dire il contrario), numeri inventati dichiarati.
+DA TAGLIARE: dettagli sul numero minimo di stazioni (1 riga al massimo), passi del leave-one-out.
+BUDGET: ≤ 80 parole.

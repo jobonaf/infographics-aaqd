@@ -1,0 +1,123 @@
+INSTRUCTIONS_01.TXT - Slide 1: Il ruolo della modellistica nella AAQD
+Leggere INSIEME a methods.txt (v2). Se un punto qui contraddice methods.txt, vale questo file.
+
+============================================================================================================
+1. IDENTIFICAZIONE
+============================================================================================================
+- Numero e titolo: 01 - "Il ruolo della modellistica nella direttiva sulla qualità dell'aria"
+  EN: "The role of modelling in the Ambient Air Quality Directive"
+- Cartella: 01-role-of-modelling/      Stem dei file in out/: role_of_modelling   (role_of_modelling_it.svg ecc.)
+- Stato: NUOVA. Dipendenze: nessuna (e' la slide di apertura della serie).
+- Riferimento nel documento tecnico: §1.3 (pagine fisiche 14-16; figura 1-1 a p. 16). Piano originale: PROJECT.md,
+  slide 1 (usa la sigla ESI: NON usarla).
+
+============================================================================================================
+2. MESSAGGIO UNICO
+============================================================================================================
+"La modellistica serve in cinque ambiti della direttiva e li collega lungo il percorso di un superamento:
+dalla rete di misura al piano."
+Il lettore deve capire (a) quali sono i cinque ambiti, (b) in quale ordine si incontrano quando c'e' un superamento,
+(c) che tutto rimanda alla stessa catena di dati e modelli. Gli atti di esecuzione e la scadenza dei due anni sono un
+elemento SECONDARIO (un riquadro piccolo, max 30 parole).
+
+============================================================================================================
+3. ARCHETIPO E SCHEMA GRAFICO (proposta di partenza: l'assistente puo' migliorarla, spiegando perche')
+============================================================================================================
+Archetipo G (hub), con un anello che mostra il percorso del superamento. Non usare 3-4 colonne di testo.
+- Grafico principale (circa il 62% della larghezza, alto quanto l'area figura): al centro un cerchio "Modellistica" +
+  "nella direttiva (AAQD)"; attorno, a pentagono, cinque nodi (icona in cerchio tinta + nome + una riga):
+    1 Rete di monitoraggio  icona pin    "dove mettere le stazioni e quale area rappresentano"
+    2 Valutazione           icona area   "livelli di concentrazione e quanto e' esteso un superamento"
+    3 Source apportionment  icona source "da quali sorgenti viene l'inquinamento e cosa cambia riducendole"
+    4 Piani                 icona doc    "quali misure e quanto valgono"
+    5 Previsioni            icona warn   "avvisi al pubblico e avvio dei piani a breve termine"
+- Percorso del superamento = frecce spesse TEAL_D che uniscono i nodi 2 -> 3 -> 4 (etichetta sull'anello:
+  "percorso di un superamento"), con:
+    * un punto di partenza sul nodo 2: "parte da un superamento osservato" (misure, oppure modelli o misure indicative);
+    * una freccia di ritorno 3 -> 2 (ocra): "rafforza la valutazione e gli inventari delle emissioni";
+    * una spunta (icona check) sul nodo 4: "verifica: limiti rispettati in ogni stazione e in tutta la zona".
+  I nodi 1 e 5 stanno fuori dal percorso (collegati al centro da una linea sottile): la rete precede, le previsioni sono
+  il canale a breve termine.
+- Riquadro secondario a destra (circa il 38%): titolo "Atti di esecuzione della Commissione" e sei righe da 3-5 parole
+  (articolo in grassetto):
+    8(7a) modelli e misure indicative   |  8(7b) area rappresentata da una stazione  |  16(4) sorgenti naturali
+    17(4) sale e sabbia sulle strade    |  18(5) proiezioni per le proroghe          |  23(5) reporting
+  Sotto, una regola in ocra (max 25 parole): "Due anni dopo l'adozione del primo atto, 8(7a): modelli o misure indicative
+  obbligatori, oltre alle misure fisse, nelle zone sopra valori limite o obiettivo (art. 8(3))."
+- Fascia in basso (max 150 caratteri, bold compreso): "La modellistica..." es. "In ogni ambito la modellistica lega
+  emissioni, concentrazioni e decisioni; dopo un superamento li percorre in sequenza fino al piano."
+- Parole totali: circa 110-130. Nessun paragrafo.
+
+============================================================================================================
+4. COSA LEGGERE (usare le pagine FISICHE; comando in methods.txt, sez. 2)
+============================================================================================================
+Pagine 14-16 (1.2 destinatari, 1.3 ambiti applicativi, atti di esecuzione, flusso di gestione di un superamento).
+Aprire come immagine la p. 16 (figura 1-1) per verificare l'ordine dei quattro passi e la freccia di ritorno.
+Non servono altre pagine.
+
+============================================================================================================
+5. FATTI DA RENDERE (gia' verificati sul testo dal richiedente; l'assistente li ricontrolla nelle pagine indicate)
+============================================================================================================
+Cinque ambiti (p. 14-15, §1.3):
+  - rete: valutare la rappresentativita' spaziale dei punti di campionamento e progettare la rete, anche spostando i punti;
+  - valutazione: stimare i livelli di concentrazione, comprese le situazioni di superamento, il contributo delle
+    sorgenti naturali e quello della risospensione dopo sale/sabbia invernali sulle strade;
+  - source apportionment: stimare il contributo delle sorgenti rilevanti e l'impatto potenziale della loro riduzione,
+    punto di partenza per la pianificazione;
+  - piani: contribuire a scegliere le misure e a quantificare l'impatto del piano, per mitigare un superamento nel tempo
+    piu' breve possibile;
+  - previsioni a breve termine: avvisare il pubblico di episodi e superamenti delle soglie di informazione e allarme;
+    la previsione e' anche l'innesco delle misure dei piani d'azione a breve termine.
+Percorso di un superamento (p. 16, fig. 1-1): 1 osservazione del superamento (da misure nei punti di campionamento, oppure
+da modelli o misure indicative); 2 stima delle indicazioni sulla gravita' (area, popolazione, lunghezza delle strade,
+ecosistemi); 3 source apportionment (contributo delle sorgenti e impatto potenziale per categoria); 4 pianificazione
+(misure nel tempo piu' breve; impatto del piano). Il source apportionment alimenta anche la fase di valutazione, per
+rafforzare i modelli di valutazione e gli inventari delle emissioni. Alla fine si verifica il rispetto in ogni punto di
+campionamento e, con gli indicatori futuri, in tutta la zona.
+Atti di esecuzione (p. 15): 8(7a) applicazioni modellistiche e come usare modelli e misure indicative, e come verificare i
+superamenti; 8(7b) rappresentativita' spaziale dei punti di campionamento; 16(4) dimostrazione e sottrazione dei
+superamenti dovuti a sorgenti naturali; 17(4) contributi della risospensione dopo sale/sabbia; 18(5) proiezioni per le
+proroghe; 23(5) reporting alla Commissione. Dopo l'adozione dell'atto 8(7a), per le zone sopra valori limite o obiettivo
+(Allegato I), per art. 8(3) modelli o misure indicative sono usati IN AGGIUNTA alle misure fisse DA DUE ANNI DOPO
+l'adozione; prima, facoltativi (anche sopra la soglia di valutazione).
+Le correzioni di note-copilot.md per questa slide (aggiungere 8(7b), 17(4), 23(5); "due anni dopo l'adozione"; verifica
+finale nell'intera zona) sono tutte confermate dal testo: adottarle.
+
+============================================================================================================
+6. COSA OMETTERE (va in sources.md, sezione "non rappresentati")
+============================================================================================================
+Il quadro del reporting alla Commissione (IPR 2011) e i suoi dettagli; la data prevista dell'atto 8(7a) (11 giugno
+2026, scritta nel documento del 2025): NON dire se e' stato adottato; le famiglie di modelli e le scale (slide 2); gli
+inquinanti trattati; il pubblico di destinazione del documento; i dettagli di ciascun capitolo.
+
+============================================================================================================
+7. TERMINI DA SPIEGARE IN FIGURA
+============================================================================================================
+AAQD = direttiva (UE) 2024/2881 sulla qualita' dell'aria ambiente (nel sottotitolo o nel centro del grafico);
+source apportionment = "da quali sorgenti viene l'inquinamento" (tenere il termine inglese, spiegato);
+misure indicative = misure meno accurate di quelle fisse (solo se serve: altrimenti "modelli o misure indicative" va bene);
+soglie di informazione e allarme = livelli oltre i quali si avvisa il pubblico (una riga, se compaiono).
+Termini inglesi tra parentesi nella versione italiana: SOLO "source apportionment" (gia' inglese). Nessun altro.
+
+============================================================================================================
+8. SOTTOTITOLO, FASCIA E TESTO ALTERNATIVO
+============================================================================================================
+Sottotitolo IT: "Cinque ambiti, un percorso · Documento tecnico di supporto della Commissione (aprile 2025), §1.3 · Dir. (UE) 2024/2881"
+Sottotitolo EN: "Five domains, one pathway · Commission technical support document (April 2025), §1.3 · Dir. (EU) 2024/2881"
+Testo alternativo (desc): descrivere cinque nodi, il percorso 2-3-4 con il ritorno 3-2, la spunta finale e il riquadro degli atti.
+
+============================================================================================================
+9. SOURCES.MD E CONTROLLI SPECIFICI
+============================================================================================================
+Righe minime in sources.md (stato ✔ salvo diversa indicazione): cinque ambiti; percorso e freccia di ritorno (fig. 1-1);
+verifica finale in tutta la zona; elenco articoli degli atti di esecuzione; regola dei due anni (art. 8(3)); righe ◐ per le
+rese sintetiche ("rete" = rappresentativita' + progettazione; "previsioni" = avvisi + innesco dei piani a breve termine).
+Controlli specifici: (1) nessun riferimento alla sigla ESI; (2) gli articoli sono scritti esattamente come nel documento
+(8(7a), 8(7b), 16(4), 17(4), 18(5), 23(5), 8(3)); (3) nessuna data dell'atto 8(7a); (4) il percorso ha UNA sola freccia di
+ritorno (3 -> 2); (5) la rete e le previsioni non sono messe "dentro" il percorso.
+
+============================================================================================================
+10. CONSEGNA
+============================================================================================================
+/mnt/user-data/outputs/01-role-of-modelling/ con build.py, sources.md, strings/it.yaml, strings/en.yaml, out/*.
+present_files: PNG e SVG IT, PNG EN, build.py, i due YAML, sources.md. Risposta breve (vedi methods.txt, sez. 9).

@@ -1,0 +1,22 @@
+INSTRUCTIONS 08 — Quanto è esteso un superamento (DA RIFARE)
+Leggi prima methods.txt (v3, stessa cartella). Cartella: 08-exceedance-situation-indicators (gia' nel repo con questo nome; consegnare la nuova versione in outputs). Versione precedente: previous/04-esi/ (strings, sources.md, png) se il pacchetto e' presente. Stem dei file: exceedance_extent.
+ARCHETIPO: C (mappa a strati). Modello di codice: templates/template_map_layers_build.py (draw_map: strade curve, area lungo le strade, edifici) se il pacchetto e' presente; altrimenti smooth() e sample() di common/layout.py.
+
+PROBLEMA: la versione attuale è a 4 pannelli con troppo testo; la mappa è piccola.
+Decisioni dell'utente da rispettare: NON usare la sigla ESI (titolo «Quanto è esteso un superamento?»); NON parlare di SRA (controverso);
+i titoli dei passi sono NOMI; mappa realistica, non schiacciata.
+
+MESSAGGIO UNICO
+Un superamento si quantifica con quattro numeri, calcolati sovrapponendo strati alla mappa dell'area sopra lo standard: superficie, persone, strade, vegetazione.
+
+SEZIONI DA LEGGERE: §3.5 (pagine fisiche 52-55), soprattutto 3.5.1-3.5.2; contenuti già verificati in previous/04-esi/sources.md (✔).
+
+LAYOUT PROPOSTO
+- Elemento grande (≥ 55% dell'area): la mappa. Un selettore di strati a destra (chip): «1 Area» → «2 Superficie» → «3 Persone» → «4 Strade» → «5 Vegetazione»,
+  con piccola icona; a ogni chip una condizione in 2-4 parole («standard per la salute», «se la causa è il traffico», «standard per la vegetazione»).
+- Sulla mappa: l'area in rosso lungo le strade; tre callout numerici sulla mappa (esempio inventato: 3,2 km², 14 000 persone, 5,6 km di strade; vegetazione «non richiesta»).
+- Sotto o a lato, tre callout «che cosa cambia il numero»: celle di popolazione ≤ 0,5 km² · residenti oppure presenti · quali strade si contano.
+- Una riga: «modello adatto allo scopo (rispetta almeno l'MQO), documentato nel piano».
+- «standard» spiegato in una riga (valore limite, valore obiettivo, livello critico).
+DA TAGLIARE: esclusioni 20 km / 5 km / 50 000 veicoli (solo in sources.md), dettagli sul canyon, «dati assimilati».
+BUDGET: ≤ 110 parole. Dichiara «esempio inventato» e che la mappa è schematica.

@@ -1,0 +1,25 @@
+INSTRUCTIONS 02 — Anatomia di un sistema modellistico
+Leggi prima methods.txt (v3, stessa cartella). Cartella da creare: 02-modelling-system-anatomy (stem dei file: modelling_system_anatomy)
+ARCHETIPO: H (anatomia con callout) con una sezione «matrioska» delle scale.
+
+MESSAGGIO UNICO
+Un sistema modellistico è: modello + input (emissioni, meteorologia, condizioni al contorno/fondo) + scala/risoluzione; a ogni scala
+corrisponde una catena modellistica diversa, e i dati di misura possono essere combinati (data fusion, assimilazione).
+
+SEZIONI DA LEGGERE
+- §1.4 «Features of modelling systems» (pagine fisiche 17-23: 1.4.1 p.18, 1.4.2 p.18, 1.4.3 p.20, 1.4.4 p.21, 1.4.5 p.22, 1.4.6 p.22, 1.4.7 p.23):
+  tipi di modello (deterministici e data-driven), risoluzione temporale e spaziale, input (emissioni, meteo, condizioni al contorno),
+  catene modellistiche per scala, data fusion / assimilazione (offline, online).
+
+CONTENUTO ESSENZIALE (da riverificare nel testo, soprattutto i numeri)
+- Schema a blocchi: [Emissioni] [Meteorologia] [Condizioni al contorno / fondo] → [Modello] → [Concentrazioni], con [Misure] che
+  rientrano tramite data fusion/assimilazione (freccia di ritorno).
+- Scale a riquadri annidati (matrioska): regionale/globale ~50–1 km · urbana ~3 km–100 m · locale ~100–10 m · microscala.
+  Verifica i valori esatti nella tabella/figura del documento.
+- Tipi di modello: deterministico (processi fisico-chimici) contro data-driven (statistico, machine learning): due icone.
+- Risoluzione: nota in una riga su perché serve una risoluzione adeguata (es. NO2 vicino alle strade contro PM2,5 regionale).
+
+DA NON MOSTRARE: elenchi di nomi di modelli, dettagli dei metodi di assimilazione.
+ELEMENTI GRAFICI: diagramma a blocchi con frecce grandi; matrioska in alto a destra; callout numerati 1-4.
+BUDGET: ≤ 100 parole. Spiega «data fusion» e «assimilazione» in 6-8 parole ciascuno.
+LEGAMI: la slide 3 (fitness-for-purpose) riprende i criteri sulla qualità; qui non parlare di validazione.
