@@ -1,0 +1,44 @@
+# English strings (version 2, "timeline" archetype): short labels, no paragraphs.
+lang: en
+alt_title: "From assessment to the plan: timing and steps"
+alt_desc: >-
+  Infographic with a timeline. Top, two tracks: the plan (exceedance recorded in year Y, plan adopted by Y+2, end of the
+  exceedance by the end of Y+4, with an example 2027, 2029, 2031; plan updated if not enough; reporting within two
+  months) and the roadmap (2026-2030: exceedance expected of values to be met in 2030, roadmap within two years of the
+  exceedance, last date to ask for a postponement 31 December 2028). Bottom: the five steps to build a plan, what the
+  plan must say and cooperation between States.
+title: "From assessment to the plan: timing and steps"
+subtitle: "Commission technical support document (April 2025), §5.1 and §5.2 · Dir. (EU) 2024/2881, Arts. 18, 19 and 21"
+plan_lbl: "PLAN"
+road_lbl: "ROADMAP"
+period: "exceedance period: 4 years at most"
+markers:
+  - ["Y", ["exceedance", "recorded"], "e.g. 2027"]
+  - ["Y + 2", ["plan adopted,", "at the latest"], "e.g. 2029"]
+  - ["end of Y + 4", ["end of the exceedance,", "at the latest"], "e.g. 2031"]
+report: "reporting within 2 months"
+loop: ["if not enough:", "updated plan"]
+road_bar: "exceedance expected of values to be met in 2030"
+flag: ["31 Dec 2028: last date", "to ask for a postponement"]
+road_rule: ["roadmap within 2 years", "of the exceedance"]
+road_end: ["deadline", "for the values"]
+steps_h: "Five steps"
+steps:
+  - ["Assessment", "Where, how much, by whom?"]
+  - ["Screening", "Which sources matter?"]
+  - ["Measures", "What can be done?"]
+  - ["Scenarios", "Enough? By when?"]
+  - ["Adoption", "Consultation, reporting"]
+say_h: "The plan must say"
+say:
+  - ["where", "points in exceedance", "pin"]
+  - ["how much", "km², people exposed", "area"]
+  - ["from where", "sources, contributions", "source"]
+  - ["which measures", "timetable, who", "gear"]
+  - ["baseline", "with no new action", "baseline"]
+  - ["uncertainty", "best and worst case", "question"]
+coop_h: "Several States"
+coop: ["If the pollution comes", "from another State:", "they cooperate (Art. 21),", "reply within 3 months"]
+def_bold: "Plan and roadmap:"
+def_l1: "say which measures, by when, to meet the limits where they are exceeded, or expected to be in 2030."
+def_l2: "They start from the assessment and the source apportionment; scenarios show whether the measures are enough."
