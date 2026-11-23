@@ -1,0 +1,61 @@
+INSTRUCTIONS 16 — Sistemi di previsione (dalla previsione europea a quella locale)
+Leggi prima methods.txt (v3, stessa cartella). Cartella da creare: 16-forecasting-systems (stem dei file: forecasting_systems)
+ARCHETIPO: B (flusso a livelli: dalla scala europea alla scala locale). Funzioni utili di common/layout.py: chevron, card, circ_icon, pill, arrow.
+
+MESSAGGIO UNICO
+Una previsione adatta alla direttiva si costruisce a livelli: si parte da CAMS (europeo) e si scende di scala solo quanto serve; per le soglie di
+informazione e allarme bastano superamenti previsti su almeno 100 km², non i punti caldi.
+
+PAGINE DA LEGGERE (pagine fisiche del PDF)
+- §6.1 obblighi, p. 96-97 (figura 6-1 a p. 97: guardala come immagine); §6.2 metodo, p. 97-103 (6.2.1 CAMS p. 98-99; 6.2.2 sistema nazionale o locale
+  p. 99-102; 6.2.3 incertezza p. 102-103); §6.3 verifica e fitness-for-purpose, p. 103-104 (MQIf, MQOf, modello di persistenza).
+- NON servono §6.4 e §6.5 (sono la slide 17).
+
+CONTENUTO ESSENZIALE
+- Tre livelli in verticale o in orizzontale, ordinati dalla scala larga alla locale, ciascuno con icona e 2-4 etichette brevi:
+  1 CAMS regionale (servizio europeo Copernicus per l'atmosfera): insieme di 11 modelli; 4 giorni (96 ore); risoluzione ~10 km; dati liberi.
+  2 CAMS per le citta' e versioni ridotte di scala nazionali: correzione statistica sulla stazione (vale per il punto di misura: per l'allarme serve capire che
+    area rappresenta); riduzione di scala nazionale di CAMS, dove esiste.
+  3 Sistema nazionale o locale: tre famiglie: statistico (serve una serie storica; va bene se la stazione rappresenta oltre 100 km²), deterministico
+    (i modelli gia' usati per valutazione e piani), ibrido o con apprendimento automatico (modello piu' correzione statistica).
+- Fascia di requisito, a fianco dei livelli (icona del quadrato 10 × 10 km): «Soglie di informazione e allarme: stazioni rappresentative della zona o di almeno
+  100 km² (la minore) → la previsione deve cogliere superamenti su quella scala, non punti caldi o canyon stradali».
+- Che cosa deve uscire (riga di 4 pillole): orario · 3 giorni · µg/m³ · per citta' o regione (con il responsabile dei piani a breve termine).
+- Incertezza e verifica (una striscia in basso, 3 elementi): da dove viene (meteo, emissioni storiche e profili, modello) → come si riduce (calibrazione additiva o
+  moltiplicativa) → come si verifica (MQIf/MQOf: come l'MQO, ma per le previsioni, contro un modello di persistenza; verifica giorno per giorno e di lungo periodo).
+
+FATTI VERIFICATI NEL TESTO (p. 96-103; ricontrolla; per §6.3 leggi tu le p. 103-104 e riferisci)
+- Art. 15 e Allegato X, punti 2-3: sistemi di previsione, «ove appropriato», usati in modo operativo per prevedere superamenti delle soglie di informazione e
+  allarme per SO2, NO2, PM2,5, PM10 e ozono; informare il pubblico nel tempo piu' breve; se c'e' rischio di superare la soglia di allarme: piani a breve termine (art. 20).
+- Le soglie sono definite per stazioni rappresentative dell'intera zona o di un'area di almeno 100 km², la minore delle due.
+- Allegato X, punto 2(b): la previsione per il pomeriggio o i giorni successivi indica l'area geografica attesa del superamento e i cambiamenti attesi
+  (miglioramento, stabilita', peggioramento) con i motivi.
+- CAMS: previsioni orarie europee dal 2015; 4 giorni; mediana di 11 modelli; ~10 km (0,1 gradi); inquinanti O3, NO2, SO2, PM10, PM2,5; dati liberi
+  nell'archivio dati Copernicus. 10 km non bastano in generale per il livello urbano e locale (niente punti caldi).
+- Statistici: regressione, serie storiche necessarie; deterministici: da gaussiani a modelli tridimensionali; apprendimento automatico: spesso dentro un sistema
+  deterministico; sensori a basso costo: non sono metodo di riferimento ma possono aiutare; ibridi: modello + correzione statistica (MOS) o apprendimento automatico.
+- Meteo: dati da centri internazionali o servizi meteo nazionali (modelli meteorologici oggi a 1-4 km). Emissioni: medie annuali con profili temporali; alternative
+  top-down; emissioni dinamiche (es. riscaldamento dipendente dalla temperatura) possono migliorare ma aggiungono ipotesi.
+- Condizioni iniziali: errori iniziali si propagano; per i modelli complessi l'alternativa consigliata e' usare la propria previsione del giorno prima; condizioni al
+  contorno: evitare il doppio conteggio delle emissioni.
+- Output minimo: orario; orizzonte consigliato 3 giorni; µg/m³; per unita' amministrative (citta', regioni), perche' puo' innescare i piani a breve termine.
+- Incertezza: meteorologia, emissioni (storiche, profili temporali, distribuzione spaziale, biogeniche), modello; riduzione con calibrazione.
+
+DA NON MOSTRARE (in sources.md come «non rappresentati»)
+L'indice di qualita' dell'aria (non richiesto), tutti i dettagli dei riquadri CAMS, le sigle ECMWF, NCEP, MOS (spiegare solo «correzione statistica»), LifeREMY,
+HERMES, SMOKE, EMEP; le tabelle dei requisiti di risoluzione; le sezioni 6.4 e 6.5 (slide 17); qualsiasi riferimento a SRA per l'area di superamento (nel
+testo le aree di rappresentativita' servono a verificare i 100 km² del modello statistico: NON rappresentarlo).
+
+SIGLE E TERMINI DA SPIEGARE
+CAMS (servizio Copernicus per l'atmosfera); «insieme di modelli» (ensemble) = la previsione e' la mediana di piu' modelli; MQIf/MQOf = indicatore e obiettivo di qualita'
+per le previsioni (spiegati in 6-8 parole); modello di persistenza = «domani come oggi». Termini inglesi tra parentesi: SOLO «ensemble» se serve.
+
+ELEMENTI GRAFICI SUGGERITI: tre livelli come tre fasce impilate o tre chevron larghi con una freccia «scala: Europa → citta'» sul lato; quadrato «100 km²» con
+il segno «non serve» sugli hotspot; pillole per l'output; striscia di verifica con tre piccoli passi. BUDGET: ≤ 110 parole.
+Sottotitolo IT: «Dalla previsione europea a quella locale · Documento tecnico di supporto della Commissione (aprile 2025), §6.1-6.3 · Dir. (UE) 2024/2881, art. 15 e Allegato X».
+FASCIA (≤ 150 caratteri): «Per prevedere i superamenti di soglia non servono punti caldi: basta cogliere quelli di almeno 100 km², con un sistema costruito per livelli.»
+LEGAMI: slide 17 (procedura per un sistema robusto e piani a breve termine, art. 20); slide 4 (MQO per la valutazione: qui versione per le previsioni).
+SOURCES.MD (minimo): obblighi e soglie ✔ (p. 96-97); 100 km² ✔ (p. 97); CAMS (11 modelli, 96 ore, 10 km) ✔ (p. 98); famiglie di metodi ✔ (p. 99-100); input,
+dominio e risoluzione ✔ (p. 100-101); condizioni iniziali e al contorno ✔ (p. 101); output minimo ✔ (p. 101-102); incertezza e calibrazione ✔ (p. 102-103); verifica
+MQIf/MQOf e persistenza (p. 103-104) ✔ o ✖ secondo quanto riesci a leggere; rese sintetiche dei livelli ◐.
+CONTROLLI: nessun hotspot nella mappa dei requisiti; il quadrato dei 100 km² e' disegnato come schema; i tre livelli sono ordinati per scala; ogni sigla spiegata.

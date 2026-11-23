@@ -1,0 +1,55 @@
+INSTRUCTIONS 15 — Proiezioni: ogni scelta sposta il risultato (RIFACIMENTO)
+Leggi prima methods.txt (v3, stessa cartella). Cartella: 15-projections (stem dei file: projections). La versione attuale e' nello zip del pacchetto (repo/15-projections/: build.py, strings,
+sources.md): serve solo come riferimento per le righe di sources.md gia' verificate; il suo difetto e' il TROPPO TESTO (3 pannelli fitti). Rifare da zero con un archetipo diverso.
+ARCHETIPO: E (matrice con segni ✓/✗) + D (grafico a barre) + una catena di cinque chevron sotto. Modello di codice facoltativo: optional/template_chart_build.py (barre con valori calcolati).
+
+MESSAGGIO UNICO
+Per stimare le concentrazioni in un anno futuro (anno di proiezione) si fanno scelte pratiche, e ognuna sposta il risultato: la meteorologia da usare e come correggere il bias del modello sono le piu'
+visibili; in tutto sono CINQUE le incertezze da controllare e dichiarare.
+
+PAGINE DA LEGGERE (pagine fisiche del PDF)
+§5.3 p. 89-94: 5.3.2 fondo e trend p. 89-91; 5.3.3 meteorologia p. 91-92 (quattro opzioni; caso dell'esposizione media); 5.3.5 correzione del bias p. 92-94 (figura 5-2: guardala come immagine);
+§5.4 p. 94-95: 5.4.2 le cinque incertezze p. 94-95; 5.4.3 sensibilita' dinamica p. 95. Non servono §5.3.1 e §5.3.4 (sorgenti naturali: slide 7).
+
+STRUTTURA DELLA SLIDE
+1 In alto a sinistra (circa 45% dell'area figura): MATRICE «quale meteorologia?» con 4 righe (opzioni) e 3 colonne di segni ✓/✗ (SOLO dove il testo lo afferma: nessun punteggio inventato):
+   Anno di riferimento: confronto diretto con il riferimento ✓ · meno calcoli ✓ · consigliata (pillola)
+   Ultimi 3-5 anni (media, anno migliore, peggiore): stima piu' robusta ✓ (le misure devono valere in tutti gli anni) · piu' calcoli ✗
+   Un anno rappresentativo (scelto anche con i dati di misura): si perde il legame con il riferimento ✗
+   Dati meteo statistici: per modelli di aree piccole (una sola etichetta, senza segni)
+   Sotto la matrice, un riquadro ocra: «Esposizione media: stesso meteo nell'anno di proiezione (es. 2030) e 10 anni prima (es. 2020), su 3 anni consecutivi».
+2 In alto a destra (circa 50%): GRAFICO A BARRE «correggere il bias» con esempio inventato CALCOLATO nel codice (µg/m³): fondo 8 + fonte locale 7 = modello 15; misure 20 (il modello sottostima di 5, il 25 %: stesso
+   rapporto dell'esempio del documento); proiezione senza correzione: fondo −10 % e fonte locale −40 % = 11,4; con correzione assoluta (+5) = 16,4; relativa (×1,33) = 15,2; combinata (3 al fondo in modo assoluto,
+   2 alla fonte locale in modo relativo) = 15,6. Segmenti colorati: fondo grigio, fonte locale TEAL, correzione ocra; valori all'inizio delle barre. Tre righe sotto il grafico, una per metodo (≤ 10 parole): assoluta
+   «per un fondo sbagliato o fonti ignote»; relativa «per fonti modellate che le misure riducono»; combinata «relativa per le fonti, assoluta per il fondo». Dichiarare «esempio inventato».
+3 In basso: catena di 5 chevron «Le cinque incertezze» (emissioni future → fondo → meteorologia → correzione del bias → sensibilita' dinamica) con una riga di ≤ 6 parole sotto ciascuno:
+   emissioni future «caso migliore e peggiore» · fondo «dati europei pronti (IIASA, CAMS)» · meteorologia «vedi la matrice» · correzione del bias «vedi il grafico» ·
+   sensibilita' dinamica «prova con trend storici e con DELTA». I chevron 3 e 4 si collegano visivamente alla matrice e al grafico (linee sottili).
+4 Fascia in basso (≤ 150 caratteri): «Cinque incertezze: emissioni future, fondo, meteorologia, correzione del bias, sensibilità dinamica: da controllare e, dove possibile, quantificare.»
+BUDGET: ≤ 120 parole in tutto. Sottotitolo IT: «Meteorologia e correzione del bias · Documento tecnico di supporto della Commissione (aprile 2025), §5.3-5.4 · Dir. (UE) 2024/2881, Allegato VIII».
+
+FATTI VERIFICATI NEL TESTO (ricontrolla; usa gli stessi valori dell'esempio)
+- Meteo (p. 91-92): non si puo' prevedere, si sceglie; opzione 1 anno di riferimento: confronto diretto con le concentrazioni di riferimento, meno risorse, collegamento diretto con la correzione del bias,
+  consigliata, da verificare la rappresentativita'; opzione 2 ultimi 3-5 anni (media, migliore, peggiore): piu' completa e robusta, piu' calcoli; opzione 3 un anno rappresentativo (anche con dati di misura): si perde il
+  legame; opzione 4 dati meteo statistici (modelli su aree limitate, es. fluidodinamici o gaussiani).
+- AEI: 3 anni consecutivi di meteo per l'anno di proiezione e per i 10 anni prima (esempio del documento: 2030 e 2020); conta soprattutto la variazione relativa.
+- Bias (p. 92-94): cause diverse -> metodi: differenza assoluta (fondo o fonti ignote), relativa (fonti modellate, simile al riscalare le emissioni), combinata; si puo' anche non correggere e giudicare a parole.
+  Esempio di fig. 5-2: modello 25 % (5 µg/m³) sotto le misure; i metodi danno risultati diversi, in genere migliori di nessuna correzione.
+- Cinque incertezze (p. 94-95; Allegato VIII, A, punto 8(f) chiede informazioni dove possibile): emissioni future, selezione dei dati meteo, scelte sulla correzione del bias, scenari per trasporto a lunga distanza e fondo,
+  sensibilita' dinamica del modello. Sensibilita' dinamica (p. 95): andare bene oggi non garantisce di rispondere bene ai cambi di emissioni; si verifica con trend storici e con il modulo degli indicatori di pianificazione di
+  DELTA (strumento FAIRMODE).
+- Fondo (p. 89-91): concentrazioni da fuori dell'area modellata, cambiano con le politiche; dati pronti: emissioni per paese 2025-2050 (IIASA, International Institute for Applied Systems Analysis) e scenari europei CAMS
+  (servizio Copernicus per l'atmosfera).
+
+DA NON MOSTRARE (sources.md, «non rappresentati»)
+Sorgenti naturali, sale e sabbia (slide 7); EMEP e dati giornalieri 2030/2050; programma nazionale di controllo (NAPCP) e doppio conteggio; mappe di bias; prova della correzione su anni passati (era nella versione precedente:
+tenerla solo se avanza spazio e se riletta nel testo, p. 93-94: ◐); l'elenco delle cause del bias; «tutta la zona» e le SRA; la sigla ESI; indicatori di estensione.
+
+SIGLE E TERMINI DA SPIEGARE
+Bias = errore sistematico del modello rispetto alle misure (4-6 parole); anno di proiezione = «l'anno futuro del piano»; fondo (background) = concentrazione che arriva da fuori dell'area modellata; IIASA e CAMS come sopra;
+DELTA = strumento FAIRMODE di valutazione dei modelli; sensibilita' dinamica = «risponde bene ai cambi di emissioni?». Termini inglesi in IT: solo «bias» e «background» (una volta, tra parentesi).
+
+LEGAMI: slide 14 (scenari: qui i meteo e il bias dentro i confronti), slide 13 (piani), slide 4 (MQO), slide 7 (sorgenti naturali).
+SOURCES.MD (minimo): quattro opzioni meteo ✔ (p. 91-92) e consigliata ✔; AEI 2030/2020 ✔ (p. 92); metodi di correzione e rapporto 25 %/5 µg/m³ ✔ (p. 92-94, fig. 5-2); valori del grafico n/a (inventati, calcolati);
+cinque incertezze ✔ (p. 94-95); DELTA e trend storici ✔ (p. 95), con «notte e giorno, feriali e festivi» ◐ se citato; dati europei di fondo ✔ (p. 89-91); matrice senza punteggi (✓/✗ solo dove affermato) ◐ per la scelta dei criteri.
+CONTROLLI: matrice senza valori inventati; esempio dichiarato inventato; le tre righe dei metodi di bias coerenti con il grafico; nessuna parola superflua fuori dal budget; ogni sigla spiegata.

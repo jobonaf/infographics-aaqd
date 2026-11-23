@@ -1,0 +1,64 @@
+INSTRUCTIONS 12 — Inquinamento transfrontaliero e prodotti UE
+Leggi prima methods.txt (v3, stessa cartella). Cartella da creare: 12-transboundary-eu-products (stem dei file: transboundary_eu_products)
+ARCHETIPO: C (mappa con frecce), con due «carte domanda» come elemento secondario. Modello di codice facoltativo: optional/template_map_layers_build.py
+(strade curve, confine irregolare) oppure smooth() e sample() di common/layout.py.
+
+MESSAGGIO UNICO
+Quando l'inquinamento arriva da fuori ci sono DUE domande diverse, con due metodi diversi: «quanto arriva da fuori?» (contributi) e
+«che cosa cambia se un altro paese riduce?» (impatti). Due prodotti europei pronti permettono uno screening.
+
+PAGINE DA LEGGERE (pagine fisiche del PDF)
+- §4.4.1 transfrontaliero, p. 72; §4.4.2 prodotti UE (riquadri CAMS e SHERPA), p. 73-75. Opzionale per la fascia: le prime righe di p. 72 (fine di
+  §4.3.6: i contributi non danno informazioni sugli impatti) e, per il legame con la direttiva, §5.1.3 a p. 83 (art. 21: cooperazione).
+- NON leggere gli esempi §4.4.3 (p. 75-79): non servono.
+
+CONTENUTO ESSENZIALE
+- Mappa schematica ALTA (non schiacciata): un paese al centro con una citta', due paesi vicini, un tratto di mare con una nave (trasporto
+  marittimo internazionale), un'area di incendio o sorgente naturale. Frecce curve di spessore diverso verso la citta' = contributi
+  (spessore QUALITATIVO, senza numeri; didascalia «schema inventato: lo spessore indica il peso del contributo»).
+- Domanda 1 «Quanto arriva da fuori?»: metodo = tagging (si «etichetta» l'origine dell'inquinamento: per paese e per tipo di sorgente);
+  prodotto = CAMS (servizio europeo Copernicus per l'atmosfera), «Contributi per paese»: scegli anno, citta' e inquinante (PM2,5 o PM10);
+  risultati giornalieri, stagionali, annuali; separa paesi vicini, trasporto marittimo, sorgenti naturali, incendi, altro.
+- Domanda 2 «Che cosa cambia se un altro paese riduce?»: metodo = impatti (si simula la riduzione e si guarda la variazione);
+  prodotti = CAMS «Valutazione di impatto paese e citta'» (riduzioni simulate di paesi vicini, trasporto marittimo, naturali, incendi,
+  altre sorgenti) e SHERPA (screening del potenziale di riduzione delle emissioni): effetto di riduzioni locali e non locali, per settore e per precursore;
+  atlante del PM2,5 con valori gia' calcolati per oltre 700 citta' europee.
+- Avvertenze (una riga ciascuna, in ocra): «ozono: l'effetto non e' proporzionale alla riduzione: verificare la linearita'»;
+  «CAMS: solo una parte delle citta' europee»; «condizioni al contorno: non distinguono il tipo di sorgente ne' le riduzioni».
+- Perche' conta: in una riga, «misure coordinate tra paesi (art. 21 della direttiva) e limiti dei soli piani nazionali».
+
+FATTI VERIFICATI NEL TESTO (ricontrolla nelle pagine indicate)
+- Il SA transfrontaliero e' un SA GEOGRAFICO: non si fa con modelli a recettore (eccezione: modelli lagrangiani all'indietro, piu' adatti a episodi: non
+  rappresentare). Per gli inquinanti reattivi, se si vuole il ruolo delle sorgenti esterne: metodi di tagging (contributi per paese o criterio geografico).
+  Se anche le sorgenti esterne possono subire misure di riduzione: metodi di impatto, gli unici che valutano l'effetto di una politica estera.
+- Ozono: tipico inquinante transfrontaliero non lineare; con i metodi di impatto verificare la linearita' (variabilita' degli impatti per diverse
+  intensita' di riduzione; somma degli impatti delle singole misure contro l'impatto dell'applicazione simultanea).
+- Con modelli euleriani una parte del trasporto transfrontaliero e' nelle condizioni al contorno: non permettono di distinguere la categoria di
+  sorgente ne' l'effetto di riduzioni (salvo ricalcolo con una simulazione a scala piu' ampia che includa le riduzioni esterne).
+- CAMS «Contributi per paese»: scelta anno, citta', PM2,5/PM10; solo un sottoinsieme di citta'; risultati: serie giornaliere (barre
+  impilate), stagionali e annuali (torte); categorie: paesi vicini, trasporto marittimo internazionale, naturali, incendi, altro.
+- CAMS «Valutazione di impatto paese e citta'»: stesse scelte; impatti da scenari con riduzione del 15% (valore presentato come impatto
+  potenziale di una riduzione del 100%: potrebbe quantificare l'effetto di una politica nazionale di riduzione moderata); i metodi di impatto possono dare
+  valori negativi o somme maggiori della concentrazione totale: meglio le barre impilate.
+- SHERPA: tre prodotti (allocazione per settore e precursore su una regione scelta; mappa interattiva di allocazione per il PM2,5; atlante urbano del
+  PM2,5 con oltre 700 citta' e una scheda per citta').
+
+DA NON MOSTRARE (in sources.md come «non rappresentati»)
+Il 15% di perturbazione (salvo una riga nell'avvertenza se avanza spazio), le sigle ACT, NUTS, FUA, EMEP; i modelli lagrangiani all'indietro; i tre
+esempi §4.4.3; la selezione dei metodi per scala; qualsiasi uso delle SRA; la sigla ESI.
+
+SIGLE E TERMINI DA SPIEGARE
+CAMS = servizio europeo Copernicus per l'atmosfera; SHERPA = strumento europeo di screening del potenziale di riduzione delle emissioni (nome esteso
+come nel documento); tagging = «etichettare» l'origine; contributo = quanto arriva da una sorgente; impatto = quanto cambia se la sorgente riduce
+(NON sono la stessa cosa: il documento dice che i contributi non danno informazioni sugli impatti); condizioni al contorno = dati che entrano nel
+modello dai confini del dominio. Termini inglesi in IT: «tagging» (tra virgolette, spiegato) e «source apportionment» solo se serve.
+
+ELEMENTI GRAFICI SUGGERITI: mappa a sinistra (circa 55-60% della larghezza); a destra due carte domanda con icone (pin, flag, source) e pillole
+«contributi» / «impatti»; fascia in basso con la distinzione contributo-impatto. BUDGET: ≤ 110 parole.
+Sottotitolo IT: «Quanto arriva da fuori, quanto cambia se riducono · Documento tecnico di supporto della Commissione (aprile 2025), §4.4 · Dir. (UE) 2024/2881, art. 21».
+FASCIA (≤ 150 caratteri): «Contributo = quanto arriva da una sorgente. Impatto = quanto cambia se la sorgente riduce. Sono due domande, non una.»
+LEGAMI: slide 10 (contributi e impatti per tipo di metodo), slide 11 (passi del source apportionment), slide 13 (cooperazione tra Stati, art. 21).
+SOURCES.MD (minimo): contributi contro impatti ✔ (p. 72, prime righe); metodo geografico e tagging ✔ (p. 72); ozono e linearita' ✔ (p. 72); condizioni al contorno ✔
+(p. 72); CAMS contributi ✔ e impatti ✔ (p. 73-74); SHERPA ✔ (p. 75); disegno della mappa e spessori delle frecce n/a (schema inventato);
+«due domande» e frasi delle carte ◐ (sintesi redazionale); avvertenza sulle citta' disponibili ✔ (p. 73-74).
+CONTROLLI: nessuna cifra inventata sulle frecce; nessun nome di sigla non spiegato; la mappa ha strade o confini curvi e non e' schiacciata.

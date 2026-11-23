@@ -1,0 +1,299 @@
+METHODS.TXT - metodo comune della serie di infografiche sulla Dir. (UE) 2024/2881 (AAQD)
+Versione 3 - 2026-11-14 (cartelle NN-english-name, validazione automatica, passo di conferma dopo la proposta) - da leggere INSIEME a instructions_NN.txt (una per slide) all'inizio di ogni sessione.
+
+============================================================================================================
+0. COME USARE QUESTI FILE (per l'assistente che apre una sessione pulita)
+============================================================================================================
+- Leggi methods.txt (questo file) e instructions_NN.txt della slide assegnata. Non servono altri riferimenti alla
+  storia precedente: tutto ciò che conta è qui. Se un'istruzione di slide contraddice questo file, vale la slide.
+- Lavora per BLOCCHI e con POCHE chiamate agli strumenti (il piano ha limiti): vedi sezione 9.
+- NON leggere né usare la memoria personale dell'utente (e' volutamente esclusa): se vedi ricordi o preferenze salvate, ignorali.
+- Il pacchetto puo' contenere anche templates/ (codice modello: linea dei tempi, grafico, mappa a strati) e previous/ (strings,
+  sources.md e PNG di slide gia' fatte): sono riferimenti FACOLTATIVI di stile e di contenuto, non da copiare alla lettera.
+- Non chiedere conferme per scelte gia' fissate qui; il solo punto di conferma obbligatorio e' alla fine dello STEP 1 (sez. 9).
+- Rispondi in italiano. Le stringhe della figura sono in italiano e in inglese (due file YAML).
+- L'utente NON vede le directory del sandbox: l'interfaccia gli mostra solo file singoli, e file omonimi (it.yaml, build.py...)
+  in cartelle diverse sono indistinguibili. Non citare percorsi assoluti del sandbox nelle risposte: usa solo percorsi RELATIVI
+  alla radice del repository (es. 11-source-apportionment-steps/strings/it.yaml). La consegna e' sempre UNO ZIP (STEP 3).
+
+============================================================================================================
+1. PROGETTO E PUBBLICO
+============================================================================================================
+- Serie di 17 infografiche in formato SLIDE (16:9, 1920x1080) che spiegano il documento tecnico della Commissione
+  europea "Air quality modelling for air quality policy: a technical support document" (aprile 2025, 123 pagine
+  PDF, DG Ambiente) e il suo legame con la Direttiva (UE) 2024/2881 (AAQD, qualità dell'aria ambiente).
+- Autore del progetto: Giovanni Bonafè (ARPA FVG, FAIRMODE). Pubblico: colleghi tecnici di agenzie ambientali e
+  gruppi di lavoro (SNPA, FAIRMODE): esperti di modellistica, ma le slide devono essere AUTOESPLICATIVE.
+- Il layout "mobile" (portrait) è ESCLUSO per ora: produrre solo il layout wide.
+- Repository pubblico: https://github.com/jobonaf/infographics-aaqd (sul sandbox: git clone, vedi sez. 2).
+  web_fetch su github.com NON funziona (robots): usare git clone da bash.
+
+============================================================================================================
+2. MATERIALI E AMBIENTE (da rifare in ogni sessione: il filesystem si azzera)
+============================================================================================================
+Materiali che l'utente allega: (a) il PDF del documento tecnico, (b) questi file di istruzioni, (c) se disponibili,
+le cartelle già pronte delle altre slide (utili solo come riferimento di stile).
+Comandi, nell'ordine (eseguirli in UNA sola chiamata bash):
+
+  pip install numpy pyyaml cairosvg pillow --break-system-packages -q
+  mkdir -p ~/.fonts && cd /tmp && curl -sL -o ss3.zip https://github.com/adobe-fonts/source-sans/releases/download/3.052R/OTF-source-sans-3.052R.zip \
+    && unzip -o -q ss3.zip -d ss3 && cp ss3/OTF/SourceSans3-*.otf ~/.fonts/ && fc-cache -f
+  cd /home/claude && git clone --depth 1 https://github.com/jobonaf/infographics-aaqd.git
+  ls infographics-aaqd infographics-aaqd/common
+
+IMPORTANTE: senza il font Source Sans 3 le larghezze di testo misurate e il render PNG sono sbagliati (testi che
+escono dai riquadri). Verificare con fc-list | grep -c "Source Sans 3" (atteso > 0).
+Rete bash consentita solo verso: github.com, raw.githubusercontent.com, codeload.github.com, pypi.org,
+files.pythonhosted.org e pochi altri. Il testo normativo della direttiva NON è accessibile: si lavora sul PDF.
+
+Estrazione del testo dal PDF (usare sempre PAGINE FISICHE del PDF, non i numeri stampati nel pie' di pagina:
+stampato + 12 = fisica):
+  pdftotext -f A -l B -layout /mnt/user-data/uploads/<file>.pdf /tmp/x.txt
+  sed -E 's/ +/ /g' /tmp/x.txt | grep -v '^\s*$' | cut -c1-400 | sed -n 1,200p
+Leggere SOLO le pagine indicate in instructions_NN.txt. Per vedere figure/tabelle: pdftoppm -jpeg -r 110 -f P -l P ...
+e aprire il JPG con view. Non rileggere interi capitoli.
+
+Mappa delle sezioni del PDF (pagine FISICHE):
+  1 Introduzione p13-25: 1.3 ruolo della modellistica p14; 1.4 caratteristiche dei sistemi p17 (1.4.1 risoluzione
+    temporale p18; 1.4.2 spaziale p18; 1.4.3 emissioni p20; 1.4.4 meteo p21; 1.4.5 condizioni al contorno p22;
+    1.4.6 data fusion/assimilation p22; 1.4.7 catene modellistiche p23); 1.5 qualità e fitness-for-purpose p23; 1.6 p25
+  2 Rappresentatività spaziale e rete p26-42: 2.1 requisiti p26; 2.2 metodo SRA p28 (2.2.1 criteri p29; 2.2.2 livelli
+    p32; 2.2.3 passi p32); 2.3 progetto della rete p36 (2.3.1 hotspot p36; 2.3.2 fondo p37; 2.3.3 metodi
+    supplementari p38; 2.3.4 revisione p40); 2.4 QA/QC p42
+  3 Modellistica di valutazione p43-58: 3.1 requisiti p43; 3.2 metodo p45; 3.3 fit-for-purpose p45; 3.4 QA/QC p47
+    (MQI p47; MQO p49; numero minimo stazioni p49; data fusion p50; note p51); 3.5 indicatori di superamento p52-55;
+    3.6 esposizione p55-57; 3.7 sorgenti naturali, sale e sabbia p57
+  4 Source apportionment p59-79: 4.1 requisiti p59; 4.2 metodi p61 (definizioni p61; emissioni p63); 4.3 QA/QC p63
+    (fitness-for-purpose p65; scelta strumenti p67; simulazione di riferimento p69; reporting p69; valutazione p70;
+    interpretazione p71); 4.4 pratica p72 (transfrontaliero p72; prodotti UE p73; esempi p75)
+  5 Piani e roadmap p80-95: 5.1 requisiti p80 (tempi p81; contenuti p81; transfrontaliero p83); 5.2 metodi p83
+    (valutazione p84; screening p85; misure p85; scenari emissivi p85; concentrazioni p87; legami con i programmi
+    nazionali p88); 5.3 pratica p89 (zona/punti p89; fondo e trend p89; meteo p91; naturali p92; bias p92);
+    5.4 fitness p94 (dinamica p95)
+  6 Previsioni p96-110: 6.1 requisiti p96; 6.2 metodo p98 (CAMS p98; sistema locale p99; incertezza p102);
+    6.3 QA/QC p103; 6.4 pratica p105 (sfide p105; procedura passo-passo p106); 6.5 previsione come innesco di piani
+    a breve termine p108
+  7 Riferimenti p111-123: 7.2 risorse e prodotti UE sulla modellistica p120
+
+============================================================================================================
+3. SCALETTA COMPLETA (17 slide), ARCHETIPO E STATO
+============================================================================================================
+ N.  Titolo                                                              Archetipo            Stato
+ 1   Il ruolo della modellistica nella AAQD (5 ambiti)                    G hub                 DA FARE
+ 2   Anatomia di un sistema modellistico                                  H anatomia/callout    DA FARE
+ 3   Fitness-for-purpose                                                  G hub                 FATTA, DA RIFARE (troppo testo)
+ 4   MQI e MQO (target plot FAIRMODE)                                     D grafico             FATTA, da sfoltire il testo
+ 5   Rappresentatività spaziale                                           C mappa               FATTA (cartella 01 originale)
+ 6   Progettazione della rete di monitoraggio                             C mappa               DA FARE
+ 7   Sorgenti naturali, sale e sabbia                                     F albero decisionale  DA FARE
+ 8   Quanto è esteso un superamento (indicatori)                          C mappa a strati      FATTA, DA RIFARE (troppo testo)
+ 9   Esposizione e impatto sanitario                                      D grafico             DA FARE
+10   Source apportionment: definizioni e metodi per inquinante            E matrice             DA FARE
+11   I sei passi del source apportionment                                 B flusso              DA FARE
+12   Transfrontaliero e prodotti UE                                       C mappa/frecce        DA FARE
+13   Dalla valutazione al piano: tempi e passi                            A linea dei tempi     FATTA (v2)
+14   Gli scenari emissivi di un piano                                     D grafico             FATTA, da sfoltire il testo
+15   Proiezioni: come stimare le concentrazioni future                    E matrice + D         FATTA, DA RIFARE (troppo testo)
+16   Sistemi di previsione                                                B flusso              DA FARE
+17   La previsione come innesco dei piani a breve termine                 A linea dei tempi     DA FARE
+Le slide FATTE esistono come cartelle ma NON sono modello di stile da copiare (tranne la 13 v2): vedi sez. 6.
+Cartelle e slug IN INGLESE (regola del repo: ^\d{2}-[a-z0-9]+(-[a-z0-9]+)*$, numero 01-17 = numero della scaletta):
+  gia' nel repo:   03-fitness-for-purpose, 04-model-quality-mqi-mqo, 05-spatial-representativeness,
+                   08-exceedance-situation-indicators, 14-emission-scenarios
+  fatte ma non ancora nel repo (nei download dell'utente): 13 (v2) -> 13-from-assessment-to-plan,
+                   15 -> 15-projections
+  da creare:       01-role-of-modelling, 02-modelling-system-anatomy, 06-monitoring-network-design,
+                   07-natural-sources-sanding-salting, 09-exposure-health-impact, 10-source-apportionment-methods,
+                   11-source-apportionment-steps, 12-transboundary-eu-products, 16-forecasting-systems,
+                   17-forecasts-short-term-action-plans
+Nome dei file in out/: <slug senza NN, con underscore>_it|en.svg|png|pdf (es. role_of_modelling_it.svg).
+Il titolo e i testi della figura restano in italiano/inglese nei due YAML; solo cartelle, file e chiavi YAML sono in inglese.
+
+============================================================================================================
+4. STRUTTURA DEL REPOSITORIO, FILE DI OGNI SLIDE E VALIDAZIONE AUTOMATICA
+============================================================================================================
+  common/svgkit.py       palette, font, primitive SVG (non modificare senza motivo)
+  common/layout.py       helper condivisi di layout (sez. 7). Va aggiunto al repo; se manca, chiedere all'utente
+  README.md              tabella dello stato delle 17 slide (aggiornare lo stato della slide a fine lavoro, se l'utente lo chiede)
+  PROJECT.md             piano ORIGINALE dei contenuti per slide (utile come punto di partenza: puo' contenere sigle o
+                         schemi superati, es. la sigla ESI: vale methods.txt + instructions_NN.txt)
+  note-copilot.md        revisione esterna (2026-11-09) con correzioni tecnico-normative proposte per alcune slide: sono
+                         SPUNTI da VERIFICARE nel PDF prima di adottarli; instructions_NN.txt dice quali valgono
+  scripts/validate_repository.py + .github/workflows/validate.yml   validazione automatica (CI)
+  NN-english-name/build.py            genera SVG (+ PNG/PDF se cairosvg c'e'), IT+EN; geometria e numeri calcolati qui
+  NN-english-name/strings/it.yaml, en.yaml   TUTTO il testo; STESSE chiavi nelle due lingue
+  NN-english-name/sources.md          tabella fonti e stato di verifica (sez. 8)
+  NN-english-name/out/                <stem>_it|en.svg|png|pdf (PNG 3840 px di larghezza)
+Regole controllate dalla CI (scripts/validate_repository.py) - la consegna deve passarle:
+  1. nome cartella: ^\d{2}-[a-z0-9]+(-[a-z0-9]+)*$ e numero 01-17;
+  2. presenti build.py, strings/it.yaml, strings/en.yaml, sources.md, cartella out/;
+  3. it.yaml ed en.yaml: YAML validi, radice mapping, INSIEME di chiavi identico;
+  4. "python build.py" lanciato DENTRO la cartella deve terminare con codice 0 e senza input da tastiera;
+  5. gli avvisi di impaginazione vanno STAMPATI con il prefisso esatto "ATTENZIONE:" (la CI li segnala): a fine build,
+     for m in WARN: print("ATTENZIONE:", m);
+  6. gli SVG in out/ devono essere XML validi e non vuoti;
+  7. i marcatori ◐ e ✖ in sources.md generano avvisi (ammessi finche' sono voci aperte).
+La CI installa SOLO numpy, PyYAML (senza cairosvg e senza Pillow): build.py deve funzionare anche senza (gli SVG si
+generano comunque; layout.py ripiega su misure stimate e avvisa). requirements.txt oggi elenca numpy, pyyaml, cairosvg:
+per le misure di testo in locale serve anche pillow (suggerire all'utente di aggiungerlo).
+Convenzioni: separatore decimale virgola in IT e punto in EN; valori numerici di esempio inventati ma CALCOLATI nel
+codice e DICHIARATI "esempio inventato" nella figura; SVG con <title> e <desc> (testo alternativo) e gruppi con id.
+README del repo: un messaggio principale per pannello/blocco; ogni affermazione tecnica o normativa in sources.md con
+fonte, data di consultazione e stato; non copiare un'infografica esistente senza cambiare titolo, descrizione alt,
+nome dei file in out/ e scheda fonti.
+
+svgkit.py (importare con: sys.path.insert(0, <repo>/common); from svgkit import *). Costanti: W,H = 1920,1080;
+palette TEAL, TEAL_D, OCHRE, RED, RED_T, SLATE, GREY, BEIGE; FONT. Funzioni: esc, T(x,y,s,size,w,fill,anchor,it,lh,extra),
+panel(x,y,w,h,num,heading,gid,hs) [pannello numerato: usarlo SOLO se serve], block_arrow, band(x,y,w,h,bold,lines)
+[fascia di definizione in basso], dot, excluded, station, point_in_poly, catmull, arc_arrow(cx,cy,r,a0,a1,color,sw),
+svg_wrap(body,title,desc,lang,w,h), band_wrapped. T accetta una stringa o una lista di righe.
+
+============================================================================================================
+5. REGOLE EDITORIALI (fissate dall'autore; non negoziabili)
+============================================================================================================
+5.1 Autoesplicativa: ogni sigla e ogni termine tecnico va spiegato NELLA figura; vietato rimandare al documento
+    ("vedi §..."). Se un termine non si riesce a spiegare in poche parole, toglierlo.
+5.2 Sintesi: UN solo messaggio per slide. Budget indicativo: circa 80-120 parole in tutto; etichette da 2-6 parole;
+    niente paragrafi. Un elemento grafico PRINCIPALE che occupa almeno metà dello spazio. Dettagli secondari ->
+    sources.md ("non rappresentati"), non nella figura.
+5.3 Concretezza: vietate espressioni vaghe (es. "punto di confronto", "un calcolo conferma", "vedono solo una parte").
+    Dire che cosa si fa o che cosa succede, con un verbo e un oggetto.
+5.4 Titoli dei passi come NOMI, non verbi (es. "Superficie", "Vegetazione": "Conta la vegetazione" fu equivocato).
+5.5 Italiano: tenere tra parentesi POCHI termini inglesi necessari (es. baseline, reference, background, bias, roadmap,
+    screening, business as usual, hotspot se serve). Non esagerare.
+5.6 Esempi numerici: ammessi se servono a capire, sempre INVENTATI, dichiarati nella figura ("esempio inventato"),
+    coerenti con il testo (es. il bias dell'esempio è quello citato nel documento) e calcolati nel codice.
+5.7 NON includere argomenti controversi se non si è MOLTO sicuri. In particolare: NON usare le aree di rappresentatività
+    (SRA) per determinare l'area di superamento. Se un passaggio del PDF li usa a quello scopo, ometterlo e annotarlo
+    in sources.md.
+5.8 NON usare la sigla ESI (parlare di "indicatori della situazione di superamento" o "come si quantifica un
+    superamento"). Altre sigle (MQO, MQI, AEI, SA, CAMS, JRC, IIASA, NAPCP...) solo se spiegate in figura.
+5.9 Non affermare nulla che non sia nel PDF: se ricostruisci o semplifichi, segna "◐" in sources.md. Il testo vigente
+    della direttiva non è disponibile: i riferimenti ad articoli/allegati sono quelli CITATI dal documento tecnico.
+5.10 Fatti già chiariti da rispettare: "10 anni prima" nell'AEI = 10 anni prima dell'ANNO DI PROIEZIONE (anno futuro
+    dello scenario), non prima dell'anno di riferimento (esempio del documento: 2030 contro 2020). DELTA Tool: oggi è
+    allineato alla definizione di MQI della AAQD (non scrivere che non lo è).
+5.11 Pubblico: nessuna ironia, nessun linguaggio colloquiale; tono tecnico e piano.
+
+============================================================================================================
+6. ARCHETIPI GRAFICI (alternare, scegliendo il più efficace per ciascuna slide)
+============================================================================================================
+Evitare lo schema "3-4 colonne di testo con icone": era il difetto delle prime slide. Ogni slide usa UN archetipo
+principale (indicato in instructions_NN.txt), con il resto al servizio di quello.
+ A  Linea dei tempi: sequenza con scadenze; asse orizzontale grande, marker con etichette brevi, barre per i periodi,
+    esempio con anni dichiarato. (13 v2 = riferimento di stile: build.py in 13-dalla-valutazione-al-piano.)
+ B  Flusso a tappe: chevron/frecce con nome della tappa (nome) e UNA domanda o uscita sotto; ingressi a sinistra,
+    uscite a destra; eventuale ramo di controllo.
+ C  Mappa (a strati): disegno schematico realistico (strade curve, confine irregolare, edifici, vegetazione, fiume),
+    strati sovrapposti o frecce; didascalia "schema inventato". Mappa ALTA (circa 2:1 al massimo, mai schiacciata).
+ D  Grafico protagonista: un grafico grande (barre, target plot) con valori inventati calcolati, 2-3 annotazioni.
+ E  Matrice a pallini/colori: righe = opzioni, colonne = criteri; pallini/colori e 1-3 parole per cella.
+ F  Albero decisionale: domande a losanghe/riquadri con rami sì/no e risultati terminali colorati.
+ G  Hub: concetto al centro, 4-6 raggi con icona e 2-4 parole ciascuno.
+ H  Anatomia con callout: oggetto disegnato al centro con 5-8 callout numerati.
+Linee guida comuni: icone a tratto semplici (set in layout.py), cerchi tinta TEAL con opacità .12 dietro le icone,
+rosso tenue per "superamento/area problematica", ocra per "attenzione/regola/condizione", grigio per elementi neutri,
+TEAL_D per elementi principali. Contrasto alto; nessun gradiente; nessuna ombra.
+
+============================================================================================================
+7. SPECIFICHE TECNICHE DI LAYOUT (canvas 1920x1080, solo wide)
+============================================================================================================
+- Sfondo BEIGE. Titolo: x=48, baseline y=76-86, 58 px bold TEAL_D. Sottotitolo: x=48, baseline y=122-134, 30 px
+  SLATE, formato "<qualificatore> · Documento tecnico di supporto della Commissione (aprile 2025), §x · Dir. (UE) 2024/2881".
+- Area figura: da y circa 150 a y=890. Margini laterali 36 px; spazio tra riquadri 40 px.
+- Fascia di definizione in basso: band(36, 910, 1848, 120, bold, [riga1, riga2]); riga1 e riga2 al massimo circa 150
+  caratteri (bold compreso): oltre, il testo esce dal bordo destro.
+- Dimensioni testo minime (slide): corpo 21 px, etichette secondarie 19-20 px, titoli di blocco 24-27 px.
+  Source Sans 3 è stretto: a 21 px circa 8-9 px per carattere.
+- Misura del testo con Pillow e il font installato: funzione width(txt,size,bold) di layout.py. wrap(lista_righe,size,maxw)
+  ri-spezza i paragrafi; lines() avvisa (WARN) se una riga supera maxw. Dopo build.py leggere SEMPRE la lista WARN e
+  correggere finché è vuota. Poi guardare il PNG (view) e, se serve, ritagliare con PIL ingrandendo.
+- Testo vivo (non convertire in tracciati). Spazi iniziali/finali dei pezzi di testo: usare U+00A0.
+- Pedici/apici: NON usare tspan con dy (cairosvg li spaziava male). Usare testi separati con x esplicito (tsub di
+  layout.py, con misure del font). Il simbolo ≤ usa DejaVu Sans come ripiego (già gestito da svgkit.esc).
+- clipPath consentiti con id UNICI nel documento. Nessun elemento esterno (immagini remote, font web).
+- common/layout.py (API): width, wrap, lines, para, WARN, header(title,subtitle), card, badge, pill/pill_w, chevron,
+  small_arrow, arrow, icon(kind,cx,cy,col), circ_icon, smooth, sample, fmt, tsub, render(svg_text, stem, png_width=3840).
+  Icone disponibili: warn, doc, flag, pin, area, source, gear, baseline, question, check, wave, canyon, people, road, leaf, grid.
+  Se common/layout.py non e' nel repo clonato ma e' allegato in /mnt/user-data/uploads/, copialo in <repo>/common/. Se non c'e'
+  da nessuna parte, fermati e chiedi all'utente di allegarlo (non riscriverlo).
+
+============================================================================================================
+8. FONTI E VERIFICA (sources.md)
+============================================================================================================
+Ogni affermazione della figura ha una riga: | Elemento | Fonte (sezione/pagina) | Stato | Nota |
+Stati: ✔ letto nel testo; ◐ sintesi, resa redazionale, schema o esempio; ✖ da verificare. Elencare in fondo gli
+"elementi volutamente non rappresentati". Dichiarare che la direttiva non è stata riletta direttamente. Segnalare
+i valori inventati. Non inventare riferimenti: citare sezioni del documento tecnico (§) con pagina fisica.
+
+============================================================================================================
+9. PROCESSO IN TRE STEP (poche chiamate; l'utente vuole ragionare insieme PRIMA di vedere una slide)
+============================================================================================================
+STEP 1 - LETTURA E PROPOSTA (nessuna slide ancora)
+  1. Setup (sez. 2) in UNA chiamata bash; estrai il testo delle SOLE pagine indicate in instructions_NN.txt; se servono
+     figure o tabelle, guarda la pagina come immagine.
+  2. Scrivi una proposta di al massimo 25 righe: messaggio unico; archetipo; schema del layout (blocchi, elemento
+     grafico principale e sua occupazione dell'area); elenco delle etichette con conteggio parole (<= 120); cosa tagli;
+     eventuale esempio inventato; dubbi o punti poco chiari nel testo del PDF; righe della sources.md che prevedi ◐/✖.
+  3. FERMATI e attendi la conferma dell'utente. Non scrivere codice prima.
+STEP 2 - COSTRUZIONE (dopo la conferma)
+  1. In UNA chiamata scrivi strings/it.yaml, strings/en.yaml e build.py (copiando le funzioni utili da templates/ se
+     presente, e da common/layout.py); esegui build.py; stampa gli avvisi come "ATTENZIONE: ..." (sez. 4).
+  2. Guarda il PNG italiano e quello inglese (view); per i punti critici ritaglia e ingrandisci con PIL.
+     Al massimo 3 iterazioni di correzione, con modifiche mirate (replace con assert), non riscritture totali.
+  3. Se il testo non sta: TAGLIA, non rimpicciolire il corpo sotto 19 px.
+STEP 3 - FINALIZZAZIONE
+  1. Scrivi sources.md (sez. 8).
+  2. Prepara la cartella NN-english-name/ (build.py, sources.md, strings/it.yaml, strings/en.yaml, out/) e comprimila in UN SOLO
+     ZIP, /mnt/user-data/outputs/NN-english-name.zip, che contiene la cartella NN-english-name/ con l'alberatura completa
+     (creare lo zip con python zipfile, partendo dalla cartella di lavoro; verificare con unzip -l che l'albero sia corretto).
+  3. present_files: PRIMA lo zip, poi soltanto il PNG italiano e quello inglese (per una verifica a colpo d'occhio).
+     NON presentare build.py, YAML e sources.md come file sciolti.
+  4. Riepilogo breve (<= 12 righe): che cosa mostra, esempi inventati, punti ◐/✖ da ricontrollare, che cosa e' stato tolto;
+     chiudi con: «Scompatta lo zip nella radice del repository (la cartella NN-english-name/ va accanto a common/)».
+Se il piano taglia il lavoro a meta', lascia in /mnt/user-data/outputs lo stato corrente e dichiara a che punto sei: la sessione
+successiva (o l'utente) riparte dai file. Non rileggere file gia' letti; non mostrare immagini piu' del necessario.
+
+============================================================================================================
+10. CHECKLIST FINALE (spuntare prima di consegnare)
+============================================================================================================
+[ ] Un solo messaggio; elemento grafico principale >= 50% dello spazio; parole totali <= ~120.
+[ ] Nessuna sigla/termine non spiegato; nessuna espressione vaga; titoli dei passi come nomi.
+[ ] IT con pochi termini inglesi tra parentesi; EN naturale; stesse chiavi YAML.
+[ ] Nessuna SRA per l'area di superamento; nessuna sigla ESI; "10 anni prima" riferito all'anno di proiezione.
+[ ] Valori di esempio inventati, dichiarati, calcolati nel codice.
+[ ] WARN vuota; PNG IT e EN controllati a vista (nessun testo fuori riquadro o sovrapposto, margine in basso).
+[ ] sources.md completo (✔/◐/✖, non rappresentati). Copia in outputs e present_files fatti.
+[ ] Regole CI della sez. 4 rispettate: slug inglese, chiavi YAML uguali, 'python build.py' ok, avvisi con prefisso ATTENZIONE:.
+[ ] Consegna: UNO zip NN-english-name.zip con l'alberatura (non file sciolti); nessun percorso del sandbox nelle risposte.
+
+============================================================================================================
+11. ERRORI GIÀ COMMESSI (da non ripetere)
+============================================================================================================
+- Troppo testo in pannelli stretti: lo spazio finisce sempre prima di quanto si stimi (a 21 px circa 40-47 caratteri
+  per riga in 400 px). Meno parole, non più pannelli.
+- Mappe schiacciate e strade dritte: sembrano finte. Usare curve (smooth), confine irregolare, area che segue le strade.
+- Etichette dei valori che si sovrappongono ai baffi/barre: metterle all'inizio della barra o fuori.
+- Pillole (tag) accanto ai titoli: controllarne la larghezza; con titoli lunghi vanno a capo o escono dal riquadro.
+- Titoli di pannello troppo lunghi: a 36 px bold circa 18 caratteri in 330 px.
+- Fascia in basso troppo lunga (>150 caratteri) tagliata a destra.
+- Modifiche ai YAML con regex multilinea: usare sempre assert sul match; e ricontrollare che le chiavi esistano in IT ed EN.
+- Interpretare "10 anni prima" come precedente al riferimento (sbagliato: vedi 5.10).
+- Fidarsi della memoria sui contenuti del PDF: rileggere SEMPRE le pagine indicate.
+
+============================================================================================================
+12. PRECEDENZA TRA I DOCUMENTI
+============================================================================================================
+1) instructions_NN.txt della slide  >  2) methods.txt  >  3) PROJECT.md e note-copilot.md del repo  >  4) memoria.
+PROJECT.md e' il piano di contenuti iniziale (usa la sigla ESI, propone 4 pannelli per slide, ecc.): serve da elenco di
+temi, non da modello grafico. note-copilot.md contiene correzioni utili ma non tutte verificate: adottarle solo dopo
+averle trovate nel PDF e segnarle in sources.md. Il layout mobile (che la revisione propone come requisito) resta
+FUORI AMBITO per ora, salvo diversa indicazione dell'utente.
+
+============================================================================================================
+13. MATERIALI DI RIFERIMENTO FACOLTATIVI (se allegati dall'utente)
+============================================================================================================
+templates/template_timeline_build.py (archetipo A), template_chart_build.py (D), template_map_layers_build.py (C):
+build.py completi di slide gia' fatte, da cui copiare impostazione e funzioni; svgkit.py identico a common/svgkit.py.
+previous/<cartella>/ (strings, sources.md, PNG italiano): versione precedente di alcune slide, per stile e per le righe di
+sources.md gia' verificate. Se mancano, lavorare comunque dalle istruzioni, dal PDF e da common/.

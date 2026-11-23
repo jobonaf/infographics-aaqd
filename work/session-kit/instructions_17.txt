@@ -1,0 +1,63 @@
+INSTRUCTIONS 17 — La previsione come innesco dei piani a breve termine
+Leggi prima methods.txt (v3, stessa cartella). Cartella da creare: 17-forecasts-short-term-action-plans (stem dei file: forecasts_short_term_action_plans)
+ARCHETIPO: A (linea dei tempi di un episodio). Modello di codice facoltativo: optional/template_timeline_build.py (binario con marker, icone, blocchi in basso).
+
+MESSAGGIO UNICO
+Quando la previsione indica il rischio di superare una soglia di allarme, il piano a breve termine e' obbligatorio: si PREPARA prima, con calma, e si ATTUA subito,
+con responsabilita' separate. Per ozono e particolato il piano puo' essere ridotto o non richiesto.
+
+PAGINE DA LEGGERE (pagine fisiche del PDF)
+- §6.4.1 sfide operative, p. 105-106; §6.4.2 procedura passo per passo, p. 106-108 (validazione e giorni con piano attivato p. 107; comunicazione al pubblico e
+  informazione ai decisori p. 108); §6.5 previsione come innesco, p. 108-110 (preparazione e attuazione p. 109; analisi degli episodi su 3-5 anni e strumenti p. 109-110).
+- In piu', le prime righe di p. 105 (fine di §6.3: i giorni con il piano attivo falsano la verifica delle previsioni).
+- NON servono i riquadri su CAMS e sulle famiglie di modelli (slide 16).
+
+CONTENUTO ESSENZIALE
+- Binario principale (orizzontale, grande, 5 marker con icona e 3-6 parole):
+  1 «Previsione a 3 giorni»  →  2 «Rischio di superare la soglia di allarme» (art. 20)  →  3 «Si attiva il piano a breve termine: misure di emergenza»  →
+  4 «Si informano autorita' e pubblico: cosa fare, effetti sulla salute»  →  5 «Verifica: i giorni con il piano si escludono dalla valutazione del modello e si analizza
+  se il piano ha funzionato».
+- Sotto, due carte affiancate con icone:
+  PREPARARE (prima, senza fretta): analisi degli episodi su 3-5 anni (origine e andamento; si puo' usare il raggruppamento di casi simili) · quali misure per settore
+  (trasporti, cantieri, industria, riscaldamento, agricoltura) e quanto funzionerebbero · catena delle decisioni (e coordinamento tra Stati se l'inquinamento arriva da fuori)
+  · consultazione pubblica · comunicazione alla Commissione entro un anno dall'adozione.
+  ATTUARE (quando scatta la previsione): appena e' previsto il superamento, le misure entrano in vigore; protocolli per avvisare tutti.
+- Terza carta «Casi particolari» (ocra): OZONO: il piano non e' richiesto se non c'e' un potenziale sostanziale di ridurre il rischio (ozono secondario, non lineare, emissioni biogeniche non
+  controllabili, trasporto da lontano). PARTICOLATO: se il potenziale e' limitato, il piano puo' limitarsi all'informazione sui comportamenti consigliati.
+- Una striscia sottile, facoltativa (max 12 parole): «Una catena che non si ferma: attiva 24 ore su 24, con siti di riserva e dati puntuali».
+
+FATTI VERIFICATI NEL TESTO (ricontrolla)
+- Art. 20(1) (citato a p. 108): se in una zona c'e' il rischio di superare una soglia di allarme (Allegato I, sezione 4), gli Stati stabiliscono piani a breve termine con le misure di
+  emergenza; quando il rischio e' individuato, progettare e predisporre il piano e' obbligatorio e le autorita' competenti lo attuano; il piano aiuta anche per i valori limite a breve termine.
+- Ozono: piano non richiesto se non c'e' potenziale sostanziale di ridurre rischio, durata o gravita' dei superamenti (tra gli altri casi dell'art. 20); ragioni (p. 108-109): formazione a valle,
+  non linearita', emissioni biogeniche, trasporto a lunga distanza. Particolato: se il potenziale di riduzione e' limitato (condizioni geografiche e meteorologiche, riscaldamento domestico),
+  il piano puo' concentrarsi sull'informazione ai comportamenti.
+- Preparazione e attuazione disaccoppiate (p. 109): preparare richiede informazioni sulle attivita' dei settori, valutazione dell'efficacia delle misure, catena decisionale, eventuale
+  coordinamento bilaterale (art. 21(4)); attuare dipende dalla disponibilita' della previsione. Procedura in due fasi: attribuzione delle sorgenti sugli episodi (3-5 anni, raggruppamento
+  come aiuto) e scelta e progetto delle misure (strumenti del cap. 5 e misure di emergenza dell'Allegato IX). Consultazione pubblica (direttiva 2003/35/CE); comunicazione alla
+  Commissione entro un anno dall'adozione; informazione al pubblico: art. 22(1)(e).
+- Verifica (p. 107): i giorni in cui una previsione di allarme ha attivato il piano vanno esclusi dalla valutazione (su tutto il dominio se locale, oppure solo sulla regione
+  interessata e i dintorni); farne analisi serve a verificare l'efficacia del piano. Se le misure funzionano, le concentrazioni scendono e la differenza con la previsione non e' un errore.
+- Operativita' (p. 105-106 e 107): continuita' di corrente e rete, siti di riserva, personale 24 ore su 24; informazione al pubblico: gratuita, facile da capire, con mappe e consigli di comportamento
+  e di salute quando si supera la soglia; protocolli per le autorita'.
+- Soglie di NO2 e SO2: alte, rilevanti soprattutto per rilasci accidentali, di fatto difficili da prevedere; quelle del PM possono essere moderate; gli Stati possono fissare soglie piu' severe (art. 15(5)).
+- Da p. 110: strumenti diversi dal modello previsionale possono servire per preparare il piano, e il modello previsionale puo' non essere adatto al source apportionment (verifica la
+  formulazione esatta e riportala in sources.md).
+
+DA NON MOSTRARE (in sources.md come «non rappresentati»)
+L'indice di qualita' dell'aria; il fattore umano (giudizio esperto) in dettaglio; il progetto LIFE REMY; le soglie di NO2 e SO2 (salvo una riga se avanza spazio); l'elenco completo
+dei passi §6.4.2 (scopo, fornitore, regione target, dati di ingresso, osservazioni, protocollo di scambio); la scelta dell'unita' amministrativa; le SRA; la sigla ESI.
+
+SIGLE E TERMINI DA SPIEGARE
+Soglia di allarme = livello oltre il quale scatta l'emergenza (spiegare in 6-8 parole); piano a breve termine = misure di emergenza per ridurre rischio o durata di un superamento;
+attribuzione delle sorgenti = «da dove viene l'inquinamento» (= source apportionment). Termini inglesi in IT: nessuno obbligatorio (eventualmente «source apportionment» una volta, spiegato).
+
+ELEMENTI GRAFICI SUGGERITI: asse dell'episodio con una freccia e cinque cerchi numerati; carte con icone (doc, gear, pin, warn, people); carta ocra «casi particolari» con un ramo
+verso il marker 3. BUDGET: ≤ 110 parole. Anni o date: NON servono; l'asse e' di giorni (D-3, D-2, D-1, D), solo se serve a orientare.
+Sottotitolo IT: «Dalla previsione all'azione · Documento tecnico di supporto della Commissione (aprile 2025), §6.4-6.5 · Dir. (UE) 2024/2881, artt. 20 e 22».
+FASCIA (≤ 150 caratteri): «Se la previsione indica il rischio di superare una soglia di allarme il piano a breve termine e' obbligatorio: si prepara prima, si attua subito.»
+LEGAMI: slide 16 (come si costruisce la previsione), slide 13 (piani a lungo termine; qui piani di emergenza), slide 10-11 (source apportionment).
+SOURCES.MD (minimo): art. 20 e obbligo ✔ (p. 108); ozono ✔ (p. 108-109); particolato ✔ (p. 109); preparare e attuare ✔ (p. 109); due fasi e 3-5 anni ✔ (p. 109-110); verifica con
+esclusione dei giorni con il piano ✔ (p. 107); informazione al pubblico ✔ (p. 108); catena operativa ✔ (p. 105-106); strumenti diversi e modello non adatto al SA ✔ o ✖ (p. 110);
+rese sintetiche dei marker ◐.
+CONTROLLI: l'asse mostra «previsione → rischio → piano → informazione → verifica»; l'ozono e il PM sono nella carta dei casi particolari e non nel binario; nessuna data; ogni termine spiegato.
