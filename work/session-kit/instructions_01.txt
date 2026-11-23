@@ -1,0 +1,46 @@
+INSTRUCTIONS 01 — Il ruolo della modellistica nella AAQD
+Leggi prima methods.txt (v3, stessa cartella). Cartella da creare: 01-role-of-modelling (stem dei file: role_of_modelling)
+ARCHETIPO: G (hub: un centro e cinque raggi) con un mini-percorso. Slide di apertura della serie: deve fare da «indice visivo».
+
+MESSAGGIO UNICO
+La modellistica serve a cinque cose nella direttiva (progettare la rete, valutare, attribuire le sorgenti, pianificare, prevedere)
+e queste cinque cose sono collegate nel percorso di un superamento.
+
+PAGINE DA LEGGERE (pagine fisiche del PDF)
+- §1.3 «roles of modelling», p. 14-16, e la figura 1-1 a p. 16 (guardala come immagine: ordine dei passi e freccia di ritorno).
+- Non servono le introduzioni dei capitoli 2-6: le domande degli ambiti sono gia' date qui sotto.
+
+CONTENUTO ESSENZIALE
+- Hub centrale «modellistica»; cinque raggi con icona e domanda in 4-6 parole (stesso colore/icona per ambito: saranno l'«indice»
+  riusato nelle altre slide):
+  Rete (icona pin): «Dove mettere le stazioni?» · Valutazione (area): «Quanto è esteso il superamento?» ·
+  Source apportionment (source): «Chi lo causa?» · Piani (doc): «Quali misure bastano?» · Previsioni (warn): «Domani si supera la soglia?»
+- Percorso del superamento, collegando i raggi Valutazione → Source apportionment → Piani, con la freccia di ritorno dal source
+  apportionment alla valutazione (rafforza modelli di valutazione e inventari delle emissioni) e una spunta finale sui Piani:
+  «verifica: limiti rispettati in ogni stazione e in tutta la zona». Rete e Previsioni non stanno nel percorso: la rete viene prima,
+  le previsioni sono il canale a breve termine (avviano i piani d'azione a breve termine).
+- Spiega «source apportionment» in 5-7 parole («da quali sorgenti viene l'inquinamento»); AAQD = direttiva (UE) 2024/2881 sulla
+  qualita' dell'aria ambiente (nel sottotitolo).
+
+FATTI VERIFICATI NEL TESTO (ricontrolla comunque nelle pagine indicate)
+- Cinque ambiti (p. 14-15): rappresentativita' spaziale dei punti di campionamento e progetto della rete (anche spostando i punti);
+  valutazione dei livelli di concentrazione, comprese le situazioni di superamento e il contributo di sorgenti naturali e sale/sabbia;
+  source apportionment (contributo delle sorgenti e impatto potenziale della loro riduzione, punto di partenza della pianificazione);
+  piani (scegliere le misure e quantificarne l'impatto, nel tempo piu' breve); previsioni a breve termine (avvisi al pubblico per
+  soglie di informazione e allarme, e innesco dei piani d'azione a breve termine).
+- Percorso (p. 16, fig. 1-1): osservazione del superamento (misure, oppure modelli o misure indicative) → stima delle indicazioni
+  sulla gravita' (area, popolazione, strade, ecosistemi) → source apportionment → pianificazione; il source apportionment alimenta
+  anche la valutazione; verifica finale in ogni punto di campionamento e, con gli indicatori futuri, in tutta la zona.
+
+DA NON MOSTRARE
+- Atti di esecuzione e relative scadenze (art. 8(7a), 8(7b), 16(4), 17(4), 18(5), 23(5); regola dei due anni dopo l'adozione dell'atto
+  8(7a), art. 8(3)): lo stato e' cambiato e sono troppe parole. Elencali pure in sources.md tra i «non rappresentati» (sono confermati
+  a p. 15), segnando ✖ «verificare gli atti adottati». NON scrivere se l'atto 8(7a) e' stato adottato, ne' la sua data.
+- Dettagli normativi del reporting, elenchi di modelli, famiglie di modelli (slide 2), qualsiasi sigla ESI.
+
+ELEMENTI GRAFICI SUGGERITI: cerchio centrale grande; cinque nodi con icone a tratto (circ_icon di common/layout.py); anello a frecce
+tra i nodi 2-3-4 con etichetta «percorso di un superamento»; spunta (icona check) sul nodo Piani.
+BUDGET: ≤ 80 parole. Sottotitolo IT: «Cinque ambiti, un percorso · Documento tecnico di supporto della Commissione (aprile 2025), §1.3 · Dir. (UE) 2024/2881».
+LEGAMI: le slide 2, 6, 8-9 (valutazione), 10-12 (SA), 13-15 (piani), 16-17 (previsioni) sono i dettagli; qui solo una frase per ambito.
+SOURCES.MD (minimo): cinque ambiti ✔; percorso e freccia di ritorno ✔ (fig. 1-1); verifica finale in tutta la zona ✔; rese sintetiche
+(«rete» = rappresentativita' + progettazione; «previsioni» = avvisi + innesco) ◐; atti di esecuzione e scadenze: non rappresentati ✖.

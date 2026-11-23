@@ -1,0 +1,20 @@
+INSTRUCTIONS 11 — I sei passi del source apportionment
+Leggi prima methods.txt (v3, stessa cartella). Cartella da creare: 11-source-apportionment-steps (stem dei file: source_apportionment_steps)
+ARCHETIPO: B (flusso a tappe) con il codice colore come elemento grafico.
+
+MESSAGGIO UNICO
+Un source apportionment fatto bene segue sei passi, a partire dalla scelta del metodo adatto a scopo e inquinante (verde = adatto, arancio = solo
+a certe condizioni, grigio = non adatto).
+
+SEZIONI DA LEGGERE: §4.3 (pagine fisiche 63-71: 4.3.1 p.65, 4.3.2 p.67, 4.3.3 p.69, 4.3.4 p.69, 4.3.5 p.70, 4.3.6 p.71): i sei passi (ESTRAI la lista esatta: nei miei appunti 1 scelta del metodo con tabelle verde/arancio/grigio,
+2 scelta degli strumenti (prodotti UE, modelli a sorgente, a recettore), 3-4 QA/QC della simulazione di riferimento e reporting,
+5-6 valutazione e interpretazione: DA VERIFICARE), tab. 4-1 e 4-2 (guarda le pagine 65-66 circa come immagine), §4.3.1 (fitness-for-purpose; p. 65).
+Fatto già verificato: modello a recettore per NO2 = grigio (limiti intrinseci).
+
+LAYOUT PROPOSTO
+- Sei chevron in fila (o a serpentina), ciascuno con numero, nome (nome, non verbo) e domanda in 3-6 parole.
+- Sotto il passo 1, un riquadro grande con una mini-matrice colorata: righe = pochi inquinanti (es. PM2,5, NO2), colonne = scopo (valutazione /
+  piano); celle verde/arancio/grigio con valori ESEMPIO tratti dalle tabelle del documento (non inventare: copia 4-6 celle reali; segnalo in sources.md).
+- Legenda: verde = adatto · arancio = solo a certe condizioni · grigio = non adatto.
+DA NON MOSTRARE: tutte le celle delle tabelle, dettagli dei prodotti UE (slide 12).
+BUDGET: ≤ 100 parole.

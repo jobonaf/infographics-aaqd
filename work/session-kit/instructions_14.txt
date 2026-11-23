@@ -1,0 +1,49 @@
+INSTRUCTIONS 14 — Gli scenari emissivi di un piano (SFOLTIMENTO e nuovo impianto grafico)
+Leggi prima methods.txt (v3, stessa cartella). Cartella: 14-emission-scenarios (gia' nel repo con questo nome: consegnare la nuova versione, senza sovrascrivere nulla; stem dei file: emission_scenarios).
+La versione attuale ha il grafico giusto ma 3 pannelli con troppo testo (sette paragrafi con etichette, piu' due blocchi). Obiettivo: il GRAFICO diventa protagonista, il testo si riduce a callout.
+ARCHETIPO: D (grafico protagonista) con callout numerati. Modello di codice facoltativo: optional/template_chart_build.py (barre con segmenti, whisker, valori calcolati).
+
+MESSAGGIO UNICO
+Gli scenari emissivi servono a rispondere a una domanda: quanto servono le misure e quanto valgono rispetto al limite. Si leggono tutti sulla stessa scala di concentrazioni, confrontate con il limite.
+
+PAGINE DA LEGGERE (pagine fisiche del PDF)
+§5.2.4 scenari emissivi, p. 85-87 (l'elenco dei sette tipi, il caso migliore/peggiore e quanti scenari calcolare); in piu' §5.3.3 p. 91-92 per l'esempio dell'esposizione media (2030 contro 2020).
+
+STRUTTURA DELLA SLIDE
+1 GRAFICO (circa il 58% della larghezza e quasi tutta l'altezza): barre orizzontali con valore in % del limite, ESEMPIO INVENTATO e CALCOLATO nel codice (dichiaralo nella figura):
+   1 Riferimento 135 · 2 Base 115 (intervallo caso migliore-peggiore 104-128) · 3 Misure selezionate 88 (78-99) · 4 Massima riduzione fattibile 72 · 6 Zero emissioni 36.
+   Linea tratteggiata del limite a 100. Barre sopra il limite in rosso, sotto in TEAL. Numeri dei callout (cerchietti 1-7) accanto alle barre.
+   Una PARENTESI con freccia dal bordo della barra Base alla linea del limite, etichetta «5 Riduzione necessaria: di quanto devono calare le emissioni» (questo scenario non e' una barra: e' il «salto» da superare).
+   Una piccola legenda del baffo: «intervallo tra caso migliore e peggiore». Una nota che spiega la distanza tra Riferimento e Zero emissioni: «la parte che dipende dalle emissioni della zona».
+2 LISTA a destra (circa 38%): sette righe, ciascuna con cerchietto numerato, NOME in grassetto e UNA frase di ≤ 7 parole, piu' un pallino di stato (legenda: ● richiesto dalla direttiva · ◐ solo in certi casi · ○ non richiesto):
+   1 Riferimento (reference) ○ «l'ultimo anno con un superamento»
+   2 Base (baseline) ● «solo le misure gia' adottate»
+   3 Misure selezionate ● «effetto di ogni misura e del pacchetto»
+   4 Massima riduzione fattibile ◐ «tutto il realistico; se il limite non si raggiunge in tempo»
+   5 Riduzione necessaria ○ «di quanto calare, nei casi semplici»
+   6 Zero emissioni ○ «senza le emissioni della zona»
+   7 Esposizione media (AEI) ◐ «3 anni contro i 3 di 10 anni prima dell'anno di proiezione»
+3 Striscia in basso, due elementi in una riga ciascuno: «Spesso bastano due scenari per l'anno di proiezione: base e finale (che rispetta il limite)» · «Se serve l'esposizione media, uno in piu' con le emissioni di 10 anni prima dell'anno di proiezione».
+4 Fascia (≤ 150 caratteri): «Uno scenario e' un calcolo con le emissioni cambiate, a parita' di meteo: mostra quanto servono le misure e quanto valgono.»
+BUDGET: ≤ 110 parole in tutto. Sottotitolo IT: «Sette tipi di scenario · Documento tecnico di supporto della Commissione (aprile 2025), §5.2.4 · Dir. (UE) 2024/2881, Allegato VIII».
+
+FATTI VERIFICATI NEL TESTO (ricontrolla in p. 85-87)
+- I sette scenari: riferimento (anno dell'ultima valutazione con superamento); base (misure gia' adottate; richiesta, Allegato VIII A punto 5); massima riduzione fattibile (non sempre richiesta: necessaria se il limite
+  non si raggiunge entro la scadenza); riduzioni per il rispetto, utili nei casi semplici con una sorgente locale dominante; zero emissioni (modello regionale; non linearita': l'ozono puo' aumentare; non richiesto ma informativo);
+  misure selezionate (effetto individuale, dove disponibile, richiesto; per gli inquinanti reattivi anche in pacchetto); esposizione media (AEI: media di 3 anni consecutivi confrontata con quella di 10 anni prima dell'anno
+  di proiezione; richiesta se l'obbligo di riduzione non e' rispettato).
+- Caso migliore, piu' probabile, peggiore dove possibile (Allegato VIII A punto 8(f)); test di sensibilita' su efficacia delle tecnologie, attuazione, adesione, esenzioni, controlli; contano soprattutto per base, misure
+  selezionate e AEI.
+- Limitare i calcoli: due scenari per l'anno di proiezione (base e finale); se non si raggiunge il rispetto, altri; per l'AEI uno in piu' di 10 anni prima dell'anno di proiezione.
+
+DA NON MOSTRARE (sources.md, «non rappresentati»)
+Il caso migliore/peggiore in forma estesa (resta il solo baffo); i dettagli della base (trend, politiche UE, NECD); l'approccio bottom-up; l'ozono come eccezione dello zero emissioni (una parola nella riga 6 al massimo, se avanza spazio);
+le SRA; la sigla ESI; i dati delle slide 13 e 15.
+
+SIGLE E TERMINI DA SPIEGARE
+AEI = indicatore di esposizione media (average exposure indicator); anno di proiezione = l'anno futuro del piano; limite = valore limite o obiettivo da rispettare. Termini inglesi in IT: «reference» e «baseline» tra parentesi; «AEI».
+
+LEGAMI: slide 13 (piani e tempi), 15 (meteo e bias dentro i confronti), 4 (MQO), 10-11 (source apportionment e impatti potenziali).
+SOURCES.MD (minimo): sette tipi ✔ (p. 85-86); base richiesta ✔; massima riduzione condizionata ✔; riduzione necessaria nei casi semplici ✔; zero emissioni informativo ✔; misure selezionate dove disponibili ✔; AEI 10 anni prima
+dell'anno di proiezione ✔ (p. 86-87; esempio 2030/2020 p. 92); caso migliore/peggiore ✔; due scenari ✔; valori del grafico n/a (inventati); stato dei pallini ◐ (resa sintetica delle condizioni).
+CONTROLLI: i valori delle barre sono calcolati nel codice e dichiarati inventati; nessun ordine «reale» implicato tra riferimento e zero emissioni se non quello dell'esempio; lo scenario 5 NON e' una barra; ogni etichetta ≤ 7 parole; il totale parole ≤ 110.

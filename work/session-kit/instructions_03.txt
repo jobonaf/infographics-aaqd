@@ -1,0 +1,25 @@
+INSTRUCTIONS 03 — Fitness-for-purpose (DA RIFARE)
+Leggi prima methods.txt (v3, stessa cartella). Cartella: 03-fitness-for-purpose (gia' nel repo con lo stesso nome: consegnare la nuova versione in outputs, senza sovrascrivere nulla; la versione precedente e' in previous/03-fitness-for-purpose/ se il pacchetto e' presente). Stem dei file: fitness_for_purpose.
+ARCHETIPO: G (hub con sei raggi) — sostituisce le 3 colonne di testo.
+
+PROBLEMA DELLA VERSIONE PRECEDENTE: troppo testuale, 3 pannelli densi; contenuti che appartengono ad altre slide (Tier e MoNET → slide 6;
+codice verde/arancio/grigio → slide 11; emulatori → slide 14-15; DELTA → slide 4).
+
+MESSAGGIO UNICO
+Non esistono modelli buoni o cattivi in assoluto: un modello è «adatto allo scopo» se rispetta sei criteri per quell'applicazione;
+superare l'MQO (obiettivo di qualità della modellistica) è necessario ma non sufficiente.
+
+SEZIONI DA LEGGERE
+- §1.5 «Fitness-for-purpose and the QA/QC process» (pagine fisiche 23-25): i sei criteri (da Denby et al., EEA 2011), QA/QC degli input.
+- §3.3 (p. 45): «nessun modello è buono o cattivo in assoluto», condizioni più severe per SA e piani.
+- §3.4.4 (p. 50-51): MQO necessario ma non sufficiente; DELTA, checklist FAIRMODE, norma CEN.
+Riferimento di contenuto: previous/03-fitness-for-purpose/sources.md (righe già verificate ✔).
+
+CONTENUTO ESSENZIALE
+- Hub: al centro «Adatto allo scopo?»; sei raggi con icona e 3-5 parole: risoluzione adeguata · processi pertinenti · sorgenti rilevanti ·
+  meteorologia adatta · validazione e MQO · documentazione.
+- Una fascia sotto/lato: «Gli input vanno controllati prima di OGNI simulazione» (una riga, icona di spunta).
+- Un cerchio piccolo dentro il grande: «MQO = necessario, non sufficiente».
+- Una riga di cinque icone (gli ambiti 2-6) con la scritta «stessa domanda, criteri diversi per ambito».
+DA NON MOSTRARE: tabella per ambito, Tier, MoNET, colori SA, emulatori, elenco strumenti FAIRMODE (al massimo «DELTA Tool» in 3 parole).
+BUDGET: ≤ 90 parole. «MQO» spiegato in figura.

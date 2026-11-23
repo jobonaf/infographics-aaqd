@@ -1,0 +1,21 @@
+INSTRUCTIONS 10 — Source apportionment: tre domande, tre risposte
+Leggi prima methods.txt (v3, stessa cartella). Cartella da creare: 10-source-apportionment-methods (stem dei file: source_apportionment_methods)
+ARCHETIPO: E (matrice a pallini/colori).
+
+MESSAGGIO UNICO
+A seconda di che cosa vuoi sapere (contributo di una sorgente, effetto di una riduzione, aumento per una sorgente locale) cambia il tipo di
+risultato del source apportionment e il tipo di metodo adatto.
+
+SEZIONI DA LEGGERE: §4.1-§4.2 (pagine fisiche 59-63): perché serve (Allegato VIII), modelli orientati alla sorgente e al recettore
+(il recettore vale per il solo particolato), i tre tipi di risultato — impatti potenziali (per la pianificazione), contributi, incrementi
+(per la valutazione) —, il tema della linearità (non reattivi lineari; reattivi come NO2, O3, aerosol secondari no), il dettaglio
+emissivo (combustibile, tecnologia, processo). Rileggi le DEFINIZIONI esatte prima di scrivere le etichette: i miei appunti sono una sintesi.
+Nota: il codice colore verde/arancio/grigio è della slide 11, non qui.
+
+LAYOUT PROPOSTO
+- Matrice: 3 righe (tipi di risultato) × colonne (domanda in parole semplici · esempio in una riga · metodo adatto: orientato alla sorgente / al recettore · lineare?).
+  Pallini pieni/vuoti o piccoli simboli; icone per riga.
+- Un piccolo schema a lato che distingue «sorgente → recettore» (si segue la sorgente) e «recettore → sorgente» (si risale dalla misura).
+- Esempio inventato (facoltativo): una torta/barra per una città con tre sorgenti: «contributo» (quota della concentrazione) e «impatto potenziale» (di quanto scende ridotta del 15%).
+DA NON MOSTRARE: lista di modelli, formule, tabelle 4-1/4-2.
+BUDGET: ≤ 100 parole. Spiega «contributo», «incremento», «impatto potenziale» con una riga concreta ciascuno.
