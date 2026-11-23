@@ -1,0 +1,45 @@
+# Stringhe italiane (versione 2, archetipo «linea dei tempi»): etichette brevi, niente paragrafi.
+# Pochi termini inglesi, solo quelli necessari (roadmap, screening, source apportionment).
+lang: it
+alt_title: "Dalla valutazione al piano: tempi e passi"
+alt_desc: >-
+  Infografica con linea dei tempi. In alto due binari: il piano (superamento registrato nell'anno Y, piano adottato entro
+  Y+2, fine del superamento entro la fine di Y+4, con un esempio 2027, 2029, 2031; piano aggiornato se non basta;
+  reporting entro due mesi) e la roadmap (2026-2030: superamento previsto di valori da rispettare nel 2030, roadmap entro
+  due anni dal superamento, ultima data per chiedere la proroga il 31 dicembre 2028). In basso: le cinque tappe per
+  costruire un piano, che cosa deve dire il piano e la cooperazione tra Stati.
+title: "Dalla valutazione al piano: tempi e passi"
+subtitle: "Documento tecnico di supporto della Commissione (aprile 2025), §5.1 e §5.2 · Dir. (UE) 2024/2881, artt. 18, 19 e 21"
+plan_lbl: "PIANO"
+road_lbl: "ROADMAP"
+period: "periodo di superamento: al massimo 4 anni"
+markers:
+  - ["Y", ["superamento", "registrato"], "es. 2027"]
+  - ["Y + 2", ["piano adottato,", "al più tardi"], "es. 2029"]
+  - ["fine di Y + 4", ["fine del superamento,", "al più tardi"], "es. 2031"]
+report: "reporting entro 2 mesi"
+loop: ["se non basta:", "piano aggiornato"]
+road_bar: "superamento previsto di valori da rispettare nel 2030"
+flag: ["31 dic 2028: ultima data", "per chiedere la proroga"]
+road_rule: ["roadmap entro 2 anni", "dal superamento"]
+road_end: ["scadenza", "dei valori"]
+steps_h: "Cinque tappe"
+steps:
+  - ["Valutazione", "Dove, quanto, da chi?"]
+  - ["Screening", "Quali sorgenti contano?"]
+  - ["Misure", "Che cosa si può fare?"]
+  - ["Scenari", "Bastano? Quando?"]
+  - ["Adozione", "Consultazione e reporting"]
+say_h: "Il piano deve dire"
+say:
+  - ["dove", "punti in superamento", "pin"]
+  - ["quanto", "km², persone esposte", "area"]
+  - ["da dove", "sorgenti, contributi", "source"]
+  - ["quali misure", "calendario, responsabili", "gear"]
+  - ["scenario base", "senza nuove azioni", "baseline"]
+  - ["incertezza", "caso migliore e peggiore", "question"]
+coop_h: "Più Stati"
+coop: ["Se l’inquinamento arriva", "da un altro Stato:", "si coopera (art. 21),", "risposta entro 3 mesi"]
+def_bold: "Piano e roadmap:"
+def_l1: "dicono quali misure, entro quando, per rispettare i limiti dove sono superati, o dove si prevede che lo saranno nel 2030."
+def_l2: "Partono dalla valutazione e dal source apportionment; gli scenari mostrano se le misure bastano."

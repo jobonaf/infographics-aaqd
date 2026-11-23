@@ -1,0 +1,65 @@
+# English strings. Paragraphs (lists) are re-wrapped automatically. Numbers in braces are computed in build.py.
+lang: en
+alt_title: "Projections: how to estimate future concentrations"
+alt_desc: >-
+  Infographic in three panels on how concentrations in a future year are estimated for an air quality plan, with the
+  five uncertainties to control. 1: future emissions, background (with ready-made European data) and how to treat natural
+  sources, road salt and sand. 2: the four possible choices for meteorology and the case of the average exposure
+  indicator. 3: correcting the model bias with an invented example (absolute, relative, combined difference), testing
+  the correction on the past and checking the model's dynamic sensitivity.
+title: "Projections: how to estimate future concentrations"
+subtitle: "Commission technical support document (April 2025), §5.3 and §5.4 · Dir. (EU) 2024/2881, Annex VIII"
+h1: "Emission inputs"
+h2: "Meteorology"
+h3: "Bias correction and checks"
+p1_intro: "The projection covers the whole zone."
+e_title: "Future emissions"
+e_text: ["They depend on measures and activity trends: they are uncertain, so a best and a worst case are calculated."]
+b_title: "Background"
+b_text: ["The concentration arriving from outside the modelled area; it changes with European and national policies. Ready-made data: emissions by country 2025–2050 (IIASA, the international institute for applied systems analysis) and European scenarios (CAMS, the Copernicus atmosphere service)."]
+n_title: "Natural sources, salt and sand"
+n_text: ["Natural sources (e.g. wildfires) are subtracted from exceedances if needed to meet the limit; so are road salt and sand (PM10), if reasonable measures are shown. In projections their emissions stay at the reference-year level, unless the plan reduces them."]
+m_intro: ["Future weather cannot be predicted: it is chosen."]
+opts:
+  - name: "Reference year"
+    tag: "recommended"
+    filled: true
+    text: ["Weather of the exceedance year for all scenarios: direct comparison, fewer runs and a bias correction tied to the assessment. Check that it is a representative year."]
+  - name: "Last 3–5 years"
+    tag: "most complete"
+    filled: false
+    text: ["Average, best and worst year: a more robust estimate, because measures must work in every year, but more runs are needed."]
+  - name: "One representative year"
+    tag: ""
+    filled: false
+    text: ["A single recent year, also chosen with measurement data: the link with the reference year is lost."]
+  - name: "Statistical weather data"
+    tag: ""
+    filled: false
+    text: ["For models of small areas: statistical data representing a better and a worse year."]
+aei_title: "Average exposure (AEI)"
+aei_text: ["Same meteorology in the projection year (e.g. 2030) and 10 years earlier (e.g. 2020), over 3 consecutive years. The relative change matters most."]
+p3_intro: ["The model usually under- or overestimates compared with measurements (bias). The correction depends on the cause: background or unknown sources, or modelled sources."]
+chart_title: "invented example (µg/m³): the model underestimates by {bias}"
+rows:
+  - "Assessment: model"
+  - "Assessment: obs."
+  - "Projection: none"
+  - "Projection: absolute"
+  - "Projection: relative"
+  - "Projection: combined"
+leg: ["background", "local source", "correction"]
+methods:
+  - name: "Absolute (+{bias} µg/m³)"
+    text: ["The difference is added: for a wrong background or unknown sources."]
+  - name: "Relative (×{ratio})"
+    text: ["Multiplied by the same ratio. For modelled sources that the measures reduce."]
+  - name: "Combined"
+    text: ["Relative for the sources, absolute for the background."]
+test_title: "Testing the correction on the past"
+test_text: ["Compute the correction for a past year (e.g. 2010) and apply it to a recent one (e.g. 2020): comparison with measurements shows whether the method works."]
+dyn_title: "Dynamic sensitivity"
+dyn_text: ["Doing well today does not guarantee responding well to reductions. It is checked with historical trends and with the DELTA module (FAIRMODE tool), which tests the model by night and day, on weekdays and weekends."]
+def_bold: "Five uncertainties:"
+def_l1: "future emissions, background, meteorology, bias correction, dynamic sensitivity: to check and, where possible, quantify."
+def_l2: "Every choice changes the result: it must be declared, with an uncertainty range where possible."

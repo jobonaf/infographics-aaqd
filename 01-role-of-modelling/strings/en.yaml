@@ -1,0 +1,30 @@
+# English strings. Lists = pre-broken lines.
+lang: en
+alt_title: "The role of modelling in the air quality directive: five domains, one pathway"
+alt_desc: >-
+  Hub diagram: modelling at the centre, five domains around it, each with one question. Network (where to place the
+  stations), assessment (how far the exceedance extends), source apportionment (who causes it, i.e. which sources the
+  pollution comes from), plans (which measures are enough) and forecasts (will the threshold be exceeded tomorrow).
+  Assessment, source apportionment and plans form the pathway of an exceedance, numbered 1 to 3; source apportionment
+  strengthens the assessment models and the emission inventories; the plans carry the final check. The network is defined
+  beforehand; forecasts trigger short-term action plans.
+title: "The role of modelling in the ambient air quality directive (AAQD)"
+subtitle: "Five domains, one pathway · Commission technical support document (April 2025), §1.3 · Directive (EU) 2024/2881"
+hub: "Modelling"
+rete_name: "Network"
+rete_q: "Where to place the stations?"
+rete_tag: "defined beforehand"
+val_name: "Assessment"
+val_q: "How far does the exceedance extend?"
+sa_name: "Source apportionment"
+sa_gloss: "which sources the pollution comes from"
+sa_q: "Who causes it?"
+pia_name: "Plans"
+pia_q: "Which measures are enough?"
+pre_name: "Forecasts"
+pre_q: "Will the threshold be exceeded tomorrow?"
+pre_tag: "triggers short-term action plans"
+path_label: "pathway of an exceedance"
+back_label: "strengthens assessment models and emission inventories"
+check_head: "check:"
+check_text: "limits met at every station and across the whole zone"

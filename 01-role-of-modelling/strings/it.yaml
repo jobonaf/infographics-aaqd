@@ -1,0 +1,30 @@
+# Stringhe italiane. Liste = righe già spezzate.
+lang: it
+alt_title: "Il ruolo della modellistica nella direttiva sull’aria: cinque ambiti, un percorso"
+alt_desc: >-
+  Schema a hub: al centro la modellistica, intorno cinque ambiti con una domanda ciascuno. Rete (dove mettere le stazioni),
+  valutazione (quanto è esteso il superamento), source apportionment (chi lo causa, cioè da quali sorgenti viene
+  l'inquinamento), piani (quali misure bastano) e previsioni (domani si supera la soglia). Valutazione, source apportionment
+  e piani formano il percorso di un superamento, numerato da 1 a 3; il source apportionment rafforza i modelli di valutazione
+  e gli inventari delle emissioni; sui piani c'è la verifica finale. La rete si definisce prima; le previsioni innescano i
+  piani a breve termine.
+title: "Il ruolo della modellistica nella direttiva sull’aria (AAQD)"
+subtitle: "Cinque ambiti, un percorso · Documento tecnico di supporto della Commissione (aprile 2025), §1.3 · Dir. (UE) 2024/2881"
+hub: "Modellistica"
+rete_name: "Rete"
+rete_q: "Dove mettere le stazioni?"
+rete_tag: "si definisce prima"
+val_name: "Valutazione"
+val_q: "Quanto è esteso il superamento?"
+sa_name: "Source apportionment"
+sa_gloss: "da quali sorgenti viene l’inquinamento"
+sa_q: "Chi lo causa?"
+pia_name: "Piani"
+pia_q: "Quali misure bastano?"
+pre_name: "Previsioni"
+pre_q: "Domani si supera la soglia?"
+pre_tag: "innesca i piani a breve termine"
+path_label: "percorso di un superamento"
+back_label: "rafforza modelli di valutazione e inventari delle emissioni"
+check_head: "verifica:"
+check_text: "limiti rispettati in ogni stazione e in tutta la zona"

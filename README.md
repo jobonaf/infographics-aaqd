@@ -1,5 +1,7 @@
 # Air quality modelling infographics for the AAQD
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23744350.svg)](https://doi.org/10.5281/zenodo.23744350)
+
 [![Validate infographics](https://github.com/jobonaf/infographics-aaqd/actions/workflows/validate.yml/badge.svg)](https://github.com/jobonaf/infographics-aaqd/actions/workflows/validate.yml)
 
 Bilingual Italian/English infographics on air quality modelling under Directive (EU) 2024/2881 (AAQD) and related technical guidance.
@@ -22,9 +24,9 @@ The project is organised as a set of 17 code-generated slides for presentations,
 | 10 | Source apportionment | Definitions and methods | Planned |
 | 11 | Source apportionment | The six source-apportionment steps | Planned |
 | 12 | Source apportionment | Transboundary pollution and EU products | Planned |
-| 13 | Plans and roadmaps | From assessment to air quality plans | Planned |
+| 13 | Plans and roadmaps | From assessment to air quality plans | Developed, review pending |
 | 14 | Plans and roadmaps | The seven emission scenarios | Developed, review pending |
-| 15 | Plans and roadmaps | Projections: background, meteorology and bias correction | Planned |
+| 15 | Plans and roadmaps | Projections: background, meteorology and bias correction | Developed, review pending |
 | 16 | Forecasting | Forecasting systems | Planned |
 | 17 | Forecasting | Forecasts as triggers for short-term action plans | Planned |
 
