@@ -24,9 +24,9 @@ The project is organised as a set of 17 code-generated slides for presentations,
 | 10 | Source apportionment | Definitions and methods | Planned |
 | 11 | Source apportionment | The six source-apportionment steps | Planned |
 | 12 | Source apportionment | Transboundary pollution and EU products | Planned |
-| 13 | Plans and roadmaps | From assessment to air quality plans | Planned |
+| 13 | Plans and roadmaps | From assessment to air quality plans | Developed, review pending |
 | 14 | Plans and roadmaps | The seven emission scenarios | Developed, review pending |
-| 15 | Plans and roadmaps | Projections: background, meteorology and bias correction | Planned |
+| 15 | Plans and roadmaps | Projections: background, meteorology and bias correction | Developed, review pending |
 | 16 | Forecasting | Forecasting systems | Planned |
 | 17 | Forecasting | Forecasts as triggers for short-term action plans | Planned |
 
