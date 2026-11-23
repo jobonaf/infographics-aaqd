@@ -1,0 +1,66 @@
+# Stringhe italiane. I paragrafi (liste) vengono ri-spezzati automaticamente in base alla larghezza.
+# I numeri tra graffe sono calcolati in build.py. Pochi termini inglesi tra parentesi, solo quelli necessari.
+lang: it
+alt_title: "Proiezioni: come stimare le concentrazioni future"
+alt_desc: >-
+  Infografica in tre pannelli su come si stimano le concentrazioni in un anno futuro per un piano di qualità dell'aria,
+  con le cinque incertezze da controllare. 1: emissioni future, fondo (con dati europei già pronti) e come trattare
+  sorgenti naturali, sale e sabbia sulle strade. 2: le quattro scelte possibili per la meteorologia e il caso
+  dell'esposizione media. 3: la correzione del bias del modello con un esempio inventato (differenza assoluta, relativa,
+  combinata), la prova della correzione sul passato e la verifica della sensibilità dinamica del modello.
+title: "Proiezioni: come stimare le concentrazioni future"
+subtitle: "Documento tecnico di supporto della Commissione (aprile 2025), §5.3 e §5.4 · Dir. (UE) 2024/2881, Allegato VIII"
+h1: "Emissioni e fondo"
+h2: "Meteorologia"
+h3: "Correzione del bias e verifiche"
+p1_intro: "La proiezione riguarda l’intera zona."
+e_title: "Emissioni future"
+e_text: ["Dipendono da misure e trend delle attività: sono incerte, per questo si calcolano un caso migliore e uno peggiore."]
+b_title: "Fondo (background)"
+b_text: ["Concentrazione che arriva da fuori dell’area modellata e cambia con le politiche europee e nazionali. Dati pronti: emissioni per paese 2025–2050 (IIASA, istituto internazionale di analisi dei sistemi applicati) e scenari europei (CAMS, servizio Copernicus per l’atmosfera)."]
+n_title: "Sorgenti naturali, sale e sabbia"
+n_text: ["Le sorgenti naturali (es. incendi boschivi) si sottraggono dai superamenti se serve per rispettare il limite; così anche sale e sabbia sulle strade (PM10), se si mostrano misure ragionevoli. Nelle proiezioni le loro emissioni restano quelle dell’anno di riferimento, salvo riduzioni previste dal piano."]
+m_intro: ["Il meteo futuro non si prevede: si sceglie."]
+opts:
+  - name: "Anno di riferimento"
+    tag: "consigliata"
+    filled: true
+    text: ["Meteo dell’anno del superamento per tutti gli scenari: confronto diretto, meno calcoli e correzione del bias legata alla valutazione. Va verificato che sia un anno rappresentativo."]
+  - name: "Ultimi 3–5 anni"
+    tag: "più completa"
+    filled: false
+    text: ["Media, anno migliore e anno peggiore: stima più robusta, perché le misure devono valere in tutti gli anni, ma servono più calcoli."]
+  - name: "Un anno rappresentativo"
+    tag: ""
+    filled: false
+    text: ["Un solo anno recente, scelto anche con i dati di misura: si perde il legame con l’anno di riferimento."]
+  - name: "Dati meteo statistici"
+    tag: ""
+    filled: false
+    text: ["Per modelli su aree piccole: dati statistici che rappresentano un anno migliore e uno peggiore."]
+aei_title: "Esposizione media (AEI)"
+aei_text: ["Stessa meteorologia nell’anno di proiezione (es. 2030) e 10 anni prima (es. 2020), su 3 anni consecutivi. Conta soprattutto la variazione relativa."]
+p3_intro: ["Il modello di solito sottostima o sovrastima rispetto alle misure (bias). La correzione dipende dalla causa: fondo o fonti ignote, oppure fonti modellate."]
+chart_title: "esempio inventato (µg/m³): il modello sottostima di {bias}"
+rows:
+  - "Valutazione: modello"
+  - "Valutazione: misure"
+  - "Proiezione: nessuna"
+  - "Proiezione: assoluta"
+  - "Proiezione: relativa"
+  - "Proiezione: combinata"
+leg: ["fondo", "fonte locale", "correzione"]
+methods:
+  - name: "Assoluta (+{bias} µg/m³)"
+    text: ["Si aggiunge la differenza: per un fondo sbagliato o fonti ignote."]
+  - name: "Relativa (×{ratio})"
+    text: ["Si moltiplica per lo stesso rapporto. Per fonti modellate che le misure riducono."]
+  - name: "Combinata"
+    text: ["Relativa per le fonti, assoluta per il fondo."]
+test_title: "Provare la correzione sul passato"
+test_text: ["Si calcola la correzione per un anno passato (es. 2010) e la si applica a uno recente (es. 2020): il confronto con le misure dice se il metodo funziona."]
+dyn_title: "Sensibilità dinamica"
+dyn_text: ["Andare bene oggi non garantisce di rispondere bene alle riduzioni. Si verifica con i trend storici e con il modulo di DELTA (strumento FAIRMODE), che prova il modello di notte e di giorno, nei feriali e nei festivi."]
+def_bold: "Cinque incertezze:"
+def_l1: "emissioni future, fondo, meteorologia, correzione del bias, sensibilità dinamica: da controllare e, dove possibile, quantificare."
+def_l2: "Ogni scelta cambia il risultato: va dichiarata, con un intervallo di incertezza dove possibile."
