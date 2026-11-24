@@ -1,26 +1,31 @@
-# 03 · Fitness-for-purpose: fonti e stato di verifica
+# 03 – Fitness-for-purpose (versione 3, archetipo G «hub»)
 
-Scheda aggiornata il 2026-11-07. Stato: ✔ letto nel testo · ◐ da fonte secondaria o da riassunto · ✖ da verificare.
-Fonte principale: Commissione europea, DG Ambiente, *Air quality modelling for air quality policy: a technical support document* (2025). La direttiva (UE) 2024/2881 **non è stata riletta direttamente**.
-Principio editoriale della slide: ogni termine tecnico è spiegato nella figura (Tier, MoNET, codice colore, emulatori, QA/QC, MQO, FAIRMODE), senza rimandi al documento originale.
+Fonte: «Air quality modelling for air quality policy: a technical support document», Commissione europea, aprile 2025. Pagine = pagine FISICHE del PDF. La Direttiva (UE) 2024/2881 NON è stata riletta direttamente.
+Stati: ✔ letto nel testo · ◐ sintesi, resa redazionale, schema o esempio · ✖ da verificare.
 
-| Elemento nella figura | Fonte | Stato | Nota |
+| Elemento | Fonte (sezione / pagina) | Stato | Nota |
 |---|---|---|---|
-| Sei criteri di fitness-for-purpose | Doc. tecnico §1.5, da Denby et al. (EEA, 2011) | ✔ | «o dati di addestramento adeguati» per i modelli data-driven è nel testo |
-| Controllo degli input prima di *ogni* simulazione; pre-processing semiautomatico, tracciabile, riproducibile | Doc. tecnico §1.5 | ✔ | |
-| Rete di monitoraggio: quattro livelli (Tier) di metodo per le aree di rappresentatività: 1 giudizio esperto, 2 dati proxy o campagne di misura, 3 modelli fit-for-purpose, 4 modelli + misure aggiuntive; consigliato almeno il 3 | Doc. tecnico §2.2.2 e §2.4 | ✔ | Il documento precisa che il Tier 3 da solo può non bastare per i criteri di area minima rappresentativa (Allegato IV, punto B); non rappresentato |
-| MoNET: applicazione web FAIRMODE; raggruppamento gerarchico delle zone per regime di inquinamento (andamento temporale e concentrazioni del modello); segnala stazioni ridondanti, lacune, incoerenze di classificazione | Doc. tecnico §2.3 e §2.4 | ✔ | Sintesi in una riga; «incoerenze di classificazione» omesse per spazio |
-| Valutazione: riprodurre tutte le concentrazioni osservate (fondo e traffico), nello spazio e nel tempo | Doc. tecnico §3.3 | ✔ | |
-| Source apportionment: metodo scelto per scopo (valutazione o piano) e inquinante; verde = adatto, arancio = adatto solo a condizioni specifiche, grigio = non adatto; esempio: modello a recettore per NO2 | Doc. tecnico §4.3.1 (tab. 4-1, 4-2) | ✔ | L'esempio del recettore per NO2 è citato nel testo come caso di grigio «per limiti intrinseci della formulazione» |
-| Piani: legare emissioni e concentrazioni per scenari futuri; scala del modello = scala del superamento (hotspot, area più ampia, regione) | Doc. tecnico §5.4.1 | ✔ | |
-| Emulatori: metodi statistici o di machine learning che ricreano la relazione emissioni–concentrazioni di un modello esistente; vantaggio: velocità | Doc. tecnico §5.4.1 | ✔ | La figura dice «più veloci» |
-| Previsioni: validazione con misure conformi agli obiettivi di qualità dei dati dell'Allegato V; orizzonte completo, n ≥ 3 giorni; giorno per giorno e lungo periodo | Doc. tecnico §6.3 | ✔ | Non rappresentato: il requisito minimo del solo giorno 1 |
-| Source apportionment e piani: condizioni più severe, soprattutto su emissioni e condizioni al contorno (barra ocra) | Doc. tecnico §3.3, ultimo capoverso | ✔ | |
-| MQO necessario ma non sufficiente; DELTA Tool (FAIRMODE) calcola MQI e MQO con diagrammi e report armonizzati | Doc. tecnico §3.4.4 | ✔ | Nota sull'allineamento di DELTA alla AAQD rimossa su indicazione dell'autore (versione aggiornata nel frattempo) |
-| FAIRMODE: criteri QA/QC, checklist, schema di reporting (Thunis e Tarrason, 2020) | Doc. tecnico §3.4.4 | ✔ | «forum europeo di modellazione della qualità dell'aria» è una descrizione redazionale di FAIRMODE |
-| Norma CEN/TC 264/WG43 sugli obiettivi di qualità dei modelli, in preparazione | Doc. tecnico §3.4.4 | ✔ | Verificare lo stato attuale della norma |
-| La direttiva chiede di riportare descrizione dell'applicazione e calcolo dell'MQO | Doc. tecnico §3.4.4 (che cita la AAQD) | ◐ | Verificare il riferimento di articolo/allegato nella direttiva |
-| Non esistono modelli «buoni» o «cattivi»; qualità relativa agli obiettivi dell'applicazione (fascia in basso) | Doc. tecnico §3.3 | ✔ | |
+| Titolo: un modello non è buono o cattivo in assoluto, è adatto o no allo scopo | §3.3, p. 45 | ✔ | «there are no good or bad models»; qualità relativa all'applicazione |
+| Sei criteri (risoluzione, processi, sorgenti, meteorologia, validazione e MQO, documentazione) | §1.5, p. 24 (da Denby et al., EEA 2011) | ✔ | Etichette abbreviate a 2-3 parole: ◐ |
+| Gli input vanno controllati prima di ogni simulazione | §1.5, p. 24 | ✔ | «before any single model run»; non solo in fase di sviluppo |
+| MQO necessario ma non sufficiente | §3.4.5, p. 51; §3.3, p. 46 | ✔ | Nelle istruzioni indicato come §3.4.4: nel PDF è §3.4.5. P. 46: la fitness-for-purpose è «più che superare l'MQO» |
+| Spiegazione di «MQO» in figura («obiettivo di qualità della modellistica; soglia per lo scarto tra modello e misure») | §3.3, p. 45 (indicatori statistici contro le misure; MQO dice se la qualità è sufficiente) | ◐ | Resa redazionale; la definizione formale (§3.4.2) non è tra le pagine lette |
+| Esempio «NO₂ urbano: strade e canyon» | §3.3, p. 46 | ✔ | Sintesi: il modello deve riprodurre fondo urbano e stazioni da traffico (moduli per strade aperte e canyon stradali) |
+| Stessa domanda, criteri diversi per ambito | §1.5, p. 24-25; §3.3, p. 46 | ◐ | P. 25: i criteri saranno raffinati per i vari domini; p. 46: i principi valgono anche per piani, previsioni e SA |
+| Cinque ambiti di applicazione (rete di monitoraggio, valutazione, attribuzione delle sorgenti, piani e roadmap, previsioni); in inglese «application», non «domain» (ambiguo con il dominio geografico) | §1.6, p. 25 (capitoli 2-6) | ◐ | Nomi e icone redazionali; l'MQO non è citato nella riga perché vale solo per la valutazione (§3.4.5, p. 51) |
+| Riga «processi pertinenti»: adatti a scala, applicazione e inquinante | §1.5, p. 24 | ✔ | Sintesi del secondo criterio |
+| Riga «sorgenti»: es. previsioni, il riscaldamento domestico varia con la temperatura | §1.4.3, p. 21 | ✔ | Previsioni richiedono emissioni dinamiche per settori legati alla meteorologia, come il riscaldamento residenziale |
+| Riga «meteorologia»: risoluzione simile a quella del modello di qualità dell'aria | §1.4.4, p. 21 | ✔ | Per dati da modello meteorologico; altrimenti verificare che catturi i processi che guidano gli inquinanti |
+| Riga «documentazione»: sistema e validazione descritti per l'applicazione | §1.5, p. 24 | ✔ | Il riferimento al calcolo dell'MQO da riportare (§3.4.5, p. 51) vale solo per la valutazione: non usato |
+| Icone | – | ◐ | Set di common/layout.py; «wave» ripetuto per meteorologia e previsioni |
 
-Scelte grafiche: la barra ocra a destra dei riquadri indica le condizioni più severe (SA e piani); i colori verde/arancio/grigio dei chip sono quelli del codice del documento.
-Elementi volutamente **non** rappresentati: elenco completo degli strumenti FAIRMODE (§7.2), limiti del Tier 3 rispetto ai criteri di area minima, dettaglio dei criteri per i singoli ambiti.
+Nessun valore numerico né esempio inventato nella figura.
+
+## Elementi volutamente non rappresentati
+- Secondo criterio, variante per i modelli data-driven (dati di addestramento sufficienti e rappresentativi, §1.5, p. 24).
+- Condizioni «più severe» per source apportionment e piani (suggerite dalle istruzioni): non trovate nelle p. 45-46; il testo dice che i principi valgono per tutti gli ambiti, con la condizione severa sulla risoluzione riferita alla valutazione (§3.3, p. 46). ✖ se si vuole usarle, cercarle nei capitoli 4 e 5.
+- Tabella 1-1 (§1.4.2, p. 19-20): risoluzioni spaziali indicative (≤ 2 500 m urbano, ≤ 10 000 m rurale), non riportate per non allungare l'esempio sulla risoluzione.
+- Strumenti pre-processing semiautomatici, tracciabilità e riproducibilità degli input (§1.5, p. 24).
+- Strumenti, checklist e schema di reporting FAIRMODE, norma CEN (§3.4.5, p. 51); DELTA Tool omesso (la nota 11 del PDF lo dà non allineato, la regola 5.10 oggi allineato).
+- Collaborazione tra modellisti, gestori delle reti ed esperti di emissioni (§1.5, p. 24).
+- Tier, MoNET, codici colore SA, emulatori, tabella per ambito.
