@@ -1,0 +1,43 @@
+# English strings - slide 02: anatomy of a modelling system (archetype H, anatomy with callouts + nested scales)
+lang: en
+alt_title: "Anatomy of a modelling system"
+alt_desc: >-
+  Block diagram: three inputs (emissions, meteorology, boundary conditions or background) feed the model, which can be
+  deterministic (physics and chemistry of the atmosphere) or data-driven (empirical relationships, machine learning), and
+  produces concentrations. Measurements come back in two ways: assimilation blends them in while the model runs, and data
+  fusion corrects the results afterwards. Top right, nested boxes (Russian doll) show the scales: global or regional 50 to
+  1 km, urban 3 km to 100 m, local 100 to 10 m, micro scale in metres; no single model covers all scales, so several models are linked in a chain, each providing boundary conditions to the next. Below, the
+  maximum cell size: 100 m for NO2 near roads, 10 km for regional-background PM2.5.
+title: "Anatomy of a modelling system"
+subtitle: "Modelling system and scales · Commission technical support document (April 2025), §1.4 · Directive (EU) 2024/2881"
+emissions: "Emissions"
+meteo: "Meteorology"
+boundary: "Boundary conditions or background"
+boundary_sub: "pollutants entering from outside the domain"
+model: "Model"
+det: "Deterministic"
+det_sub: "physics and chemistry of the atmosphere"
+data: "Data-driven"
+data_sub: "empirical relationships, machine learning"
+out: "Concentrations"
+out_note: "illustrative sketch"
+meas: "Measurements"
+assim: "Assimilation"
+assim_sub: "blends measurements in while the model runs"
+fusion: "Data fusion"
+fusion_sub: "corrects the results with measurements, afterwards"
+scales:
+  - "Global / regional · 50–1 km"
+  - "Urban · 3 km–100 m"
+  - "Local · 100–10 m"
+  - "Micro scale · metres"
+chain: "Each model provides boundary conditions to the next"
+res_title: "Maximum cell size"
+res_no2: " near roads"
+res_no2_val: "≤ 100 m"
+res_pm_sub: "2.5"
+res_pm: " regional background"
+res_pm_val: "≤ 10 km"
+band_bold: "The model is the core of a modelling system,"
+band_text: "which also includes the input data and works at a given scale."
+band_line2: "No single model covers all scales: several models are linked in a chain."

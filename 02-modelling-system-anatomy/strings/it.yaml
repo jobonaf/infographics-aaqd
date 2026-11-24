@@ -1,0 +1,43 @@
+# Stringhe italiane - slide 02: anatomia di un sistema modellistico (archetipo H, anatomia con callout + matrioska)
+lang: it
+alt_title: "Anatomia di un sistema modellistico"
+alt_desc: >-
+  Schema a blocchi: tre ingressi (emissioni, meteorologia, condizioni al contorno o di fondo) entrano nel modello, che può essere
+  deterministico (fisica e chimica dell'atmosfera) oppure data-driven (relazioni empiriche, machine learning), e produce le
+  concentrazioni. Le misure rientrano in due modi: con l'assimilazione, che le integra durante il calcolo del modello, e con la
+  data fusion, che corregge i risultati a posteriori. In alto a destra, riquadri annidati (matrioska) per le scale: globale o
+  regionale da 50 a 1 km, urbana da 3 km a 100 m, locale da 100 a 10 m, microscala nell'ordine dei metri; nessun modello copre tutte le scale,
+  quindi più modelli si collegano in una catena e ciascuno fornisce le condizioni al contorno al successivo. Sotto, la dimensione massima delle celle: 100 m per NO2 vicino alle strade, 10 km per PM2,5 di fondo regionale.
+title: "Anatomia di un sistema modellistico"
+subtitle: "Sistema modellistico e scale · Documento tecnico di supporto della Commissione (aprile 2025), §1.4 · Dir. (UE) 2024/2881"
+emissions: "Emissioni"
+meteo: "Meteorologia"
+boundary: "Condizioni al contorno o di fondo"
+boundary_sub: "inquinanti in arrivo dall'esterno del dominio"
+model: "Modello"
+det: "Deterministico"
+det_sub: "fisica e chimica dell'atmosfera"
+data: "Data-driven"
+data_sub: "relazioni empiriche, machine learning"
+out: "Concentrazioni"
+out_note: "schema illustrativo"
+meas: "Misure"
+assim: "Assimilazione"
+assim_sub: "integra le misure durante il calcolo"
+fusion: "Data fusion"
+fusion_sub: "corregge i risultati con le misure, a posteriori"
+scales:
+  - "Globale / regionale · 50–1 km"
+  - "Urbana · 3 km–100 m"
+  - "Locale · 100–10 m"
+  - "Microscala · metri"
+chain: "Ogni modello fornisce le condizioni al contorno al successivo"
+res_title: "Dimensione massima delle celle"
+res_no2: " vicino alle strade"
+res_no2_val: "≤ 100 m"
+res_pm_sub: "2,5"
+res_pm: " di fondo regionale"
+res_pm_val: "≤ 10 km"
+band_bold: "Il modello è il cuore del sistema modellistico,"
+band_text: "che comprende anche i dati in ingresso e opera a una data scala."
+band_line2: "Nessun modello copre tutte le scale: più modelli si collegano in una catena."

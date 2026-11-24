@@ -1,0 +1,123 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080" lang="en" font-family="'Source Sans 3','Source Sans Pro','Helvetica Neue',Arial,sans-serif" role="img" aria-labelledby="t d">
+<title id="t">Anatomy of a modelling system</title>
+<desc id="d">Block diagram: three inputs (emissions, meteorology, boundary conditions or background) feed the model, which can be deterministic (physics and chemistry of the atmosphere) or data-driven (empirical relationships, machine learning), and produces concentrations. Measurements come back in two ways: assimilation blends them in while the model runs, and data fusion corrects the results afterwards. Top right, nested boxes (Russian doll) show the scales: global or regional 50 to 1 km, urban 3 km to 100 m, local 100 to 10 m, micro scale in metres; no single model covers all scales, so several models are linked in a chain, each providing boundary conditions to the next. Below, the maximum cell size: 100 m for NO2 near roads, 10 km for regional-background PM2.5.</desc>
+<rect width="1920" height="1080" fill="#EFEBDD"/>
+<text x="48" y="76" font-size="58" fill="#1F5F63" font-weight="700">Anatomy of a modelling system</text><text x="48" y="122" font-size="30" fill="#22343A">Modelling system and scales · Commission technical support document (April 2025), §1.4 · Directive (EU) 2024/2881</text>
+<g id="inputs">
+<rect x="26" y="150" width="390" height="520" rx="36" fill="#2A9D9A" fill-opacity=".10"/>
+<rect x="36" y="160" width="370" height="100" rx="30" fill="#fff" stroke="#B7C6C4" stroke-width="2.6"/>
+<circle cx="88" cy="210" r="30" fill="#2A9D9A" fill-opacity=".12"/><g transform="translate(88,210)" fill="none" stroke="#1F5F63" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M-20,20 V-2 H-6 V20 M-6,20 V-22 H8 V20 M8,20 H22 M-24,20 H24"/></g>
+<text x="136" y="220" font-size="29" fill="#1F5F63" font-weight="700">Emissions</text>
+<rect x="36" y="300" width="370" height="100" rx="30" fill="#fff" stroke="#B7C6C4" stroke-width="2.6"/>
+<circle cx="88" cy="350" r="30" fill="#2A9D9A" fill-opacity=".12"/><g transform="translate(88,350)" fill="none" stroke="#1F5F63" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M-22,6 C-14,-18 -6,-18 0,0 C6,18 14,18 22,-6"/><path d="M-22,20 H22" stroke-width="2.6"/></g>
+<text x="136" y="360" font-size="29" fill="#1F5F63" font-weight="700">Meteorology</text>
+<rect x="36" y="440" width="370" height="220" rx="30" fill="#fff" stroke="#B7C6C4" stroke-width="2.6"/>
+<circle cx="88" cy="492" r="30" fill="#2A9D9A" fill-opacity=".12"/><g transform="translate(88,492)" fill="none" stroke="#1F5F63" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M-20,-4 L-8,-20 L14,-14 L20,6 L4,20 L-16,14 Z"/></g>
+<text x="136" y="488" font-size="29" fill="#1F5F63" font-weight="700"><tspan x="136" dy="0">Boundary conditions</tspan><tspan x="136" dy="33.3">or background</tspan></text>
+<text x="136" y="574" font-size="22" fill="#22343A"><tspan x="136" dy="0">pollutants entering from</tspan><tspan x="136" dy="26.8">outside the domain</tspan></text>
+</g>
+<g transform="translate(453,210) scale(1.5) translate(-453,-210)"><path d="M441,201 h10 v-9 l16,18 l-16,18 v-9 h-10 z" fill="#1F5F63"/></g>
+<g transform="translate(453,350) scale(1.5) translate(-453,-350)"><path d="M441,341 h10 v-9 l16,18 l-16,18 v-9 h-10 z" fill="#1F5F63"/></g>
+<g transform="translate(453,550) scale(1.5) translate(-453,-550)"><path d="M441,541 h10 v-9 l16,18 l-16,18 v-9 h-10 z" fill="#1F5F63"/></g>
+<g id="model">
+<rect x="500" y="160" width="380" height="500" rx="30" fill="#fff" stroke="#B7C6C4" stroke-width="2.6"/>
+<text x="524" y="205" font-size="32" fill="#1F5F63" font-weight="700">Model</text>
+<rect x="520" y="222" width="340" height="200" rx="22" fill="#2A9D9A" fill-opacity=".10"/>
+<circle cx="576" cy="280" r="32" fill="#2A9D9A" fill-opacity=".12"/><g transform="translate(576,280)" fill="none" stroke="#1F5F63" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><circle r="11"/><circle r="4"/><path d="M15.0,0.0 L22.0,0.0"/><path d="M10.6,10.6 L15.6,15.6"/><path d="M0.0,15.0 L0.0,22.0"/><path d="M-10.6,10.6 L-15.6,15.6"/><path d="M-15.0,0.0 L-22.0,0.0"/><path d="M-10.6,-10.6 L-15.6,-15.6"/><path d="M-0.0,-15.0 L-0.0,-22.0"/><path d="M10.6,-10.6 L15.6,-15.6"/></g>
+<text x="624" y="290" font-size="29" fill="#22343A" font-weight="700">Deterministic</text>
+<text x="540" y="354" font-size="23" fill="#22343A"><tspan x="540" dy="0">physics and chemistry of the</tspan><tspan x="540" dy="28.1">atmosphere</tspan></text>
+<rect x="520" y="438" width="340" height="200" rx="22" fill="#2A9D9A" fill-opacity=".10"/>
+<circle cx="576" cy="496" r="32" fill="#2A9D9A" fill-opacity=".12"/><g transform="translate(576,496)" fill="none" stroke="#1F5F63" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M-21,-14 H21 M-14,-21 V21"/><path d="M-21,0 H21 M0,-21 V21"/><path d="M-21,14 H21 M14,-21 V21"/></g>
+<text x="624" y="506" font-size="29" fill="#22343A" font-weight="700">Data-driven</text>
+<text x="540" y="570" font-size="23" fill="#22343A"><tspan x="540" dy="0">empirical relationships, machine</tspan><tspan x="540" dy="28.1">learning</tspan></text>
+</g>
+<g transform="translate(930,410) scale(1.5) translate(-930,-410)"><path d="M918,401 h10 v-9 l16,18 l-16,18 v-9 h-10 z" fill="#1F5F63"/></g>
+<g id="output">
+<rect x="980" y="160" width="260" height="500" rx="30" fill="#fff" stroke="#B7C6C4" stroke-width="2.6"/>
+<text x="1110" y="205" font-size="29" fill="#1F5F63" font-weight="700" text-anchor="middle">Concentrations</text>
+<circle cx="1018" cy="255" r="6.7" fill="#2A9D9A" fill-opacity="0.43"/>
+<circle cx="1064" cy="255" r="6.8" fill="#2A9D9A" fill-opacity="0.43"/>
+<circle cx="1110" cy="255" r="6.7" fill="#2A9D9A" fill-opacity="0.43"/>
+<circle cx="1156" cy="255" r="6.6" fill="#2A9D9A" fill-opacity="0.42"/>
+<circle cx="1202" cy="255" r="6.6" fill="#2A9D9A" fill-opacity="0.42"/>
+<circle cx="1018" cy="301" r="7.5" fill="#2A9D9A" fill-opacity="0.47"/>
+<circle cx="1064" cy="301" r="8.4" fill="#2A9D9A" fill-opacity="0.51"/>
+<circle cx="1110" cy="301" r="8.0" fill="#2A9D9A" fill-opacity="0.49"/>
+<circle cx="1156" cy="301" r="7.0" fill="#2A9D9A" fill-opacity="0.44"/>
+<circle cx="1202" cy="301" r="6.6" fill="#2A9D9A" fill-opacity="0.42"/>
+<circle cx="1018" cy="347" r="10.4" fill="#2A9D9A" fill-opacity="0.60"/>
+<circle cx="1064" cy="347" r="13.9" fill="#2A9D9A" fill-opacity="0.76"/>
+<circle cx="1110" cy="347" r="12.2" fill="#2A9D9A" fill-opacity="0.68"/>
+<circle cx="1156" cy="347" r="8.4" fill="#2A9D9A" fill-opacity="0.51"/>
+<circle cx="1202" cy="347" r="6.9" fill="#2A9D9A" fill-opacity="0.44"/>
+<circle cx="1018" cy="393" r="12.7" fill="#2A9D9A" fill-opacity="0.70"/>
+<circle cx="1064" cy="393" r="18.0" fill="#D7372B" fill-opacity="0.95"/>
+<circle cx="1110" cy="393" r="15.7" fill="#D7372B" fill-opacity="0.84"/>
+<circle cx="1156" cy="393" r="10.0" fill="#2A9D9A" fill-opacity="0.58"/>
+<circle cx="1202" cy="393" r="7.6" fill="#2A9D9A" fill-opacity="0.47"/>
+<circle cx="1018" cy="439" r="10.5" fill="#2A9D9A" fill-opacity="0.60"/>
+<circle cx="1064" cy="439" r="14.2" fill="#2A9D9A" fill-opacity="0.78"/>
+<circle cx="1110" cy="439" r="13.6" fill="#2A9D9A" fill-opacity="0.75"/>
+<circle cx="1156" cy="439" r="11.1" fill="#2A9D9A" fill-opacity="0.63"/>
+<circle cx="1202" cy="439" r="9.6" fill="#2A9D9A" fill-opacity="0.56"/>
+<circle cx="1018" cy="485" r="7.6" fill="#2A9D9A" fill-opacity="0.47"/>
+<circle cx="1064" cy="485" r="9.2" fill="#2A9D9A" fill-opacity="0.54"/>
+<circle cx="1110" cy="485" r="10.8" fill="#2A9D9A" fill-opacity="0.62"/>
+<circle cx="1156" cy="485" r="12.5" fill="#2A9D9A" fill-opacity="0.70"/>
+<circle cx="1202" cy="485" r="12.1" fill="#2A9D9A" fill-opacity="0.68"/>
+<circle cx="1018" cy="531" r="6.8" fill="#2A9D9A" fill-opacity="0.43"/>
+<circle cx="1064" cy="531" r="7.5" fill="#2A9D9A" fill-opacity="0.47"/>
+<circle cx="1110" cy="531" r="9.5" fill="#2A9D9A" fill-opacity="0.56"/>
+<circle cx="1156" cy="531" r="12.1" fill="#2A9D9A" fill-opacity="0.68"/>
+<circle cx="1202" cy="531" r="12.1" fill="#2A9D9A" fill-opacity="0.68"/>
+<circle cx="1018" cy="577" r="6.6" fill="#2A9D9A" fill-opacity="0.42"/>
+<circle cx="1064" cy="577" r="7.0" fill="#2A9D9A" fill-opacity="0.44"/>
+<circle cx="1110" cy="577" r="8.0" fill="#2A9D9A" fill-opacity="0.49"/>
+<circle cx="1156" cy="577" r="9.4" fill="#2A9D9A" fill-opacity="0.55"/>
+<circle cx="1202" cy="577" r="9.4" fill="#2A9D9A" fill-opacity="0.55"/>
+<text x="1110" y="640" font-size="19" fill="#22343A" font-style="italic" text-anchor="middle">illustrative sketch</text>
+</g>
+<g id="measurements">
+<path d="M690.0,740.0 L690.0,668.0" stroke="#1F5F63" stroke-width="7" stroke-linecap="round" fill="none"/><path d="M698.3,685.1 L690.0,668.0 L681.7,685.1" fill="none" stroke="#1F5F63" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M1110.0,740.0 L1110.0,668.0" stroke="#1F5F63" stroke-width="7" stroke-linecap="round" fill="none"/><path d="M1118.3,685.1 L1110.0,668.0 L1101.7,685.1" fill="none" stroke="#1F5F63" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="36" y="740" width="1204" height="150" rx="30" fill="#fff" stroke="#B7C6C4" stroke-width="2.6"/>
+<circle cx="106" cy="815" r="36" fill="#2A9D9A" fill-opacity=".12"/><g transform="translate(106,815)" fill="none" stroke="#1F5F63" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M0,22 C-14,6 -17,0 -17,-8 a17,17 0 0 1 34,0 c0,8 -3,14 -17,30z"/><circle cy="-8" r="5"/></g>
+<text x="160" y="827" font-size="34" fill="#1F5F63" font-weight="700">Measurements</text>
+<path d="M490,760 V870" stroke="#B7C6C4" stroke-width="2.4"/>
+<path d="M950,760 V870" stroke="#B7C6C4" stroke-width="2.4"/>
+<text x="690" y="786" font-size="28" fill="#22343A" font-weight="700" text-anchor="middle">Assimilation</text>
+<text x="690" y="820" font-size="22" fill="#22343A" text-anchor="middle"><tspan x="690" dy="0">blends measurements in while the model</tspan><tspan x="690" dy="26.8">runs</tspan></text>
+<text x="1095" y="786" font-size="28" fill="#22343A" font-weight="700" text-anchor="middle">Data fusion</text>
+<text x="1095" y="820" font-size="22" fill="#22343A" text-anchor="middle"><tspan x="1095" dy="0">corrects the results with</tspan><tspan x="1095" dy="26.8">measurements, afterwards</tspan></text>
+</g>
+<g id="scales">
+<rect x="1290" y="160" width="594" height="440" rx="28" fill="#FFFFFF" stroke="#1F5F63" stroke-width="2.6"/>
+<text x="1314" y="198" font-size="26" fill="#22343A" font-weight="700">Global / regional · 50–1 km</text>
+<circle cx="1840" cy="189" r="24" fill="#2A9D9A" fill-opacity=".12"/><g transform="translate(1840,189)" fill="none" stroke="#1F5F63" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M-20,-4 L-8,-20 L14,-14 L20,6 L4,20 L-16,14 Z"/></g>
+<rect x="1320" y="222" width="534" height="348" rx="24" fill="#E3F1EF" stroke="#1F5F63" stroke-width="2.6"/>
+<text x="1344" y="260" font-size="26" fill="#22343A" font-weight="700">Urban · 3 km–100 m</text>
+<circle cx="1810" cy="251" r="24" fill="#2A9D9A" fill-opacity=".12"/><g transform="translate(1810,251)" fill="none" stroke="#1F5F63" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="-9" cy="-10" r="6"/><path d="M-20,16 v-6 a11,9 0 0 1 22,0 v6"/><circle cx="12" cy="-6" r="5"/><path d="M6,16 v-4 a9,8 0 0 1 16,0 v4"/></g>
+<rect x="1350" y="284" width="474" height="256" rx="20" fill="#C9E5E2" stroke="#1F5F63" stroke-width="2.6"/>
+<text x="1374" y="322" font-size="26" fill="#22343A" font-weight="700">Local · 100–10 m</text>
+<circle cx="1780" cy="313" r="24" fill="#2A9D9A" fill-opacity=".12"/><g transform="translate(1780,313)" fill="none" stroke="#1F5F63" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M-9,22 L-4,-22 M9,22 L4,-22"/><path d="M0,-18 v8 M0,-2 v8 M0,12 v8" stroke-width="2.6"/></g>
+<rect x="1380" y="346" width="414" height="164" rx="16" fill="#AFD9D5" stroke="#1F5F63" stroke-width="2.6"/>
+<text x="1404" y="384" font-size="26" fill="#22343A" font-weight="700">Micro scale · metres</text>
+<circle cx="1750" cy="375" r="24" fill="#2A9D9A" fill-opacity=".12"/><g transform="translate(1750,375)" fill="none" stroke="#1F5F63" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M-22,22 V-14 H-8 V22 M8,22 V-18 H22 V22 M-26,22 H26"/></g>
+<text x="1290" y="636" font-size="26" fill="#1F5F63" font-weight="700">Each model provides boundary conditions to the next</text>
+</g>
+<g id="resolution">
+<rect x="1290" y="690" width="594" height="200" rx="30" fill="#fff" stroke="#B7C6C4" stroke-width="2.6"/>
+<text x="1320" y="734" font-size="28" fill="#1F5F63" font-weight="700">Maximum cell size</text>
+<circle cx="1342" cy="789" r="26" fill="#2A9D9A" fill-opacity=".12"/><g transform="translate(1342,789)" fill="none" stroke="#1F5F63" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M-9,22 L-4,-22 M9,22 L4,-22"/><path d="M0,-18 v8 M0,-2 v8 M0,12 v8" stroke-width="2.6"/></g>
+<g><text x="1388.0" y="797.0" font-size="23.0" fill="#22343A">NO</text><text x="1406.4" y="801.6" font-size="15.6" fill="#22343A">2</text><text x="1412.7" y="797.0" font-size="23.0" fill="#22343A"> near roads</text></g>
+<text x="1676" y="797" font-size="30" font-weight="700" fill="#22343A" font-family="'DejaVu Sans',sans-serif">≤</text>
+<text x="1716" y="797" font-size="30" fill="#22343A" font-weight="700">100 m</text>
+<circle cx="1342" cy="849" r="26" fill="#2A9D9A" fill-opacity=".12"/><g transform="translate(1342,849)" fill="none" stroke="#1F5F63" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M-21,-14 H21 M-14,-21 V21"/><path d="M-21,0 H21 M0,-21 V21"/><path d="M-21,14 H21 M14,-21 V21"/></g>
+<g><text x="1388.0" y="857.0" font-size="23.0" fill="#22343A">PM</text><text x="1406.4" y="861.6" font-size="15.6" fill="#22343A">2.5</text><text x="1425.2" y="857.0" font-size="23.0" fill="#22343A"> regional background</text></g>
+<text x="1676" y="857" font-size="30" font-weight="700" fill="#22343A" font-family="'DejaVu Sans',sans-serif">≤</text>
+<text x="1716" y="857" font-size="30" fill="#22343A" font-weight="700">10 km</text>
+</g>
+<rect x="36" y="910" width="1848" height="120" rx="28" fill="#1F5F63"/>
+<text x="76" y="965" font-size="30" fill="#fff"><tspan font-weight="700">The model is the core of a modelling system,</tspan> which also includes the input data and works at a given scale.</text>
+<text x="76" y="1007" font-size="30" fill="#fff">No single model covers all scales: several models are linked in a chain.</text>
+</svg>
