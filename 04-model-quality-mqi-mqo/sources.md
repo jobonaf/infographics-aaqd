@@ -1,6 +1,6 @@
-# 02 · MQI e MQO: fonti e stato di verifica
+# 04 · MQI e MQO: fonti e stato di verifica
 
-Scheda redatta il 2026-11-07. **Non sostituisce la lettura del testo vigente.** Stato: ✔ letto nel testo · ◐ da fonte secondaria o da riassunto · ✖ da verificare.
+Scheda redatta il 2026-11-07, aggiornata il 2026-11-24 (versione alleggerita: target plot grande). **Non sostituisce la lettura del testo vigente.** Stato: ✔ letto nel testo · ◐ da fonte secondaria o da riassunto · ✖ da verificare.
 
 Fonti principali
 - Documentazione FAIRMODE/DELTA sul *target plot* (Thunis et al., 2012-2013; presentazioni DELTA 2014; atti Harmo): **solo per il pannello 3**. Il documento tecnico della Commissione nomina il target diagram soltanto per le previsioni (§6.3), non per la valutazione
@@ -23,6 +23,21 @@ Fonti principali
 | «condizione necessaria ma non sufficiente» (fitness-for-purpose) | Doc. tecnico §1.5 e §3.4 | ◐ | Verificare formulazione |
 | Dati delle serie (pannello 1) e dei 12 valori MQI (pannello 3) | — | n/a | Inventati, dichiarati nella figura. MQI90 = 0,97 è calcolato in `build.py` dai 12 valori sintetici |
 
-Elementi volutamente **non** rappresentati: regola «con meno di 10 stazioni, MQI ≤ 1 in tutte» (tolta per spazio dopo il passaggio al target plot, da riprendere in una slide di approfondimento), incertezze a breve termine (24 h, 8 h, orarie; tabella 2 dell'Allegato V), valori per le misure indicative, aggiustamenti dell'MQI per l'incertezza dovuta al campionamento casuale.
+Aggiornamento 2026-11-24 (versione alleggerita, seconda revisione)
+| Elemento nella figura | Fonte | Stato | Nota |
+|---|---|---|---|
+| Formula MQI = RMSE / √(U_O² + U_M²); a lungo termine |bias| al posto dell'RMSE; U_M = β · U_O | Doc. tecnico §3.4.1, p. 36 | ✔ | Simboli spiegati in figura |
+| β = rapporto tra le incertezze massime ammesse (modello / misura), «Allegato V», **senza valore numerico in figura** | Doc. tecnico §3.4.1; Allegato V punto A, tab. 1 | ◐ | Valori (PM10 annuo 1,3) da `t_data_quality.md`, **da confrontare con l'Allegato V**: la verifica sta qui, non sulla slide. La curva è disegnata con β = 1,3 (`BETA` in `build.py`) ma senza numeri |
+| Schema dell'incertezza ammessa: costante fino al VL, poi proporzionale (esempio PM10, media annua) | Doc. tecnico §3.4.1 e fig. 3-2, p. 36 | ✔ | Nessun valore numerico nello schema |
+| MQO: MQI ≤ 1 per almeno il 90 % delle stazioni (MQI al 90° percentile ≤ 1), a breve e lungo termine; solo lungo termine se il modello dà la media annua | Doc. tecnico §3.4.2, pp. 48-49 | ✔ | Riletto il 2026-11-24 |
+| «Con meno di 10 stazioni si raccomanda MQI ≤ 1 in tutte, senza la regola del 90 %» | Doc. tecnico §3.4.3, p. 49 | ✔ | È una raccomandazione FAIRMODE che va oltre la direttiva; decide l'autorità competente (non scritto in figura) |
+| «Condizione necessaria, non sufficiente, per l'adeguatezza allo scopo» | Doc. tecnico §3.4.2 (l'indicatore non esprime criteri di fitness-for-purpose) | ✔ | Formulazione sintetica |
+| Target plot: assi CRMSE e bias normalizzati, cerchi MQI = 1 e 0,5 | FAIRMODE/DELTA | ◐ | Normalizzazione = denominatore dell'MQI del documento; FAIRMODE storico: 2·RMSU |
+| Etichette R (sinistra), SD (destra), bias + (alto), bias − (basso) | FAIRMODE/DELTA | ◐ | Convenzione di segno di CRMSE da verificare sulla guida DELTA in uso |
+| MQI90 = 0,95; «11 stazioni su 12» | — | n/a | Esempio inventato e dichiarato; calcolato in `build.py` dai 12 punti sintetici |
+| Leave-one-out: «validare su stazioni non usate, escluse a turno» | Doc. tecnico §1.4.6 e §3.4 | ◐ | Passi della procedura non rappresentati |
+| DELTA | — | — | Non nominato nella figura (oggi allineato alla definizione AAQD) |
+
+Elementi volutamente **non** rappresentati: passi del leave-one-out e sottoinsieme riservato, incertezze a breve termine (tabella B), valori per le misure indicative, copertura minima dei dati (tabella C), aggiustamenti dell'MQI per il campionamento casuale, valori numerici di U_O, U_M e β.
 
 Dopo la verifica sull'Allegato V: aggiornare gli stati qui sopra e la versione in `CITATION.cff`.
