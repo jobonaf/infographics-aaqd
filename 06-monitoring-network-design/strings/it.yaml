@@ -1,0 +1,33 @@
+# Stringhe italiane. Separatore decimale: virgola.
+lang: it
+alt_title: "Progettare la rete di monitoraggio con i modelli"
+alt_desc: >-
+  Mappa schematica inventata di una città con fasce di concentrazione modellata (rosso dove è alta), stazioni esistenti,
+  un hotspot da traffico e due stazioni di fondo, urbano e rurale. A destra tre messaggi: l'hotspot è dove il modello
+  indica la concentrazione massima; il fondo è in zone non dominate da una sola sorgente; fino al 50% di stazioni fisse
+  in meno, in zone sotto i valori limite e a tre condizioni. Un riquadro spiega MoNET, che raggruppa le zone per
+  andamento e livello di inquinamento e segnala stazioni ridondanti e lacune. In basso: revisione almeno ogni 5 anni.
+title: "Progettare la rete di monitoraggio"
+subtitle: "Ruolo dei modelli · Documento tecnico di supporto della Commissione (aprile 2025), §2.3 · Dir. (UE) 2024/2881"
+map_note: "Schema inventato"
+leg_conc: "concentrazione"
+leg_low: "bassa"
+leg_high: "alta"
+leg_station: "stazione esistente"
+lab_hot: "Hotspot (traffico)"
+lab_urban: "Fondo urbano"
+lab_rural: "Fondo rurale"
+h_hot: "Hotspot: dove il modello indica la concentrazione massima"
+sub_hot: "(esclusi i luoghi senza persone esposte)"
+h_bg: "Fondo: zone non dominate da una sola sorgente"
+pill_red: "Solo in zone sotto i valori limite"
+h_red: "Fino al 50% di stazioni fisse in meno, se:"
+c1: "dati sufficienti per valutare i limiti e informare il pubblico"
+c2: "modello su tutta la zona e stazioni per validarlo"
+c3: "misure indicative (strumenti semplici), almeno quante le stazioni tolte"
+mon_head: "MoNET"
+mon_text: "applicazione web: raggruppa le celle del modello per andamento nel tempo e livello di concentrazione (clustering gerarchico)"
+mon_same: "stesso gruppo: stazione ridondante"
+mon_gap: "nessuna stazione: lacuna"
+band_bold: "Revisione della rete almeno ogni 5 anni"
+band_l2: "con modello o misure indicative"

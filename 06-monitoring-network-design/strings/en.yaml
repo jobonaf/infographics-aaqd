@@ -1,0 +1,33 @@
+# English strings. Decimal separator: point.
+lang: en
+alt_title: "Designing the monitoring network with models"
+alt_desc: >-
+  Invented schematic map of a city with modelled concentration bands (red where high), existing stations, a traffic
+  hotspot and two background stations, urban and rural. On the right three messages: the hotspot is where the model
+  shows the highest concentration; background is in areas not dominated by a single source; up to 50% fewer fixed
+  stations, in zones below the limit values and under three conditions. An inset explains MoNET, which groups areas by
+  pattern and level of pollution and flags redundant stations and gaps. At the bottom: review at least every 5 years.
+title: "Designing the monitoring network"
+subtitle: "Role of models · Commission technical support document (April 2025), §2.3 · Dir. (EU) 2024/2881"
+map_note: "Invented schematic"
+leg_conc: "concentration"
+leg_low: "low"
+leg_high: "high"
+leg_station: "existing station"
+lab_hot: "Hotspot (traffic)"
+lab_urban: "Urban background"
+lab_rural: "Rural background"
+h_hot: "Hotspot: where the model shows the highest concentration"
+sub_hot: "(places with no one exposed are excluded)"
+h_bg: "Background: areas not dominated by a single source"
+pill_red: "Only in zones below the limit values"
+h_red: "Up to 50% fewer fixed stations, if:"
+c1: "enough data to assess limits and inform the public"
+c2: "model covering the whole zone and stations to validate it"
+c3: "indicative measurements (simple instruments), at least as many as stations removed"
+mon_head: "MoNET"
+mon_text: "web application: groups model cells by pattern over time and concentration level (hierarchical clustering)"
+mon_same: "same group: redundant station"
+mon_gap: "no station: gap"
+band_bold: "Network review at least every 5 years"
+band_l2: "with a model or indicative measurements"
