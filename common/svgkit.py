@@ -1,6 +1,8 @@
 """svgkit: elementi grafici e stile condivisi dalla serie di infografiche AAQD.
 Solo libreria standard + numpy; l'output è SVG puro (testo vivo, gruppi con id)."""
+import base64
 import html, math
+import pathlib
 
 # ---- design tokens (palette ispirata al logo del pacchetto R spatrep) ----
 TEAL, TEAL_D, BEIGE = "#2A9D9A", "#1F5F63", "#EFEBDD"
@@ -9,6 +11,37 @@ GREY, SLATE, OCHRE, ZONE = "#A9A59B", "#22343A", "#C58B1A", "#E6E4DC"
 FONT = "'Source Sans 3','Source Sans Pro','Helvetica Neue',Arial,sans-serif"
 W, H = 1920, 1080                           # tela 16:9
 SYM_FONT = "'DejaVu Sans','Arial Unicode MS',sans-serif"   # per glifi matematici assenti nel font base
+
+
+_ROOT = pathlib.Path(__file__).resolve().parents[1]
+_FONT_DIR = _ROOT / "assets" / "fonts"
+
+
+def _embedded_fonts_css():
+    """Incorpora Source Sans 3 Regular e Bold nell'SVG."""
+    variants = (
+        (400, ("SourceSans3-Regular.ttf", "SourceSans3-Regular.otf")),
+        (700, ("SourceSans3-Bold.ttf", "SourceSans3-Bold.otf")),
+    )
+    rules = []
+    for weight, names in variants:
+        path = next((_FONT_DIR / name for name in names if (_FONT_DIR / name).is_file()), None)
+        if path is None:
+            raise FileNotFoundError(
+                f"Font Source Sans 3 peso {weight} non trovato in {_FONT_DIR}"
+            )
+        is_ttf = path.suffix.lower() == ".ttf"
+        mime = "font/ttf" if is_ttf else "font/otf"
+        fmt = "truetype" if is_ttf else "opentype"
+        data = base64.b64encode(path.read_bytes()).decode("ascii")
+        rules.append(
+            "@font-face{"
+            "font-family:'Source Sans 3';"
+            f"font-style:normal;font-weight:{weight};"
+            f"src:url('data:{mime};base64,{data}') format('{fmt}');"
+            "}"
+        )
+    return "<defs><style type=\"text/css\">" + "".join(rules) + "</style></defs>"
 
 
 def esc(s):
@@ -108,8 +141,9 @@ def arc_arrow(cx, cy, r, a0, a1, color, sw=3.2):
 
 
 def svg_wrap(body, title, desc, lang, w=W, h=H):
+    fonts = _embedded_fonts_css()
     return (f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {w} {h}" width="{w}" height="{h}" lang="{lang}" '
-            f'font-family="{FONT}" role="img" aria-labelledby="t d">\n<title id="t">{html.escape(title)}</title>\n'
+            f'font-family="{FONT}" role="img" aria-labelledby="t d">\n{fonts}\n<title id="t">{html.escape(title)}</title>\n'
             f'<desc id="d">{html.escape(desc)}</desc>\n{body}\n</svg>\n')
 
 
