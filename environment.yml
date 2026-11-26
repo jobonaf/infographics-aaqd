@@ -1,0 +1,10 @@
+name: infographics
+channels:
+  - defaults
+dependencies:
+  - pillow
+  - python=3.13
+  - cairosvg
+  - pyyaml
+  - numpy
+prefix: C:\Users\arpa730000\AppData\Local\miniconda3\envs\infographics
