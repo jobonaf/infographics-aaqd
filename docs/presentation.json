@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "title": "Infografiche AAQD",
+  "title": "Modelling for AAQD",
   "defaults": {
     "duration": 1050,
     "padding": 0.08
@@ -8,10 +8,10 @@
   "slides": [
     {
       "id": "title",
-      "title": "Infografiche AAQD",
+      "title": "Modelling for AAQD",
       "src": "assets/generated/title.svg",
       "enabled": true,
-      "language": "it",
+      "language": "en",
       "frames": [
         {
           "id": "overview",
@@ -22,9 +22,9 @@
     {
       "id": "01-role-of-modelling",
       "title": "Role of modelling",
-      "src": "https://raw.githubusercontent.com/jobonaf/infographics-aaqd/main/01-role-of-modelling/out/role_of_modelling_it.svg",
+      "src": "https://raw.githubusercontent.com/jobonaf/infographics-aaqd/main/01-role-of-modelling/out/role_of_modelling_en.svg",
       "enabled": true,
-      "language": "it",
+      "language": "en",
       "frames": [
         {
           "id": "overview",
@@ -83,9 +83,9 @@
     {
       "id": "02-modelling-system-anatomy",
       "title": "Modelling system anatomy",
-      "src": "https://raw.githubusercontent.com/jobonaf/infographics-aaqd/main/02-modelling-system-anatomy/out/modelling_system_anatomy_it.svg",
+      "src": "https://raw.githubusercontent.com/jobonaf/infographics-aaqd/main/02-modelling-system-anatomy/out/modelling_system_anatomy_en.svg",
       "enabled": true,
-      "language": "it",
+      "language": "en",
       "frames": [
         {
           "id": "overview",
@@ -124,9 +124,9 @@
     {
       "id": "03-fitness-for-purpose",
       "title": "Fitness for purpose",
-      "src": "https://raw.githubusercontent.com/jobonaf/infographics-aaqd/main/03-fitness-for-purpose/out/fitness_for_purpose_it.svg",
+      "src": "https://raw.githubusercontent.com/jobonaf/infographics-aaqd/main/03-fitness-for-purpose/out/fitness_for_purpose_en.svg",
       "enabled": true,
-      "language": "it",
+      "language": "en",
       "frames": [
         {
           "id": "overview",
@@ -161,9 +161,9 @@
     {
       "id": "04-model-quality-mqi-mqo",
       "title": "Model quality mqi mqo",
-      "src": "https://raw.githubusercontent.com/jobonaf/infographics-aaqd/main/04-model-quality-mqi-mqo/out/mqi_mqo_it.svg",
+      "src": "https://raw.githubusercontent.com/jobonaf/infographics-aaqd/main/04-model-quality-mqi-mqo/out/mqi_mqo_en.svg",
       "enabled": true,
-      "language": "it",
+      "language": "en",
       "frames": [
         {
           "id": "overview",
@@ -198,9 +198,9 @@
     {
       "id": "05-spatial-representativeness",
       "title": "Spatial representativeness",
-      "src": "https://raw.githubusercontent.com/jobonaf/infographics-aaqd/main/05-spatial-representativeness/out/spatrep_it.svg",
+      "src": "https://raw.githubusercontent.com/jobonaf/infographics-aaqd/main/05-spatial-representativeness/out/spatrep_en.svg",
       "enabled": true,
-      "language": "it",
+      "language": "en",
       "frames": [
         {
           "id": "overview",
@@ -227,9 +227,9 @@
     {
       "id": "06-monitoring-network-design",
       "title": "Monitoring network design",
-      "src": "https://raw.githubusercontent.com/jobonaf/infographics-aaqd/main/06-monitoring-network-design/out/monitoring_network_design_it.svg",
+      "src": "https://raw.githubusercontent.com/jobonaf/infographics-aaqd/main/06-monitoring-network-design/out/monitoring_network_design_en.svg",
       "enabled": true,
-      "language": "it",
+      "language": "en",
       "frames": [
         {
           "id": "overview",
@@ -264,9 +264,9 @@
     {
       "id": "07-natural-sources-sanding-salting",
       "title": "Natural sources sanding salting",
-      "src": "https://raw.githubusercontent.com/jobonaf/infographics-aaqd/main/07-natural-sources-sanding-salting/out/natural_sources_sanding_salting_it.svg",
+      "src": "https://raw.githubusercontent.com/jobonaf/infographics-aaqd/main/07-natural-sources-sanding-salting/out/natural_sources_sanding_salting_en.svg",
       "enabled": true,
-      "language": "it",
+      "language": "en",
       "frames": [
         {
           "id": "overview",
@@ -309,9 +309,9 @@
     {
       "id": "08-exceedance-situation-indicators",
       "title": "Exceedance situation indicators",
-      "src": "https://raw.githubusercontent.com/jobonaf/infographics-aaqd/main/08-exceedance-situation-indicators/out/esi_it.svg",
+      "src": "https://raw.githubusercontent.com/jobonaf/infographics-aaqd/main/08-exceedance-situation-indicators/out/esi_en.svg",
       "enabled": true,
-      "language": "it",
+      "language": "en",
       "frames": [
         {
           "id": "overview",
@@ -342,9 +342,9 @@
     {
       "id": "13-from-assessment-to-plan",
       "title": "From assessment to plan",
-      "src": "https://raw.githubusercontent.com/jobonaf/infographics-aaqd/main/13-from-assessment-to-plan/out/from_assessment_to_plan_it.svg",
+      "src": "https://raw.githubusercontent.com/jobonaf/infographics-aaqd/main/13-from-assessment-to-plan/out/from_assessment_to_plan_en.svg",
       "enabled": true,
-      "language": "it",
+      "language": "en",
       "frames": [
         {
           "id": "overview",
@@ -379,9 +379,9 @@
     {
       "id": "14-emission-scenarios",
       "title": "Emission scenarios",
-      "src": "https://raw.githubusercontent.com/jobonaf/infographics-aaqd/main/14-emission-scenarios/out/scenari_it.svg",
+      "src": "https://raw.githubusercontent.com/jobonaf/infographics-aaqd/main/14-emission-scenarios/out/scenari_en.svg",
       "enabled": true,
-      "language": "it",
+      "language": "en",
       "frames": [
         {
           "id": "overview",
@@ -408,9 +408,9 @@
     {
       "id": "15-projections",
       "title": "Projections",
-      "src": "https://raw.githubusercontent.com/jobonaf/infographics-aaqd/main/15-projections/out/projections_it.svg",
+      "src": "https://raw.githubusercontent.com/jobonaf/infographics-aaqd/main/15-projections/out/projections_en.svg",
       "enabled": true,
-      "language": "it",
+      "language": "en",
       "frames": [
         {
           "id": "overview",
@@ -439,7 +439,7 @@
       "title": "Riferimenti e licenza",
       "src": "assets/generated/references.svg",
       "enabled": true,
-      "language": "it",
+      "language": "en",
       "frames": [
         {
           "id": "overview",
