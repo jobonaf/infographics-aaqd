@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AAQD · presentazione con zoom</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <header class="topbar">
+      <div class="titles">
+        <div class="eyebrow">INFOGRAFICHE AAQD</div>
+        <h1>Caricamento…</h1>
+      </div>
+      <div class="top-actions">
+        <span id="status">Caricamento SVG…</span>
+        <button id="fullscreen" class="quiet" type="button">Schermo intero</button>
+      </div>
+    </header>
+
+    <section class="stage-wrap" aria-live="polite">
+      <div id="stage" class="stage">
+        <div class="loading">Caricamento dell'infografica…</div>
+      </div>
+      <div class="stage-caption">
+        <span id="frame-title">Panoramica</span>
+        <span id="counter">1 / 1</span>
+      </div>
+    </section>
+
+    <nav class="controls" aria-label="Controlli della presentazione">
+      <button id="previous" type="button" aria-label="Inquadratura precedente">←</button>
+      <div id="frame-buttons" class="frame-buttons"></div>
+      <button id="next" type="button" aria-label="Inquadratura successiva">→</button>
+    </nav>
+
+    <p class="hint">Usa ← → oppure spazio per avanzare. Premi F per lo schermo intero.</p>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>

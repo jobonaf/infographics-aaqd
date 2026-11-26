@@ -1,0 +1,288 @@
+:root {
+  color-scheme: dark;
+  --bg: #172326;
+  --panel: #223236;
+  --muted: #a8b7b6;
+  --text: #f3f1e9;
+  --accent: #75c5bd;
+  --line: #43585a;
+}
+
+* { box-sizing: border-box; }
+
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Source Sans 3", "Source Sans Pro", "Helvetica Neue", Arial, sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 8px;
+}
+
+button,
+select {
+  color: inherit;
+  font: inherit;
+}
+
+button { cursor: pointer; }
+
+.app { width: min(1440px, 100%); }
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin: 0 0 6px;
+}
+
+.titles {
+  min-width: 0;
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  white-space: nowrap;
+}
+
+.eyebrow,
+h1 {
+  margin: 0;
+  font-family: "Source Sans 3", "Source Sans Pro", "Helvetica Neue", Arial, sans-serif;
+  font-size: 11px;
+  font-weight: 750;
+  letter-spacing: .10em;
+  line-height: 1.2;
+}
+
+.eyebrow {
+  flex: 0 0 auto;
+  color: var(--accent);
+}
+
+h1 {
+  min-width: 0;
+  overflow: hidden;
+  color: var(--text);
+  text-overflow: ellipsis;
+}
+
+.top-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+button {
+  border: 1px solid var(--line);
+  background: var(--panel);
+  border-radius: 8px;
+  padding: 9px 14px;
+  transition: background .15s, border-color .15s;
+}
+
+button:hover,
+button:focus-visible,
+select:hover,
+select:focus-visible {
+  border-color: var(--accent);
+  outline: none;
+}
+
+button:disabled {
+  opacity: .35;
+  cursor: default;
+}
+
+button.quiet {
+  background: transparent;
+  color: var(--muted);
+}
+
+#slide-select {
+  min-width: min(390px, 42vw);
+  max-width: 46vw;
+  padding: 8px 34px 8px 11px;
+  color: var(--text);
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.stage-wrap { width: 100%; }
+
+.stage {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background: #EFEBDD;
+  border: 1px solid #111;
+  border-radius: 4px;
+  box-shadow: 0 6px 20px rgb(0 0 0 / 28%);
+}
+
+.stage > svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.loading,
+.error {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  padding: 30px;
+  color: #22343A;
+  text-align: center;
+}
+
+.stage-caption {
+  display: flex;
+  justify-content: space-between;
+  padding: 6px 2px 0;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+#frame-title {
+  color: var(--text);
+  font-weight: 600;
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.controls > button {
+  width: 44px;
+  height: 42px;
+  padding: 0;
+  font-size: 22px;
+}
+
+.frame-buttons {
+  display: flex;
+  gap: 7px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.frame-buttons button {
+  padding: 9px 13px;
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.frame-buttons button[aria-current="step"] {
+  background: #315c5c;
+  border-color: var(--accent);
+  color: #fff;
+}
+
+.hint {
+  margin: 6px 0 0;
+  text-align: center;
+  color: #819392;
+  font-size: 12px;
+}
+
+.focus-overlay {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity .25s ease;
+}
+
+.focus-overlay.is-active { opacity: 1; }
+
+.focus-blur {
+  position: absolute;
+  background: rgb(239 235 221 / 10%);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+
+.app:fullscreen {
+  width: 100%;
+  height: 100%;
+  padding: 5px 7px 3px;
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr) auto auto;
+  background: var(--bg);
+}
+
+.app:fullscreen .topbar { margin-bottom: 4px; }
+
+.app:fullscreen .stage-wrap {
+  min-height: 0;
+  display: grid;
+  grid-template-rows: minmax(0, 1fr) auto;
+}
+
+.app:fullscreen .stage {
+  width: auto;
+  height: 100%;
+  max-width: 100%;
+  max-height: 100%;
+  margin: auto;
+  aspect-ratio: 16 / 9;
+  border-radius: 0;
+}
+
+.app:fullscreen .controls { margin-top: 6px; }
+.app:fullscreen .hint { margin-top: 3px; }
+
+@media (max-width: 700px) {
+  body { padding: 5px; }
+
+  .topbar {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .titles { white-space: normal; }
+
+  .top-actions {
+    width: 100%;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  #slide-select {
+    min-width: 0;
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .frame-buttons button { padding: 8px 9px; }
+}
+
+/* Forza intestazione e titolo slide alla stessa identica dimensione. */
+.topbar .titles .eyebrow,
+.topbar .titles h1 {
+  font-family: "Source Sans 3", "Source Sans Pro", "Helvetica Neue", Arial, sans-serif !important;
+  font-size: 11px !important;
+  font-weight: 700 !important;
+  line-height: 1.2 !important;
+  letter-spacing: .10em !important;
+  text-transform: uppercase;
+}
