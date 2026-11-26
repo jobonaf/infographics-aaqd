@@ -1,0 +1,32 @@
+# English strings: decision tree on natural sources, road salt and sand.
+lang: en
+alt_title: "Natural sources, road salt and sand: when an exceedance can be subtracted"
+alt_desc: >-
+  Decision tree. It starts from the question on the cause of the exceedance. If the cause is natural (wildfires, sea
+  spray, dust from arid regions, eruptions), the contribution is subtracted if needed to meet the limit, provided it is
+  determined with sufficient certainty. If the cause is winter salt or sand on roads (PM10 only), it is subtracted if
+  reasonable measures were taken to lower concentrations; otherwise it stays in the exceedance. Any other cause stays in the
+  exceedance. A box explains that in projections salt and sand emissions stay at the reference-year level, if known, unless
+  the plan reduces them; modelling of salt and sand is not recommended.
+title: "Natural sources, road salt and sand"
+subtitle: "What can be subtracted · Commission technical support document (April 2025), §3.7 and §5.3.4 · Dir. (EU) 2024/2881"
+n1: "Cause of the exceedance?"
+nat_h: "Natural"
+nat_ex: ["Wildfires", "Sea spray", "Dust from arid regions", "Eruptions"]
+salt_h: ["Winter salt or sand", "on roads"]
+salt_sub: "PM10 only (fine particles)"
+other_h: "Other cause"
+nat_term: ["Subtracted, if needed", "to meet the limit"]
+nat_cond_b: "Condition:"
+nat_cond: "contribution determined with sufficient certainty"
+q2: "Reasonable measures taken to lower concentrations?"
+y_lbl: "Yes"
+n_lbl: "No"
+sub_term: "Subtracted"
+rem_term: "Stays in the exceedance"
+proj_h: "In projections"
+cap_same: "same emissions as the reference year (if known)"
+cap_cut: "unless the plan reduces them (to be quantified)"
+note: "Modelling not recommended: emission factors vary with local practices and weather"
+def_bold: "Subtracting"
+def_text: "= excluding the contribution from the exceedance calculation."

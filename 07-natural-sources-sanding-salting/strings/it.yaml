@@ -1,0 +1,32 @@
+# Stringhe italiane: albero decisionale su sorgenti naturali, sale e sabbia.
+lang: it
+alt_title: "Sorgenti naturali, sale e sabbia: quando un superamento si può sottrarre"
+alt_desc: >-
+  Albero decisionale. Si parte dalla domanda sulla causa del superamento. Se la causa è naturale (incendi boschivi, spruzzi
+  marini, polvere da regioni aride, eruzioni), il contributo si sottrae se serve a rispettare il limite, purché sia determinato
+  con sufficiente certezza. Se la causa è sale o sabbia sulle strade (solo PM10), si sottrae se sono state prese misure
+  ragionevoli per ridurre le concentrazioni; altrimenti resta nel superamento. Ogni altra causa resta nel superamento. Un
+  riquadro spiega che nelle proiezioni le emissioni di sale e sabbia restano quelle dell’anno di riferimento, se note, salvo
+  riduzioni previste dal piano; la modellistica di sale e sabbia non è raccomandata.
+title: "Sorgenti naturali, sale e sabbia"
+subtitle: "Che cosa si può sottrarre · Documento tecnico di supporto della Commissione (aprile 2025), §3.7 e §5.3.4 · Dir. (UE) 2024/2881"
+n1: "Causa del superamento?"
+nat_h: "Naturale"
+nat_ex: ["Incendi boschivi", "Spruzzi marini", "Polvere da regioni aride", "Eruzioni"]
+salt_h: ["Sale o sabbia", "sulle strade"]
+salt_sub: "solo polveri fini (PM10)"
+other_h: "Altra causa"
+nat_term: ["Si sottrae, se serve", "a rispettare il limite"]
+nat_cond_b: "Condizione:"
+nat_cond: "contributo determinato con sufficiente certezza"
+q2: "Misure ragionevoli per ridurre le concentrazioni?"
+y_lbl: "Sì"
+n_lbl: "No"
+sub_term: "Si sottrae"
+rem_term: "Resta nel superamento"
+proj_h: "Nelle proiezioni"
+cap_same: "stesse emissioni dell’anno di riferimento (se note)"
+cap_cut: "salvo riduzioni previste dal piano (da quantificare)"
+note: "Modellistica non raccomandata: i fattori di emissione variano con pratiche locali e meteo"
+def_bold: "Sottrarre"
+def_text: "= escludere il contributo dal calcolo del superamento."
