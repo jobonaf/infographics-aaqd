@@ -286,3 +286,10 @@ button.quiet {
   letter-spacing: .10em !important;
   text-transform: uppercase;
 }
+
+/* Le slide SVG sono sovrapposte durante lo scorrimento gestito da app.js. */
+.stage > .slide-svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
