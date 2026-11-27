@@ -1,450 +1,206 @@
 {
   "version": 2,
-  "title": "Modelling for AAQD",
-  "defaults": {
-    "duration": 1050,
-    "padding": 0.08
-  },
+  "title": "Infografiche AAQD",
+  "defaults": {"duration": 1050, "padding": 0.08},
   "slides": [
     {
       "id": "title",
-      "title": "Modelling for AAQD",
-      "src": "assets/generated/title.svg",
+      "type": "text",
+      "title": "Infografiche AAQD",
       "enabled": true,
-      "language": "en",
+      "language": "it",
+      "content": {"eyebrow": "PRESENTAZIONE", "heading": "Infografiche AAQD", "subtitle": "Modellistica e valutazione della qualità dell’aria", "lines": ["Giovanni Bonafè", "ARPA FVG", "27/11/2026"], "footer": "Presentazione animata delle infografiche del progetto AAQD"},
       "frames": [
-        {
-          "id": "overview",
-          "label": "Titolo"
-        }
+        {"id": "overview", "label": "Titolo"}
       ]
     },
     {
       "id": "01-role-of-modelling",
       "title": "Role of modelling",
-      "src": "https://raw.githubusercontent.com/jobonaf/infographics-aaqd/main/01-role-of-modelling/out/role_of_modelling_en.svg",
+      "src": "https://raw.githubusercontent.com/jobonaf/infographics-aaqd/main/01-role-of-modelling/out/role_of_modelling_it.svg",
       "enabled": true,
-      "language": "en",
+      "language": "it",
       "frames": [
-        {
-          "id": "overview",
-          "label": "Panoramica"
-        },
-        {
-          "id": "spokes",
-          "label": "Spokes"
-        },
-        {
-          "id": "path",
-          "label": "Path"
-        },
-        {
-          "id": "feedback",
-          "label": "Feedback"
-        },
-        {
-          "id": "hub",
-          "label": "Hub"
-        },
-        {
-          "id": "node_rete",
-          "label": "Node rete"
-        },
-        {
-          "id": "node_val",
-          "label": "Node val"
-        },
-        {
-          "id": "node_sa",
-          "label": "Node sa"
-        },
-        {
-          "id": "node_pia",
-          "label": "Node pia"
-        },
-        {
-          "id": "node_pre",
-          "label": "Node pre"
-        },
-        {
-          "id": "labels",
-          "label": "Labels"
-        },
-        {
-          "id": "check",
-          "label": "Check"
-        },
-        {
-          "id": "overview",
-          "label": "Riepilogo"
-        }
+        {"id": "overview", "label": "Panoramica"},
+        {"id": "spokes", "label": "Spokes"},
+        {"id": "path", "label": "Path"},
+        {"id": "feedback", "label": "Feedback"},
+        {"id": "hub", "label": "Hub"},
+        {"id": "node_rete", "label": "Node rete"},
+        {"id": "node_val", "label": "Node val"},
+        {"id": "node_sa", "label": "Node sa"},
+        {"id": "node_pia", "label": "Node pia"},
+        {"id": "node_pre", "label": "Node pre"},
+        {"id": "labels", "label": "Labels"},
+        {"id": "check", "label": "Check"},
+        {"id": "overview", "label": "Riepilogo"}
       ]
     },
     {
       "id": "02-modelling-system-anatomy",
       "title": "Modelling system anatomy",
-      "src": "https://raw.githubusercontent.com/jobonaf/infographics-aaqd/main/02-modelling-system-anatomy/out/modelling_system_anatomy_en.svg",
+      "src": "https://raw.githubusercontent.com/jobonaf/infographics-aaqd/main/02-modelling-system-anatomy/out/modelling_system_anatomy_it.svg",
       "enabled": true,
-      "language": "en",
+      "language": "it",
       "frames": [
-        {
-          "id": "overview",
-          "label": "Panoramica"
-        },
-        {
-          "id": "inputs",
-          "label": "Inputs"
-        },
-        {
-          "id": "model",
-          "label": "Model"
-        },
-        {
-          "id": "output",
-          "label": "Output"
-        },
-        {
-          "id": "measurements",
-          "label": "Measurements"
-        },
-        {
-          "id": "scales",
-          "label": "Scales"
-        },
-        {
-          "id": "resolution",
-          "label": "Resolution"
-        },
-        {
-          "id": "overview",
-          "label": "Riepilogo"
-        }
+        {"id": "overview", "label": "Panoramica"},
+        {"id": "inputs", "label": "Inputs"},
+        {"id": "model", "label": "Model"},
+        {"id": "output", "label": "Output"},
+        {"id": "measurements", "label": "Measurements"},
+        {"id": "scales", "label": "Scales"},
+        {"id": "resolution", "label": "Resolution"},
+        {"id": "overview", "label": "Riepilogo"}
       ]
     },
     {
       "id": "03-fitness-for-purpose",
       "title": "Fitness for purpose",
-      "src": "https://raw.githubusercontent.com/jobonaf/infographics-aaqd/main/03-fitness-for-purpose/out/fitness_for_purpose_en.svg",
+      "src": "https://raw.githubusercontent.com/jobonaf/infographics-aaqd/main/03-fitness-for-purpose/out/fitness_for_purpose_it.svg",
       "enabled": true,
-      "language": "en",
+      "language": "it",
       "frames": [
-        {
-          "id": "overview",
-          "label": "Panoramica"
-        },
-        {
-          "id": "spokes",
-          "label": "Spokes"
-        },
-        {
-          "id": "hub",
-          "label": "Hub"
-        },
-        {
-          "id": "criteria",
-          "label": "Criteria"
-        },
-        {
-          "id": "domains",
-          "label": "Domains"
-        },
-        {
-          "id": "inputs",
-          "label": "Inputs"
-        },
-        {
-          "id": "overview",
-          "label": "Riepilogo"
-        }
+        {"id": "overview", "label": "Panoramica"},
+        {"id": "spokes", "label": "Spokes"},
+        {"id": "hub", "label": "Hub"},
+        {"id": "criteria", "label": "Criteria"},
+        {"id": "domains", "label": "Domains"},
+        {"id": "inputs", "label": "Inputs"},
+        {"id": "overview", "label": "Riepilogo"}
       ]
     },
     {
       "id": "04-model-quality-mqi-mqo",
       "title": "Model quality mqi mqo",
-      "src": "https://raw.githubusercontent.com/jobonaf/infographics-aaqd/main/04-model-quality-mqi-mqo/out/mqi_mqo_en.svg",
+      "src": "https://raw.githubusercontent.com/jobonaf/infographics-aaqd/main/04-model-quality-mqi-mqo/out/mqi_mqo_it.svg",
       "enabled": true,
-      "language": "en",
+      "language": "it",
       "frames": [
-        {
-          "id": "overview",
-          "label": "Panoramica"
-        },
-        {
-          "id": "target-plot",
-          "label": "Target plot"
-        },
-        {
-          "id": "formula",
-          "label": "Formula"
-        },
-        {
-          "id": "uncertainty-curve",
-          "label": "Uncertainty curve"
-        },
-        {
-          "id": "data-fusion",
-          "label": "Data fusion"
-        },
-        {
-          "id": "definition",
-          "label": "Definition"
-        },
-        {
-          "id": "overview",
-          "label": "Riepilogo"
-        }
+        {"id": "overview", "label": "Panoramica"},
+        {"id": "target-plot", "label": "Target plot"},
+        {"id": "formula", "label": "Formula"},
+        {"id": "uncertainty-curve", "label": "Uncertainty curve"},
+        {"id": "data-fusion", "label": "Data fusion"},
+        {"id": "definition", "label": "Definition"},
+        {"id": "overview", "label": "Riepilogo"}
       ]
     },
     {
       "id": "05-spatial-representativeness",
       "title": "Spatial representativeness",
-      "src": "https://raw.githubusercontent.com/jobonaf/infographics-aaqd/main/05-spatial-representativeness/out/spatrep_en.svg",
+      "src": "https://raw.githubusercontent.com/jobonaf/infographics-aaqd/main/05-spatial-representativeness/out/spatrep_it.svg",
       "enabled": true,
-      "language": "en",
+      "language": "it",
       "frames": [
-        {
-          "id": "overview",
-          "label": "Panoramica"
-        },
-        {
-          "id": "panel1",
-          "label": "Pannello 1"
-        },
-        {
-          "id": "panel2",
-          "label": "Pannello 2"
-        },
-        {
-          "id": "panel3",
-          "label": "Pannello 3"
-        },
-        {
-          "id": "overview",
-          "label": "Riepilogo"
-        }
+        {"id": "overview", "label": "Panoramica"},
+        {"id": "panel1", "label": "Pannello 1"},
+        {"id": "panel2", "label": "Pannello 2"},
+        {"id": "panel3", "label": "Pannello 3"},
+        {"id": "overview", "label": "Riepilogo"}
       ]
     },
     {
       "id": "06-monitoring-network-design",
       "title": "Monitoring network design",
-      "src": "https://raw.githubusercontent.com/jobonaf/infographics-aaqd/main/06-monitoring-network-design/out/monitoring_network_design_en.svg",
+      "src": "https://raw.githubusercontent.com/jobonaf/infographics-aaqd/main/06-monitoring-network-design/out/monitoring_network_design_it.svg",
       "enabled": true,
-      "language": "en",
+      "language": "it",
       "frames": [
-        {
-          "id": "overview",
-          "label": "Panoramica"
-        },
-        {
-          "id": "map",
-          "label": "Map"
-        },
-        {
-          "id": "legend",
-          "label": "Legend"
-        },
-        {
-          "id": "monet",
-          "label": "Monet"
-        },
-        {
-          "id": "messages",
-          "label": "Messages"
-        },
-        {
-          "id": "review",
-          "label": "Review"
-        },
-        {
-          "id": "overview",
-          "label": "Riepilogo"
-        }
+        {"id": "overview", "label": "Panoramica"},
+        {"id": "map", "label": "Map"},
+        {"id": "legend", "label": "Legend"},
+        {"id": "monet", "label": "Monet"},
+        {"id": "messages", "label": "Messages"},
+        {"id": "review", "label": "Review"},
+        {"id": "overview", "label": "Riepilogo"}
       ]
     },
     {
       "id": "07-natural-sources-sanding-salting",
       "title": "Natural sources sanding salting",
-      "src": "https://raw.githubusercontent.com/jobonaf/infographics-aaqd/main/07-natural-sources-sanding-salting/out/natural_sources_sanding_salting_en.svg",
+      "src": "https://raw.githubusercontent.com/jobonaf/infographics-aaqd/main/07-natural-sources-sanding-salting/out/natural_sources_sanding_salting_it.svg",
       "enabled": true,
-      "language": "en",
+      "language": "it",
       "frames": [
-        {
-          "id": "overview",
-          "label": "Panoramica"
-        },
-        {
-          "id": "node-1",
-          "label": "Node 1"
-        },
-        {
-          "id": "branches",
-          "label": "Branches"
-        },
-        {
-          "id": "natural",
-          "label": "Natural"
-        },
-        {
-          "id": "salt-sand",
-          "label": "Salt sand"
-        },
-        {
-          "id": "other",
-          "label": "Other"
-        },
-        {
-          "id": "projections",
-          "label": "Projections"
-        },
-        {
-          "id": "definition",
-          "label": "Definition"
-        },
-        {
-          "id": "overview",
-          "label": "Riepilogo"
-        }
+        {"id": "overview", "label": "Panoramica"},
+        {"id": "node-1", "label": "Node 1"},
+        {"id": "branches", "label": "Branches"},
+        {"id": "natural", "label": "Natural"},
+        {"id": "salt-sand", "label": "Salt sand"},
+        {"id": "other", "label": "Other"},
+        {"id": "projections", "label": "Projections"},
+        {"id": "definition", "label": "Definition"},
+        {"id": "overview", "label": "Riepilogo"}
       ]
     },
     {
       "id": "08-exceedance-situation-indicators",
       "title": "Exceedance situation indicators",
-      "src": "https://raw.githubusercontent.com/jobonaf/infographics-aaqd/main/08-exceedance-situation-indicators/out/esi_en.svg",
+      "src": "https://raw.githubusercontent.com/jobonaf/infographics-aaqd/main/08-exceedance-situation-indicators/out/esi_it.svg",
       "enabled": true,
-      "language": "en",
+      "language": "it",
       "frames": [
-        {
-          "id": "overview",
-          "label": "Panoramica"
-        },
-        {
-          "id": "panel1",
-          "label": "Pannello 1"
-        },
-        {
-          "id": "panel2",
-          "label": "Pannello 2"
-        },
-        {
-          "id": "panel3",
-          "label": "Pannello 3"
-        },
-        {
-          "id": "panel4",
-          "label": "Pannello 4"
-        },
-        {
-          "id": "overview",
-          "label": "Riepilogo"
-        }
+        {"id": "overview", "label": "Panoramica"},
+        {"id": "panel1", "label": "Pannello 1"},
+        {"id": "panel2", "label": "Pannello 2"},
+        {"id": "panel3", "label": "Pannello 3"},
+        {"id": "panel4", "label": "Pannello 4"},
+        {"id": "overview", "label": "Riepilogo"}
       ]
     },
     {
       "id": "13-from-assessment-to-plan",
       "title": "From assessment to plan",
-      "src": "https://raw.githubusercontent.com/jobonaf/infographics-aaqd/main/13-from-assessment-to-plan/out/from_assessment_to_plan_en.svg",
+      "src": "https://raw.githubusercontent.com/jobonaf/infographics-aaqd/main/13-from-assessment-to-plan/out/from_assessment_to_plan_it.svg",
       "enabled": true,
-      "language": "en",
+      "language": "it",
       "frames": [
-        {
-          "id": "overview",
-          "label": "Panoramica"
-        },
-        {
-          "id": "timeline",
-          "label": "Timeline"
-        },
-        {
-          "id": "steps",
-          "label": "Steps"
-        },
-        {
-          "id": "say",
-          "label": "Say"
-        },
-        {
-          "id": "coop",
-          "label": "Coop"
-        },
-        {
-          "id": "definition",
-          "label": "Definition"
-        },
-        {
-          "id": "overview",
-          "label": "Riepilogo"
-        }
+        {"id": "overview", "label": "Panoramica"},
+        {"id": "timeline", "label": "Timeline"},
+        {"id": "steps", "label": "Steps"},
+        {"id": "say", "label": "Say"},
+        {"id": "coop", "label": "Coop"},
+        {"id": "definition", "label": "Definition"},
+        {"id": "overview", "label": "Riepilogo"}
       ]
     },
     {
       "id": "14-emission-scenarios",
       "title": "Emission scenarios",
-      "src": "https://raw.githubusercontent.com/jobonaf/infographics-aaqd/main/14-emission-scenarios/out/scenari_en.svg",
+      "src": "https://raw.githubusercontent.com/jobonaf/infographics-aaqd/main/14-emission-scenarios/out/scenari_it.svg",
       "enabled": true,
-      "language": "en",
+      "language": "it",
       "frames": [
-        {
-          "id": "overview",
-          "label": "Panoramica"
-        },
-        {
-          "id": "panel1",
-          "label": "Pannello 1"
-        },
-        {
-          "id": "panel2",
-          "label": "Pannello 2"
-        },
-        {
-          "id": "panel3",
-          "label": "Pannello 3"
-        },
-        {
-          "id": "overview",
-          "label": "Riepilogo"
-        }
+        {"id": "overview", "label": "Panoramica"},
+        {"id": "panel1", "label": "Pannello 1"},
+        {"id": "panel2", "label": "Pannello 2"},
+        {"id": "panel3", "label": "Pannello 3"},
+        {"id": "overview", "label": "Riepilogo"}
       ]
     },
     {
       "id": "15-projections",
       "title": "Projections",
-      "src": "https://raw.githubusercontent.com/jobonaf/infographics-aaqd/main/15-projections/out/projections_en.svg",
+      "src": "https://raw.githubusercontent.com/jobonaf/infographics-aaqd/main/15-projections/out/projections_it.svg",
       "enabled": true,
-      "language": "en",
+      "language": "it",
       "frames": [
-        {
-          "id": "overview",
-          "label": "Panoramica"
-        },
-        {
-          "id": "panel1",
-          "label": "Pannello 1"
-        },
-        {
-          "id": "panel2",
-          "label": "Pannello 2"
-        },
-        {
-          "id": "panel3",
-          "label": "Pannello 3"
-        },
-        {
-          "id": "overview",
-          "label": "Riepilogo"
-        }
+        {"id": "overview", "label": "Panoramica"},
+        {"id": "panel1", "label": "Pannello 1"},
+        {"id": "panel2", "label": "Pannello 2"},
+        {"id": "panel3", "label": "Pannello 3"},
+        {"id": "overview", "label": "Riepilogo"}
       ]
     },
     {
       "id": "references",
+      "type": "text",
       "title": "Riferimenti e licenza",
-      "src": "assets/generated/references.svg",
       "enabled": true,
-      "language": "en",
+      "language": "it",
+      "content": {"eyebrow": "RIFERIMENTI E LICENZA", "heading": "Riferimenti", "subtitle": "Fonti principali e condizioni di riuso", "lines": ["Direttiva (UE) 2024/2881 sulla qualità dell’aria ambiente", "Commissione europea, documento tecnico di supporto (aprile 2025)", "Repository: https://github.com/jobonaf/infographics-aaqd", "Infografiche: CC BY 4.0 · codice del prototipo: MIT"], "footer": "Giovanni Bonafè · ARPA FVG"},
       "frames": [
-        {
-          "id": "overview",
-          "label": "Riferimenti"
-        }
+        {"id": "overview", "label": "Riferimenti"}
       ]
     }
   ]

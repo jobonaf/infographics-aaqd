@@ -1,0 +1,127 @@
+{
+  "version": 2,
+  "title": "Infografiche AAQD",
+  "defaults": {"duration": 1050, "padding": 0.08},
+  "slides": [
+    {
+      "id": "title",
+      "type": "text",
+      "title": "Infografiche AAQD",
+      "enabled": true,
+      "language": "it",
+      "content": {"eyebrow": "PRESENTAZIONE", "heading": "Infografiche AAQD", "subtitle": "Modellistica e valutazione della qualità dell’aria", "lines": ["Giovanni Bonafè", "ARPA FVG", "27/11/2026"], "footer": "Presentazione animata delle infografiche del progetto AAQD"},
+      "frames": [
+        {"id": "overview", "label": "Titolo"}
+      ]
+    },
+    {
+      "id": "01-role-of-modelling",
+      "title": "Role of modelling",
+      "src": "https://raw.githubusercontent.com/jobonaf/infographics-aaqd/main/01-role-of-modelling/out/role_of_modelling_it.svg",
+      "enabled": true,
+      "language": "it",
+      "frames": [
+        {"id": "overview", "label": "Panoramica"}
+      ]
+    },
+    {
+      "id": "02-modelling-system-anatomy",
+      "title": "Modelling system anatomy",
+      "src": "https://raw.githubusercontent.com/jobonaf/infographics-aaqd/main/02-modelling-system-anatomy/out/modelling_system_anatomy_it.svg",
+      "enabled": true,
+      "language": "it",
+      "frames": [
+        {"id": "overview", "label": "Panoramica"},
+        {"id": "inputs", "label": "Inputs"},
+        {"id": "model", "label": "Model"},
+        {"id": "output", "label": "Output"},
+        {"id": "measurements", "label": "Measurements"},
+        {"id": "scales", "label": "Scales"},
+        {"id": "resolution", "label": "Resolution"},
+        {"id": "overview", "label": "Riepilogo"}
+      ]
+    },
+    {
+      "id": "03-fitness-for-purpose",
+      "title": "Fitness for purpose",
+      "src": "https://raw.githubusercontent.com/jobonaf/infographics-aaqd/main/03-fitness-for-purpose/out/fitness_for_purpose_it.svg",
+      "enabled": true,
+      "language": "it",
+      "frames": [
+        {"id": "overview", "label": "Panoramica"},
+        {"id": "criteria", "label": "Criteria"},
+        {"id": "domains", "label": "Domains"},
+        {"id": "overview", "label": "Riepilogo"}
+      ]
+    },
+    {
+      "id": "04-model-quality-mqi-mqo",
+      "title": "Model quality mqi mqo",
+      "src": "https://raw.githubusercontent.com/jobonaf/infographics-aaqd/main/04-model-quality-mqi-mqo/out/mqi_mqo_it.svg",
+      "enabled": true,
+      "language": "it",
+      "frames": [
+        {"id": "overview", "label": "Panoramica"},
+        {"id": "target-plot", "label": "Target plot"},
+        {"id": "formula", "label": "Formula"},
+        {"id": "uncertainty-curve", "label": "Uncertainty curve"},
+        {"id": "data-fusion", "label": "Data fusion"},
+        {"id": "overview", "label": "Riepilogo"}
+      ]
+    },
+    {
+      "id": "05-spatial-representativeness",
+      "title": "Spatial representativeness",
+      "src": "https://raw.githubusercontent.com/jobonaf/infographics-aaqd/main/05-spatial-representativeness/out/spatrep_it.svg",
+      "enabled": true,
+      "language": "it",
+      "frames": [
+        {"id": "overview", "label": "Panoramica"},
+        {"id": "panel1", "label": "Punto"},
+        {"id": "panel2", "label": "Tolleranza"},
+        {"id": "panel3", "label": "Area"},
+        {"id": "overview", "label": "Riepilogo"}
+      ]
+    },
+    {
+      "id": "06-monitoring-network-design",
+      "title": "Monitoring network design",
+      "src": "https://raw.githubusercontent.com/jobonaf/infographics-aaqd/main/06-monitoring-network-design/out/monitoring_network_design_it.svg",
+      "enabled": true,
+      "language": "it",
+      "frames": [
+        {"id": "overview", "label": "Panoramica"},
+        {"id": "map", "label": "Map"},
+        {"id": "messages", "label": "Messages"},
+        {"id": "overview", "label": "Riepilogo"}
+      ]
+    },
+    {
+      "id": "07-natural-sources-sanding-salting",
+      "title": "Natural sources sanding salting",
+      "src": "https://raw.githubusercontent.com/jobonaf/infographics-aaqd/main/07-natural-sources-sanding-salting/out/natural_sources_sanding_salting_it.svg",
+      "enabled": true,
+      "language": "it",
+      "frames": [
+        {"id": "overview", "label": "Panoramica"},
+        {"id": "node-1", "label": "Node 1"},
+        {"id": "natural", "label": "Natural"},
+        {"id": "salt-sand", "label": "Salt sand"},
+        {"id": "other", "label": "Other"},
+        {"id": "projections", "label": "Projections"},
+        {"id": "overview", "label": "Riepilogo"}
+      ]
+    },
+    {
+      "id": "references",
+      "type": "text",
+      "title": "Riferimenti e licenza",
+      "enabled": true,
+      "language": "it",
+      "content": {"eyebrow": "RIFERIMENTI E LICENZA", "heading": "Riferimenti", "subtitle": "Fonti principali e condizioni di riuso", "lines": ["Direttiva (UE) 2024/2881 sulla qualità dell’aria ambiente", "Commissione europea, documento tecnico di supporto (aprile 2025)", "Repository: https://github.com/jobonaf/infographics-aaqd", "Infografiche: CC BY 4.0 · codice del prototipo: MIT"], "footer": "Giovanni Bonafè · ARPA FVG"},
+      "frames": [
+        {"id": "overview", "label": "Riferimenti"}
+      ]
+    }
+  ]
+}

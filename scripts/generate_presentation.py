@@ -1,10 +1,9 @@
 #!/usr/bin/env python3
 """Genera presentation.json, rileva i frame SVG e crea copertina e chiusura."""
 import argparse
-import base64
 from datetime import date
-import html
 import json
+import os
 from pathlib import Path, PurePosixPath
 import re
 import urllib.parse
@@ -80,42 +79,34 @@ def active_svg(path, root):
     return path.parent.name == "out" and not any(p in EXCLUDED_DIRS or p.startswith(".") for p in parts)
 
 
-def font_css(root):
-    font_dir = root / "assets" / "fonts"
-    rules = []
-    for weight, names in ((400, ("SourceSans3-Regular.ttf", "SourceSans3-Regular.otf")), (700, ("SourceSans3-Bold.ttf", "SourceSans3-Bold.otf"))):
-        path = next((font_dir / n for n in names if (font_dir / n).is_file()), None)
-        if path:
-            mime = "font/ttf" if path.suffix.lower() == ".ttf" else "font/otf"
-            data = base64.b64encode(path.read_bytes()).decode("ascii")
-            rules.append(f"@font-face{{font-family:'Source Sans 3';font-weight:{weight};src:url(data:{mime};base64,{data});}}")
-    return "".join(rules)
-
-
-def text_slide(path, root, kind, title, subtitle, lines, footer):
-    path.parent.mkdir(parents=True, exist_ok=True)
-    y0 = 510 if kind == "title" else 420
-    rows = "".join(
-        f'<text x="160" y="{y0+i*58}" font-size="30" fill="#22343A">{html.escape(str(line))}</text>'
-        for i, line in enumerate(lines)
-    )
-    label = "PRESENTAZIONE" if kind == "title" else "RIFERIMENTI E LICENZA"
-    svg = f'''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080" font-family="Source Sans 3,Arial,sans-serif">
-<defs><style>{font_css(root)}</style></defs>
-<rect width="1920" height="1080" fill="#EFEBDD"/><rect width="34" height="1080" fill="#1F5F63"/>
-<text x="160" y="170" font-size="22" font-weight="700" letter-spacing="3" fill="#2A9D9A">{label}</text>
-<text x="160" y="285" font-size="68" font-weight="700" fill="#1F5F63">{html.escape(title)}</text>
-<text x="160" y="355" font-size="34" fill="#22343A">{html.escape(subtitle)}</text>
-{rows}
-<text x="160" y="990" font-size="22" fill="#667879">{html.escape(footer)}</text>
-</svg>
-'''
-    path.write_text(svg, encoding="utf-8")
-
-
-def rel_src(path, output_path):
-    return path.relative_to(output_path.parent).as_posix()
-
+def dump_manifest(manifest):
+    """JSON leggibile: ogni frame occupa una sola riga."""
+    lines = [
+        "{",
+        f'  "version": {json.dumps(manifest["version"])},',
+        f'  "title": {json.dumps(manifest["title"], ensure_ascii=False)},',
+        f'  "defaults": {json.dumps(manifest["defaults"], ensure_ascii=False)},',
+        '  "slides": ['
+    ]
+    for slide_index, slide in enumerate(manifest["slides"]):
+        lines.append("    {")
+        keys = [key for key in slide if key != "frames"]
+        for key in keys:
+            lines.append(
+                f'      {json.dumps(key)}: '
+                f'{json.dumps(slide[key], ensure_ascii=False)},'
+            )
+        lines.append('      "frames": [')
+        for frame_index, frame in enumerate(slide["frames"]):
+            comma = "," if frame_index < len(slide["frames"]) - 1 else ""
+            lines.append(
+                "        " + json.dumps(frame, ensure_ascii=False, separators=(", ", ": ")) + comma
+            )
+        lines.append("      ]")
+        comma = "," if slide_index < len(manifest["slides"]) - 1 else ""
+        lines.append("    }" + comma)
+    lines.extend(["  ]", "}"])
+    return "\n".join(lines) + "\n"
 
 def main():
     ap = argparse.ArgumentParser(description=__doc__)
@@ -123,7 +114,7 @@ def main():
     ap.add_argument("--repo", default="jobonaf/infographics-aaqd")
     ap.add_argument("--branch", default="main")
     ap.add_argument("--language", default="it", choices=("it", "en"))
-    ap.add_argument("--output", default="presentation.json")
+    ap.add_argument("--output", help="manifesto da scrivere; predefinito: <root>/docs/presentation.json")
     ap.add_argument("--local-src", action="store_true")
     ap.add_argument("--no-summary", action="store_true")
     ap.add_argument("--presentation-title", default="Infografiche AAQD")
@@ -136,30 +127,35 @@ def main():
     args = ap.parse_args()
 
     root = find_repo_root(args.root)
-    output = Path(args.output).expanduser().resolve()
-    generated = output.parent / "assets" / "generated"
-    cover = generated / "title.svg"
-    closing = generated / "references.svg"
-    text_slide(cover, root, "title", args.presentation_title, args.presentation_subtitle,
-               (args.author, args.affiliation, args.presentation_date),
-               "Presentazione animata delle infografiche del progetto AAQD")
+    if args.output:
+        candidate = Path(args.output).expanduser()
+        output = (root / candidate).resolve() if not candidate.is_absolute() else candidate.resolve()
+    else:
+        output = root / "docs" / "presentation.json"
+    output.parent.mkdir(parents=True, exist_ok=True)
     references = args.reference or [
         "Direttiva (UE) 2024/2881 sulla qualità dell’aria ambiente",
         "Commissione europea, documento tecnico di supporto (aprile 2025)",
         f"Repository: https://github.com/{args.repo}",
     ]
-    text_slide(closing, root, "closing", "Riferimenti", "Fonti principali e condizioni di riuso",
-               (*references, args.licence), f"{args.author} · {args.affiliation}")
-
-    slides = [{"id": "title", "title": args.presentation_title, "src": rel_src(cover, output),
-               "enabled": True, "language": args.language,
-               "frames": [{"id": "overview", "label": "Titolo"}]}]
+    slides = [{
+        "id": "title", "type": "text", "title": args.presentation_title,
+        "enabled": True, "language": args.language,
+        "content": {
+            "eyebrow": "PRESENTAZIONE",
+            "heading": args.presentation_title,
+            "subtitle": args.presentation_subtitle,
+            "lines": [args.author, args.affiliation, args.presentation_date],
+            "footer": "Presentazione animata delle infografiche del progetto AAQD"
+        },
+        "frames": [{"id": "overview", "label": "Titolo"}]
+    }]
     svg_files = sorted(p for p in root.rglob(f"*_{args.language}.svg") if active_svg(p, root))
     for svg_path in svg_files:
         relative = svg_path.relative_to(root).as_posix()
         detected = frame_ids(svg_path)
         if args.local_src:
-            src = Path(svg_path).relative_to(output.parent).as_posix()
+            src = Path(os.path.relpath(svg_path, output.parent)).as_posix()
         else:
             src = f"https://raw.githubusercontent.com/{args.repo}/{args.branch}/{urllib.parse.quote(relative, safe='/')}"
         frames = [{"id": "overview", "label": "Panoramica"}]
@@ -170,12 +166,21 @@ def main():
                        "enabled": True, "language": args.language, "frames": frames})
         print(f"{relative}: {', '.join(detected) if detected else 'nessun dettaglio'}")
 
-    slides.append({"id": "references", "title": "Riferimenti e licenza", "src": rel_src(closing, output),
-                   "enabled": True, "language": args.language,
-                   "frames": [{"id": "overview", "label": "Riferimenti"}]})
+    slides.append({
+        "id": "references", "type": "text", "title": "Riferimenti e licenza",
+        "enabled": True, "language": args.language,
+        "content": {
+            "eyebrow": "RIFERIMENTI E LICENZA",
+            "heading": "Riferimenti",
+            "subtitle": "Fonti principali e condizioni di riuso",
+            "lines": [*references, args.licence],
+            "footer": f"{args.author} · {args.affiliation}"
+        },
+        "frames": [{"id": "overview", "label": "Riferimenti"}]
+    })
     manifest = {"version": 2, "title": args.presentation_title,
                 "defaults": {"duration": 1050, "padding": 0.08}, "slides": slides}
-    output.write_text(json.dumps(manifest, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    output.write_text(dump_manifest(manifest), encoding="utf-8")
     print(f"Scritto {output}: {len(slides)} slide")
 
 

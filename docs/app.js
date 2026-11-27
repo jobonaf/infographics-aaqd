@@ -12,7 +12,7 @@ async function loadManifest(path = 'presentation.json') {
   const activeSlides = manifest.slides.filter(slide => slide.enabled !== false);
   if (!activeSlides.length) throw new Error('Il manifesto non contiene SVG abilitate');
   for (const slide of activeSlides) {
-    if (!slide.title || !slide.src || !Array.isArray(slide.frames) || !slide.frames.length) {
+    if (!slide.title || (!slide.src && !slide.content) || !Array.isArray(slide.frames) || !slide.frames.length) {
       throw new Error(`Configurazione incompleta per la slide "${slide.id || 'senza id'}"`);
     }
   }
@@ -159,6 +159,7 @@ async function goToFrame(index, animate = true) {
   frameIndex = Math.max(0, Math.min(index, frameTargets.length - 1));
   updateControls();
   const target = frameTargets[frameIndex];
+  if (!svgRoot) return;
   if (animate) {
     const frame = slides[slideIndex].frames[frameIndex];
     await animateCamera(target, frame.duration ?? defaults.duration);
@@ -189,6 +190,38 @@ function buildFrameTargets() {
   });
 }
 
+function createTextSlide(slide) {
+  const content = slide.content || {};
+  const article = document.createElement('article');
+  article.className = 'text-slide';
+
+  const eyebrow = document.createElement('div');
+  eyebrow.className = 'text-slide-eyebrow';
+  eyebrow.textContent = content.eyebrow || '';
+
+  const heading = document.createElement('h2');
+  heading.textContent = content.heading || slide.title;
+
+  const subtitle = document.createElement('p');
+  subtitle.className = 'text-slide-subtitle';
+  subtitle.textContent = content.subtitle || '';
+
+  const lines = document.createElement('div');
+  lines.className = 'text-slide-lines';
+  for (const value of content.lines || []) {
+    const line = document.createElement('p');
+    line.textContent = value;
+    lines.append(line);
+  }
+
+  const footer = document.createElement('p');
+  footer.className = 'text-slide-footer';
+  footer.textContent = content.footer || '';
+
+  article.append(eyebrow, heading, subtitle, lines, footer);
+  return article;
+}
+
 async function fetchSvg(index) {
   const response = await fetch(slides[index].src, { cache: 'no-cache' });
   if (!response.ok) throw new Error(`Impossibile caricare l'SVG (${response.status})`);
@@ -200,6 +233,11 @@ async function fetchSvg(index) {
   imported.setAttribute('preserveAspectRatio', 'xMidYMid meet');
   imported.classList.add('slide-svg');
   return imported;
+}
+
+async function createSlideElement(index) {
+  const slide = slides[index];
+  return (slide.type === 'text' || (!slide.src && slide.content)) ? createTextSlide(slide) : fetchSvg(index);
 }
 
 async function swapSlide(imported, direction) {
@@ -258,13 +296,18 @@ async function swapSlide(imported, direction) {
 
 async function loadSlide(index, direction = 0) {
   status.textContent = 'Caricamento SVG…';
-  const imported = await fetchSvg(index);
+  const imported = await createSlideElement(index);
   await swapSlide(imported, direction);
-  svgRoot = imported;
+  svgRoot = imported.matches('svg') ? imported : null;
   focusOverlay = null;
-  createFocusOverlay();
-  await sleepFrame();
-  buildFrameTargets();
+  if (svgRoot) {
+    createFocusOverlay();
+    await sleepFrame();
+    buildFrameTargets();
+  } else {
+    frameTargets = [null];
+    frameFocusRects = [null];
+  }
   frameButtons.replaceChildren();
   slides[index].frames.forEach((frame, i) => {
     const button = document.createElement('button');
@@ -273,7 +316,7 @@ async function loadSlide(index, direction = 0) {
     frameButtons.append(button);
   });
   frameIndex = 0;
-  setViewBox(frameTargets[0]);
+  if (svgRoot) setViewBox(frameTargets[0]);
   updateControls();
   status.textContent = 'SVG vettoriale · pronto';
 }
@@ -303,7 +346,17 @@ function showError(error) {
 
 async function start() {
   const params = new URLSearchParams(window.location.search);
-  await loadManifest(params.get('presentation') || 'presentation.json');
+  const requested = params.get('presentation');
+
+  if (requested) {
+    await loadManifest(requested);
+  } else {
+    try {
+      await loadManifest('presentation.sequence.json');
+    } catch {
+      await loadManifest('presentation.json');
+    }
+  }
   buildSlideSelector();
   slideIndex = 0;
   await loadSlide(slideIndex);
