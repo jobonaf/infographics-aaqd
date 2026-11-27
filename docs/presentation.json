@@ -17,7 +17,7 @@
     {
       "id": "01-role-of-modelling",
       "title": "Role of modelling",
-      "src": "https://raw.githubusercontent.com/jobonaf/infographics-aaqd/main/01-role-of-modelling/out/role_of_modelling_it.svg",
+      "src": "../01-role-of-modelling/out/role_of_modelling_it.svg",
       "enabled": true,
       "language": "it",
       "frames": [
@@ -39,7 +39,7 @@
     {
       "id": "02-modelling-system-anatomy",
       "title": "Modelling system anatomy",
-      "src": "https://raw.githubusercontent.com/jobonaf/infographics-aaqd/main/02-modelling-system-anatomy/out/modelling_system_anatomy_it.svg",
+      "src": "../02-modelling-system-anatomy/out/modelling_system_anatomy_it.svg",
       "enabled": true,
       "language": "it",
       "frames": [
@@ -56,7 +56,7 @@
     {
       "id": "03-fitness-for-purpose",
       "title": "Fitness for purpose",
-      "src": "https://raw.githubusercontent.com/jobonaf/infographics-aaqd/main/03-fitness-for-purpose/out/fitness_for_purpose_it.svg",
+      "src": "../03-fitness-for-purpose/out/fitness_for_purpose_it.svg",
       "enabled": true,
       "language": "it",
       "frames": [
@@ -72,7 +72,7 @@
     {
       "id": "04-model-quality-mqi-mqo",
       "title": "Model quality mqi mqo",
-      "src": "https://raw.githubusercontent.com/jobonaf/infographics-aaqd/main/04-model-quality-mqi-mqo/out/mqi_mqo_it.svg",
+      "src": "../04-model-quality-mqi-mqo/out/mqi_mqo_it.svg",
       "enabled": true,
       "language": "it",
       "frames": [
@@ -88,7 +88,7 @@
     {
       "id": "05-spatial-representativeness",
       "title": "Spatial representativeness",
-      "src": "https://raw.githubusercontent.com/jobonaf/infographics-aaqd/main/05-spatial-representativeness/out/spatrep_it.svg",
+      "src": "../05-spatial-representativeness/out/spatrep_it.svg",
       "enabled": true,
       "language": "it",
       "frames": [
@@ -102,7 +102,7 @@
     {
       "id": "06-monitoring-network-design",
       "title": "Monitoring network design",
-      "src": "https://raw.githubusercontent.com/jobonaf/infographics-aaqd/main/06-monitoring-network-design/out/monitoring_network_design_it.svg",
+      "src": "../06-monitoring-network-design/out/monitoring_network_design_it.svg",
       "enabled": true,
       "language": "it",
       "frames": [
@@ -118,7 +118,7 @@
     {
       "id": "07-natural-sources-sanding-salting",
       "title": "Natural sources sanding salting",
-      "src": "https://raw.githubusercontent.com/jobonaf/infographics-aaqd/main/07-natural-sources-sanding-salting/out/natural_sources_sanding_salting_it.svg",
+      "src": "../07-natural-sources-sanding-salting/out/natural_sources_sanding_salting_it.svg",
       "enabled": true,
       "language": "it",
       "frames": [
@@ -136,7 +136,7 @@
     {
       "id": "08-exceedance-situation-indicators",
       "title": "Exceedance situation indicators",
-      "src": "https://raw.githubusercontent.com/jobonaf/infographics-aaqd/main/08-exceedance-situation-indicators/out/esi_it.svg",
+      "src": "../08-exceedance-situation-indicators/out/esi_it.svg",
       "enabled": true,
       "language": "it",
       "frames": [
@@ -151,7 +151,7 @@
     {
       "id": "13-from-assessment-to-plan",
       "title": "From assessment to plan",
-      "src": "https://raw.githubusercontent.com/jobonaf/infographics-aaqd/main/13-from-assessment-to-plan/out/from_assessment_to_plan_it.svg",
+      "src": "../13-from-assessment-to-plan/out/from_assessment_to_plan_it.svg",
       "enabled": true,
       "language": "it",
       "frames": [
@@ -167,7 +167,7 @@
     {
       "id": "14-emission-scenarios",
       "title": "Emission scenarios",
-      "src": "https://raw.githubusercontent.com/jobonaf/infographics-aaqd/main/14-emission-scenarios/out/scenari_it.svg",
+      "src": "../14-emission-scenarios/out/scenari_it.svg",
       "enabled": true,
       "language": "it",
       "frames": [
@@ -181,7 +181,7 @@
     {
       "id": "15-projections",
       "title": "Projections",
-      "src": "https://raw.githubusercontent.com/jobonaf/infographics-aaqd/main/15-projections/out/projections_it.svg",
+      "src": "../15-projections/out/projections_it.svg",
       "enabled": true,
       "language": "it",
       "frames": [

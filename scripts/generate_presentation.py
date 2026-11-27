@@ -6,6 +6,7 @@ import json
 import os
 from pathlib import Path, PurePosixPath
 import re
+import shutil
 import urllib.parse
 import xml.etree.ElementTree as ET
 
@@ -79,6 +80,22 @@ def active_svg(path, root):
     return path.parent.name == "out" and not any(p in EXCLUDED_DIRS or p.startswith(".") for p in parts)
 
 
+
+def copy_web_fonts(root, docs_dir):
+    """Copia i font usati dall'interfaccia HTML in docs/fonts."""
+    source_dir = root / "assets" / "fonts"
+    target_dir = docs_dir / "fonts"
+    required = ("SourceSans3-Regular.ttf", "SourceSans3-Bold.ttf")
+    missing = [name for name in required if not (source_dir / name).is_file()]
+    if missing:
+        raise SystemExit(
+            "Font mancanti in " + str(source_dir) + ": " + ", ".join(missing)
+        )
+    target_dir.mkdir(parents=True, exist_ok=True)
+    for name in required:
+        shutil.copy2(source_dir / name, target_dir / name)
+
+
 def dump_manifest(manifest):
     """JSON leggibile: ogni frame occupa una sola riga."""
     lines = [
@@ -133,6 +150,7 @@ def main():
     else:
         output = root / "docs" / "presentation.json"
     output.parent.mkdir(parents=True, exist_ok=True)
+    copy_web_fonts(root, output.parent)
     references = args.reference or [
         "Direttiva (UE) 2024/2881 sulla qualità dell’aria ambiente",
         "Commissione europea, documento tecnico di supporto (aprile 2025)",
